@@ -1,31 +1,72 @@
+import Navbar from "./componets/Navbar";
 
 import About from "./componets/About";
-import Navbar from "./componets/Navbar";
+
 import Solutions from "./componets/Solutions";
-import Cont from "./componets/Contents";
-
-import Contents from "./componets/Contents";
-import Usp from "./componets/Usp";
-import Services from "./componets/Services";
-import Values from "./componets/Values";
-import Devel from "./componets/Devel";
-import Our from "./componets/Our";
+import Our_Soution from "./componets/Our_Solution";
 
 
+import Service from "./componets/Service";
+import Our_Service from "./componets/Our_service";
+
+
+import Our_Development from "./componets/Our_Development";
+
+import Growing_Values from "./componets/Growing_Values";
+
+import Our_Usp from "./componets/Our_Usp"
+
+import Footer from "./componets/Footer";
+
+
+
+
+
+
+
+;
 
 export default function Home() {
   return (
     <>
+
       <Navbar />
-      <About /> *
+      {/* First Page */}
+
+
+      <About />
+      {/* Second Page */}
+
+
       <Solutions />
-      {/* {/* <Cont /> */}
-      <Contents />
-      <Devel />
-      <Values />
-      <Usp />
-      <Services />
-      <Our />
+      {/* Third Page */}
+
+      <Our_Soution />
+      {/* Third First Page */}
+
+
+      <Service />
+      {/*  Fourth Page*/}
+
+      <Our_Service />
+      {/* Fourth First page */}
+
+
+      <Our_Development />
+      {/* Fifth Page */}
+
+
+      <Growing_Values />
+      {/* Six Page */}
+
+
+      <Our_Usp />
+      {/* Seventh Page*/}
+
+
+      <Footer />
+      {/* Eight Page */}
+
     </>
   )
 }

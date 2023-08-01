@@ -13,6 +13,16 @@ const data1 = {
             }
         },
         {
+            "id": 2,
+            "attributes": {
+                "name": "Cyber Security Audit",
+                "description": "It is designed to be a comprehensive review and analysis of business's IT infrastructure. It identifies threats and vulnerabilities, exposing weaknesses and high-risk practices.",
+                "createdAt": "2023-07-21T10:06:15.742Z",
+                "updatedAt": "2023-07-21T10:06:17.371Z",
+                "publishedAt": "2023-07-21T10:06:17.369Z"
+            }
+        },
+        {
             "id": 3,
             "attributes": {
                 "name": "Database Audit",
@@ -154,7 +164,7 @@ const data1 = {
 };
 // const apiEndpoint = 'Api link'; 
 
-function Contents() {
+function Service() {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
@@ -174,6 +184,19 @@ function Contents() {
 
     return (
         <>
+            <div className='bg-sky-700'>
+                <ul>
+                    <li className='text-2xl text-white font-medium  pt-11 space-x-28 ps-64'>
+                        We Offer A Wide Variety Of Security Audit
+                    </li>
+                    <li className='text-white text-2xl space-x-28 font-medium ps-64'>
+                        Services
+                    </li>
+                    <li className='py-2 ps-64'>
+                        <img src="/Image/Line 20.png" alt="Image Description" className='' />
+                    </li>
+                </ul>
+            </div>
 
             <div className='text-white text-center items-center'
                 style={{
@@ -183,19 +206,26 @@ function Contents() {
                 }}
             >
                 {services.map((service) => (
-                    <div key={service.id} className='w-1/3 p-8'>
+                    <div key={service.id} className='w-1/3 p-4'>
                         <div>
                             <h2 className='text-xl'>{service.attributes.name}</h2>
                         </div>
                         <div className='pt-7'>
                             <p>{service.attributes.description}</p>
                         </div>
+
                     </div>
                 ))}
             </div>
 
+            <div className='text-white text-center items-center'
+                style={{
+                    background: 'linear-gradient(180deg, #000000 0%, #0B2241 3.05%, #0B2241 107.63%, #0B2241 117.13%)',
+                }}>
+                <button className='bg-sky-700 p-2'  > KNOW MORE</button>
+            </div>
         </>
     );
 }
 
-export default Contents;
+export default Service;

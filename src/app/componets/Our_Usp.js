@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Usp() {
+function Our_Usp() {
     return (
         <>
             <div className=' bg-sky-950'>
@@ -50,4 +50,4 @@ function Usp() {
     )
 }
 
-export default Usp
+export default Our_Usp
