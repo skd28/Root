@@ -7,7 +7,7 @@ import Our_Soution from "./componets/Our_Solution";
 
 
 import Service from "./componets/Service";
-import Our_Service from "./componets/Our_service";
+import Our_Service from "./componets/Our_Service";
 
 
 import Our_Development from "./componets/Our_Development";
