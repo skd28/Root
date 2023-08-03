@@ -36,10 +36,6 @@ const Slider = ({ image }) => {
                     </div>
                 </div>
 
-
-
-
-
                 <div className='flex space-x-2 overflow-hidden items-center bg-cover  text-white'>
                     <BsChevronCompactLeft onClick={handlePrev} size={50} />
                     <div className="flex space-x-2 overflow-hidden items-center bg-cover  text-white px-20">
@@ -67,10 +63,10 @@ const Slider = ({ image }) => {
                                     <div className={`bg-cyan-600 text-center justify-center rounded-3xl m-3`}>
                                         <p
                                             className={`${index === firstVisibleIndex + 1
-                                                ? 'text-lg'
+                                                ? 'text-xl'
                                                 : index === firstVisibleIndex + 2
-                                                    ? 'text-xl' // Apply a different size for the last description (you can use any size class you want)
-                                                    : 'text-base'
+                                                    ? 'text-sm' // Apply a different size for the last description (you can use any size class you want)
+                                                    : 'text-sm'
                                                 }`}
                                         >
                                             {item.attributes.description}
@@ -80,7 +76,6 @@ const Slider = ({ image }) => {
                             ))}
                     </div>
                     <BsChevronCompactRight onClick={handleNext} size={50} />
-
                 </div>
             </div>
         </>

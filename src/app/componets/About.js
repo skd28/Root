@@ -1,5 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+
 
 const data1 = {
     "data": [
@@ -48,12 +50,12 @@ function About() {
 
     return (
         <>
-            <div className='bg-black py-16 px-16'>
+            {/* <div className='bg-black py-16 px-16'>
                 <div className='text-4xl  '>
                     <ul className='text-white '>
                         <li>{services && services.Name}</li>
-                        <li className='pt-3'>
-                            <img src={`/Image/Line 20.png`} alt="Image Description" />
+                        <li className='mt-3'>
+                            <Image src="/Image/Line 20.png" width={100} height={200} alt="Image Description" />
                         </li>
                     </ul>
                 </div>
@@ -63,6 +65,25 @@ function About() {
                     </div>
                     <div className='text-white w-96 text-justify'>
                         <p >{services && services.description}</p>
+                    </div>
+                </div>
+            </div> */}
+
+            <div className='bg-black py-16 px-6 md:px-16'>
+                <div className='text-4xl text-white'>
+                    <ul>
+                        <li>{services && services.Name}</li>
+                        <li className='mt-3'>
+                            <Image src="/Image/Line 20.png" width={100} height={200} alt="Image Description" />
+                        </li>
+                    </ul>
+                </div>
+                <div className='flex flex-col md:flex-row items-center md:px-10'>
+                    <div className='border border-solid border-gray-300 m-14'>
+                        <img src={`/Image/Frame 38.png`} alt="Image Description" />
+                    </div>
+                    <div className='text-white mt-6 md:mt-0 md:w-96 md:text-justify'>
+                        <p>{services && services.description}</p>
                     </div>
                 </div>
             </div>

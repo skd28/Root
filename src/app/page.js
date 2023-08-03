@@ -30,18 +30,18 @@ export default function Home() {
   return (
     <>
 
-      <Navbar />
+      {/* <Navbar /> */}
       {/* First Page */}
 
 
-      <About />
+      {/* <About /> */}
       {/* Second Page */}
 
 
       <Solutions />
       {/* Third Page */}
 
-      <Our_Soution />
+      {/* <Our_Soution /> */}
       {/* Third First Page */}
 
 
@@ -52,7 +52,7 @@ export default function Home() {
       {/* Fourth First page */}
 
 
-      <Our_Development />
+      {/* <Our_Development /> */}
       {/* Fifth Page */}
 
 
@@ -63,8 +63,7 @@ export default function Home() {
       <Our_Usp />
       {/* Seventh Page*/}
 
-
-      <Footer />
+      {/* <Footer /> */}
       {/* Eight Page */}
 
     </>
