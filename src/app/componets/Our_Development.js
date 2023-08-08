@@ -1,6 +1,32 @@
-import React from 'react'
+"use client"
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+
+
+
+
 
 function Our_Development() {
+    const [services, setServices] = useState(null);
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+            try {
+                const response = await fetch('https://root-blogsite.onrender.com/api/our-development-starting');
+                const data1 = await response.json();
+                console.log(data1);
+                setServices(data1.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+
     return (
         <>
             <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat "

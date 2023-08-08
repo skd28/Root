@@ -6,14 +6,14 @@ const Navbar = () => {
         <>
             <nav >
 
-                <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat  py-40"
+                <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat "
                     style={{
                         backgroundImage: 'url("/Image/image 18.png")',
                     }}>
-                    <div className='ps-32'>
+                    <div className='py-10 ps-10'>
                         <img src="/Image/Logo.png" alt="Image Description" />
                     </div>
-                    <div className='pt-64 ps-32'>
+                    <div className='pt-64 ps-10'>
 
                         <div>
                             <ul className='text-white'>
@@ -28,8 +28,8 @@ const Navbar = () => {
                                         We can make technology accessible!
                                     </p>
                                 </li>
-                                <div className='mt-24 '>
-                                    <button className='text-white  rounded-full  border-2 px-4 py-4'>GET QUOTE</button>
+                                <div className='pt-18 py-10'>
+                                    <button className='text-white  rounded-full  border-2 px-2 py-2 text-sm'>GET QUOTE</button>
                                 </div>
 
                             </ul>

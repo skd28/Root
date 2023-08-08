@@ -69,8 +69,8 @@ function Footer() {
         <>
             {/* Test My Code  */}
 
-            <div className='bg-custom-blue'>
-                <div className='text-white text-4xl pt-52 pl-32'>
+            <div className='bg-custom-blue '>
+                <div className='text-white text-4xl pt-14 pl-20 pb-10'>
                     <h1 className='text-white'>
                         <a className=''>Services</a>
                         <div className='pt-3'>
@@ -78,23 +78,23 @@ function Footer() {
                         </div>
                     </h1>
                 </div>
-                <div className='text-center text-white pt-10'>
+                <div className='text-center text-white pt-10 pb-20 '>
                     {use.map(item => (
                         <div key={item.id}>
-                            <h3 className='font-bold py-5'>{item.Name}</h3>
-                            <div className='text-center justify-center py-5 flex flex-col'>
-                                <p className='px-80'>{item.Description}</p>
+                            <h3 className='font-semibold py-5 text-base'>{item.Name}</h3>
+                            <div className='text-center justify-center  flex flex-col'>
+                                <p className='px-80 text-sm'>{item.Description}</p>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <footer className='bg-black py-5 px-10'>
+                <footer className='bg-black py-4 px-10  drop-shadow-2xl '>
                     <div className='sm:flex sm:justify-between'>
-                        <p className='text-white'>
+                        <p className='text-white text-xs'>
                             Copyright © 2023 Root Technologies - All Rights Reserved.
                         </p>
-                        <ul className='mt-8 flex flex-wrap justify-start gap-4  sm:mt-0 lg:justify-end'>
+                        <ul className='mt-8 flex flex-wrap justify-start gap-4  sm:mt-0 lg:justify-end text-xs'>
                             <li>
                                 <a href='#' className='text-white transition hover:opacity-75'>
                                     Powered by <a className='underline underline-offset-8'>GoDaddy</a>

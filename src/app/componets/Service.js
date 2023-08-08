@@ -1,8 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-// import { useRouter } from 'next/router';
+
 import { useRouter } from 'next/navigation'
-import Link from 'next/link';
+
 const data1 = {
     "data": [
         {
@@ -185,25 +185,20 @@ function Service() {
         fetchData();
     }, []);
 
-    const handleKnowMoreClick = () => {
-        // Step 3: Handle button click and navigate to the "Our_Service" page
-        router.push('/Our_Service');
-    };
-
     return (
         <>
-            <div className='bg-sky-700'>
+            <div className='bg-[#164179] py-5 pb-8'>
                 <ul>
                     <li className='text-4xl text-white font-medium  pt-11 space-x-28 ps-32'>
                         We Offer A Wide Variety Of Security Audit Services
                     </li>
-                    <li className='py-2 ps-32'>
+                    <li className='mt-3 ps-32'>
                         <img src="/Image/Line 20.png" alt="Image Description" className='' />
                     </li>
                 </ul>
             </div>
 
-            <div className=' bg-[#0B2341] py-16'
+            <div className=' bg-[#0B2341] py-10 pb-5'
                 style={{
                     justifyContent: 'center',
                     display: 'flex',
@@ -214,18 +209,18 @@ function Service() {
                     <div key={service.id} className='w-1/3 p-4 text-white text-center items-start'
                     >
                         <div>
-                            <h2 className='text-xl justify-start'>{service.attributes.name}</h2>
+                            <h2 className=' justify-start text-base w-10 ' >{service.attributes.name}</h2>
                         </div>
-                        <div className='pt-16 text-justify '>
+                        <div className='pt-16 text-justify text-xs px-5'>
                             <p>{service.attributes.description}</p>
                         </div>
                     </div>
                 ))}
-                <div className='text-white text-right mb-10'
+                <div className='text-white text-right mb-10 bg-[#164179] rounded  mt-10'
 
                 >
-                    <button className='bg-sky-700 p-2' onClick={() => router.push('Our_Service')}>KNOW MORE</button>
-                    <Link href="Our_Service">Back to home</Link>
+                    <button className=' p-2 text-xs' onClick={() => router.push('our_services')}>KNOW MORE</button>
+
                 </div>
             </div>
 
