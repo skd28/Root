@@ -18,9 +18,9 @@ import Our_Usp from "./componets/Our_Usp"
 
 import Footer from "./componets/Footer";
 
-import Second from "./componets/Second";
 
-import Devlopment from "./componets/Devlopment"
+
+
 
 
 
@@ -33,40 +33,40 @@ export default function Home() {
     <>
 
       {/* <Second /> */}
-      {/* <Navbar /> */}
+      <Navbar />
       {/* First Page */}
 
 
-      {/* <About /> */}
+      <About />
       {/* Second Page */}
 
 
       <Solutions />
       {/* Third Page */}
 
-      {/* <Our_Soution /> */}
+      <Our_Soution />
       {/* Third First Page */}
 
 
-      {/* <Service /> */}
+      <Service />
       {/*  Fourth Page*/}
 
-      {/* <Our_Service /> */}
+      <Our_Service />
       {/* Fourth First page */}
 
 
-      {/* <Our_Development /> */}
+      <Our_Development />
       {/* Fifth Page */}
       {/* <Devlopment /> */}
 
-      {/* <Growing_Values /> */}
+      <Growing_Values />
       {/* Six Page */}
 
 
-      {/* <Our_Usp /> */}
+      <Our_Usp />
       {/* Seventh Page*/}
 
-      {/* <Footer /> */}
+      <Footer />
       {/* Eight Page */}
 
 

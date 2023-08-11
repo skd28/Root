@@ -16,7 +16,7 @@ function Home() {
         const fetchData = async () => {
 
             try {
-                const response = await fetch('https://root-blogsite.onrender.com/api/our-developments/');
+                const response = await fetch('https://root-blogsite.onrender.com/api/our-development-2nds');
                 const data1 = await response.json();
                 console.log(data1);
                 setServices(data1.data);
@@ -41,13 +41,14 @@ function Home() {
         <>
             <div className='bg-[#0B2341]'>
                 <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-36 "
-                    style={{ backgroundImage: `url(${services && services[0].attributes.backgorudImglinkTop})` }}>
+                    style={{ backgroundImage: `url(${services && services[0].attributes.backgroundimgtopLink})` }}>
                     <div className=' text-center  py-96 text-3xl  text-white'>
-                        {/* <h1>Our Devlopment</h1>
+
+                        <h1>Our Devlopment</h1>
 
                         <div className='ps-96 pt-3'>
                             <img src="/Image/Line 20.png" alt="Image Description" className='items-center' />
-                        </div> */}
+                        </div>
                     </div>
                 </div>
 
@@ -56,8 +57,8 @@ function Home() {
                 <div className=' grid grid-flow-col gap-x-10 '>
                     <div className='m-6'>
 
-                        {services && <img src={services[0].attributes.GIFlink} alt="Image Description" />}
-                        {/* <img src="/Image/Deve1.png" alt="Image Description" className='items-center m-10' className='items-center m-10' /> */}
+                        {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='items-center m-20' />}
+                        {/* <img src="/Image/Deve1.png" alt="Image Description" className='items-center m-10' /> */}
                     </div>
                     <div className='grid grid-flow-col  mt-16'>
                         <div className='grid grid-flow-row text-white  '>
@@ -65,12 +66,12 @@ function Home() {
                                 {services &&
                                     services.slice(currentSlide, currentSlide + 3).map((item, index) => (
                                         <div key={item.id}>
-                                            <button className='bg-[#8069EE] m-2 rounded-xl p-3 px-12 justify-center items-center text-center '>
-                                                {item.attributes.name}
-                                            </button>
+                                            <span className='bg-[#8069EE] m-2 rounded-xl p-2 px-12 justify-center items-center text-center '>
+                                                {item.attributes.subtitle2}
+                                            </span>
 
-                                            <p className=' bg-[#8069EE] m-2 rounded  justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5' >
-                                                {item.attributes.description}  </p>
+                                            <p className=' bg-[#8069EE] m-2 rounded  justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
+                                                {item.attributes.Description}  </p>
                                         </div>
                                     ))}
                             </div>

@@ -7,15 +7,14 @@ const Slider = ({ image }) => {
     const [firstVisibleIndex, setFirstVisibleIndex] = useState(0);
 
 
-    const handlePrev = () => {
 
+
+    const handlePrev = () => {
         setFirstVisibleIndex((prevIndex) => Math.max(prevIndex - 1, 0));
     };
 
     const handleNext = () => {
-
-        const lastVisibleIndex = firstVisibleIndex + 2;
-        if (image && lastVisibleIndex < image.length - 1) {
+        if (image && firstVisibleIndex < image.length - 3) {
             setFirstVisibleIndex((prevIndex) => prevIndex + 1);
         }
     };
@@ -36,7 +35,8 @@ const Slider = ({ image }) => {
                 </div>
 
                 <div className='flex space-x-2 overflow-hidden items-center bg-cover  text-white'>
-                    <BsChevronCompactLeft onClick={handlePrev} size={50} />
+                    <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
+                    {/* <BsChevronCompactLeft onClick={handlePrev} size={50} /> */}
                     <div className="flex space-x-2 overflow-hidden items-center bg-cover  text-white px-20">
                         {image &&
                             image.slice(firstVisibleIndex, firstVisibleIndex + 3).map((item, index) => (
@@ -44,18 +44,19 @@ const Slider = ({ image }) => {
                                     <button className='bg-[#8069EE] m-2 rounded-xl   w-5/6 h-10  justify-center items-center text-center '>
                                         {item.attributes.name}
                                     </button>
-                                    <img
-                                        src={item.attributes.Imglink} />
+                                    <img src={item.attributes.Imglink} className='w-1/2' />
                                     <p className=' bg-[#8069EE] m-2 rounded  justify-center items-center text-justify  w-5/6 h-56 p-5 py-3 mb-5' >
                                         {item.attributes.description}
                                         <br />
-                                        <button className={`index==firstVisibleIndex+1`}>Summit</button>
+                                        {(index == 1) && <button >Summit</button>}
+
                                     </p>
 
                                 </div>
                             ))}
                     </div>
-                    <BsChevronCompactRight onClick={handleNext} size={50} />
+                    <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
+                    {/* <BsChevronCompactRight onClick={handleNext} size={50} /> */}
                 </div>
             </div>
         </>
@@ -63,6 +64,34 @@ const Slider = ({ image }) => {
 };
 
 export default Slider
+
+
+
+
+  // const handlePrev = () => {
+
+    //     setFirstVisibleIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    // };
+
+    // const handleNext = () => {
+
+    //     const lastVisibleIndex = firstVisibleIndex + 2;
+    //     if (image && lastVisibleIndex < image.length - 1) {
+    //         setFirstVisibleIndex((prevIndex) => prevIndex + 1);
+    //     }
+    // };
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -12,10 +12,10 @@ function About() {
         const fetchData = async () => {
             // setServices(data1.data[0].attributes);
             try {
-                const response = await fetch('https://root-blogsite.onrender.com/api/about-us');
+                const response = await fetch('https://root-blogsite.onrender.com/api/about-uses');
                 const data1 = await response.json();
                 console.log(data1);
-                setServices(data1.data.attributes);
+                setServices(data1.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -26,30 +26,46 @@ function About() {
 
     return (
         <>
+            <div className='bg-black '>
 
-            {services && <div className='bg-black py-16 px-6 md:px-16'>
 
-                <div className='text-4xl text-white'>
+
+
+                <div className='text-4xl text-white py-16 px-6 md:px-16'>
                     <ul>
                         <li>
-                            {services.name}
+                            {services && services[0].attributes.Name}
                         </li>
                         <li className='mt-3'>
                             <Image src="/Image/Line 20.png" width={100} height={200} alt="Image Description" />
                         </li>
                     </ul>
                 </div>
-                <div className='flex flex-col md:flex-row items-center md:px-10'>
+
+
+                <div className='grid grid-flow-col  gap-10 items-center mx-20'>
                     <div className='border border-solid border-gray-300 '>
-                        <Image src={services.imglink} alt="Image Description" width={600} height={800} />
+                        {services && (
+                            <img
+                                src={services[0].attributes.ImgLink}
+                                alt="Image Description"
+                                className="items-center w-60 h-60 "
+                            />
+                        )}
+                        {/* <Image src={services.ImgLink} alt="Image Description" width={600} height={800} /> */}
                     </div>
-                    <div className='text-white  md:mt-0 md:w-1/2 md:text-justify'>
-                        <p>{services.description}</p>
+                    <div className='text-white text-sm'>
+
+                        <p >
+                            {services && services[0].attributes.Description}
+                        </p>
+                        {/* <p>{services.Description}</p> */}
                     </div>
                 </div>
+
             </div>
 
-            }
+
 
         </>
     );

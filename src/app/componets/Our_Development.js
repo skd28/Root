@@ -14,7 +14,7 @@ function Our_Development() {
         const fetchData = async () => {
 
             try {
-                const response = await fetch('https://root-blogsite.onrender.com/api/our-development-starting');
+                const response = await fetch('https://root-blogsite.onrender.com/api/our-developments');
                 const data1 = await response.json();
                 console.log(data1);
                 setServices(data1.data);
