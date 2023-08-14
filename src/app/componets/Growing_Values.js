@@ -117,7 +117,9 @@ function Growing_Values() {
                             </p>
                         )}
 
-                        <p className="mt-28 ms-7">
+                        <p className="mt-28 ms-7" style={{
+                            border: "2px solid blue",
+                        }}>
                             {services && (
                                 <img src={services[1].attributes.GIFlink} alt="Image Description"
                                     className="items-center w-80 h-80 " />

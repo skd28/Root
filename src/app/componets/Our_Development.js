@@ -56,12 +56,20 @@ function Our_Development() {
 
                     </div>
                 </div>
+            </div >
 
-                {/* Content Part */}
-                <div className='' >
+            <div className='grid grid-flow-col bg-custom-blue' style={{
+                // border: '2px solid black',
+            }}>
+                {/* Left */}
+                <div className=' relative' style={{
+                    // border: '2px solid green',
+                }}>
 
-                    <div className='bg-custom-blue relative' style={{ width: '50%', float: "left", height: '2500', border: "2px solid blue", }}>
-
+                    {/* Upper */}
+                    <div style={{
+                        // border: '2px solid green',
+                    }}>
                         <div className='bg-[#0B2341] text-xs  ms-28  mt-16  text-center justify-center items-center  p-7 w-[537.1329956054688px] h-[120px]   ' style={{
 
                             borderRadius: '14px',
@@ -77,53 +85,80 @@ function Our_Development() {
                                 </p>
                             )}
                         </div>
+                    </div>
+                    {/* Lower */}
 
-                        <div className='w-52 h-10 ms-28 mt-20' style={{
-                            border: '2px solid red',
-                            // with: '60',
-                            // height: '20',
-                            // top: '4432',
-                            // left: '97',
+                    <div style={{
+                        // border: '2px solid black',
+                    }}>
+                        <p class=" h-10  text-white ms-28  mt-20 rounded-md text-center pt-1  bg-gradient-to-r from-[rgba(217, 217, 217, 0.12)] to-[rgba(217, 217, 217, 0.12)] via-[#EDE7E7]" style={{
+                            width: '220px',
+                            border: '1px solid #EDE7E7',
                         }}>
-                            <p class="w-40 h-8 top-4443 left-97 text-white  " style={{
-                                // border: '2px solid yellow',
-                            }}>
-                                {services && services[0].attributes.subtitle}
-                            </p>
-                        </div>
+                            {services && services[0].attributes.subtitle}
+                        </p>
 
-                        <div className='ms-28 mt-5' style={{
-                            width: '212.409px', height: '213.696px', top: '4486.067px', left: '96.767px', border: '0.1px solid black',
+
+                        <div className='ms-28 mt-5 rounded ' style={{
+                            border: '1px solid #EDE7E7',
+                            // border: '0.1px solid black',
+                            width: '220px', height: '205px',
+                            // top: '4486.067px', left: '96.767px',
                         }}>
-                            <p className='text-white text-sm text-justify m-5' style={{
-                                width: '170px', height: '185px', top: '4507px',
-                                left: '118px',
+                            <p className='text-white text-xs text-justify  px-5 py-2 ' style={{
+                                width: '200px', height: '200px',
+
+                                // top: '4507px',
+                                // left: '118px',
                             }}>
                                 {services && services[0].attributes.content}
                             </p>
 
                         </div>
-
-                        <h1 className='text-white'>Left Part</h1>
-                    </div>
-
-
-                    <div className='bg-custom-blue relative' style={{ width: '50%', float: 'right', height: '1000', border: "2px solid green", }}>
-
-                        <div
-                            style={{
-                                backgroundImage: `url(${services && services[0].attributes.ImgLink})`, backgroundSize: "cover", height: "200", width: "400",
-                                top: '20',
-                            }}
-                        >
-
-                        </div>
-                        <h1>Right Part</h1>
                     </div>
                 </div>
 
 
-            </div >
+
+                {/* Right */}
+                <div>
+                    <div className='mt-28  mr-28'
+                        style={{
+                            backgroundImage: `url(${services && services[0].attributes.ImgLink})`,
+                            backgroundSize: "cover",
+                            width: '530px', height: '370px',
+                            // border: "2px solid black",
+
+                        }}
+                    >
+                        <div className='pt-20 -ms-80 -mr-32'>
+                            {services && <img src={services[0].attributes.BubbleImgLink} alt='Image' />}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div className='bg-custom-blue pt-10  ps-3'>
+                <div className='px-24 pb-20'>
+                    <div className="relative ">
+                        <div className="absolute inset-0 flex items-center ms-32 " aria-hidden="true">
+                            <div className="w-full border-t border-gray-300 " />
+                        </div>
+                        <div className="relative flex items-center justify-between ">
+                            <span className="bg-custom-blue  text-base font-semibold leading-6 text-white ">Learn More</span>
+                            <button
+                                type="button"
+                                className="inline-flex items-center gap-x-4 rounded-full bg-custom-blue  py-3 text-sm font-semibold text-white shadow-sm  hover:bg-custom-blue "
+                            >
+                                <span>{'>'}</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
 
 
 
@@ -236,23 +271,23 @@ export default Our_Development
 //                     </div>
 //                 </div>
 
-//                 <div className='px-24 pb-20'>
-//                     <div className="relative ">
-//                         <div className="absolute inset-0 flex items-center" aria-hidden="true">
-//                             <div className="w-full border-t border-gray-300" />
-//                         </div>
-//                         <div className="relative flex items-center justify-between ms-15">
-//                             <span className="bg-blue-900  text-base font-semibold leading-6 text-white">Learn More</span>
-//                             <button
-//                                 type="button"
-//                                 className="inline-flex items-center gap-x-1.5 rounded-full bg-blue-900  py-1.5 text-sm font-semibold text-white shadow-sm  hover:bg-gray-50"
-//                             >
-//                                 <span>{'>'}</span>
-//                             </button>
-//                         </div>
-//                     </div>
-//                 </div>'
-//             </div >
+        //         <div className='px-24 pb-20'>
+        //             <div className="relative ">
+        //                 <div className="absolute inset-0 flex items-center" aria-hidden="true">
+        //                     <div className="w-full border-t border-gray-300" />
+        //                 </div>
+        //                 <div className="relative flex items-center justify-between ms-15">
+        //                     <span className="bg-blue-900  text-base font-semibold leading-6 text-white">Learn More</span>
+        //                     <button
+        //                         type="button"
+        //                         className="inline-flex items-center gap-x-1.5 rounded-full bg-blue-900  py-1.5 text-sm font-semibold text-white shadow-sm  hover:bg-gray-50"
+        //                     >
+        //                         <span>{'>'}</span>
+        //                     </button>
+        //                 </div>
+        //             </div>
+        //         </div>
+        //    // </div >
 
 //         </>
 //     )

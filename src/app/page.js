@@ -55,7 +55,7 @@ export default function Home() {
       {/* Fourth First page */}
 
 
-      {/* <Our_Development /> */}
+      <Our_Development />
       {/* Fifth Page */}
       {/* <Devlopment /> */}
 
