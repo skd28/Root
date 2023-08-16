@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import Image from 'next/image';
+
 
 
 
@@ -41,36 +40,54 @@ function Home() {
         <>
             <div className='bg-[#0B2341]'>
                 <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-36 "
-                    style={{ backgroundImage: `url(${services && services[0].attributes.backgroundimgtopLink})` }}>
-                    <div className=' text-center  py-96 text-3xl  text-white'>
+                    style={{ backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})` }}>
+                    <div className=' text-center  py-96 text-3xl pr-12  text-white'>
+                        <p >
+                            {services && services[0].attributes.Title}
+                        </p>
 
-                        <h1>Our Devlopment</h1>
+                        <div className="w-20 h-1 ms-80 pt-2">
+                            <div className=" bg-white w-20 h-1 rounded">
+                            </div>
 
-                        <div className='ps-96 pt-3'>
-                            <img src="/Image/Line 20.png" alt="Image Description" className='items-center' />
                         </div>
                     </div>
                 </div>
+            </div>
 
 
 
-                <div className=' grid grid-flow-col gap-x-10 '>
-                    <div className='m-6'>
+            <div className='bg-[#0B2341] py-10'>
+                <div className=' grid grid-flow-col'>
+                    <div>
+                        <div style={{
+                            backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
+                            height: '200px',
+                            width: '400px',
+                        }}>
+                            <h1 className='text-white'>Hello I am Image</h1>
+                            {/* <div className=' w-[500px] h-[400px] ps-20 mt-32'
+                                style={{
+                                    // border: '2px solid red',
+                                }}>
 
-                        {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='items-center m-20' />}
-                        {/* <img src="/Image/Deve1.png" alt="Image Description" className='items-center m-10' /> */}
+                                {services && <img src={services[0].attributes.GIFlink} alt="Image Description"
+                                    className=' w-96 h-96' />}
+                            </div> */}
+                        </div>
                     </div>
-                    <div className='grid grid-flow-col  mt-16'>
-                        <div className='grid grid-flow-row text-white  '>
+
+                    <div className='grid grid-flow-col  mt-12 ms-32'>
+                        <div className='grid grid-flow-row text-white px-16 '>
                             <div className=''>
                                 {services &&
                                     services.slice(currentSlide, currentSlide + 3).map((item, index) => (
                                         <div key={item.id}>
-                                            <span className='bg-[#8069EE] m-2 rounded-xl p-2 px-12 justify-center items-center text-center '>
+                                            <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
                                                 {item.attributes.subtitle2}
                                             </span>
 
-                                            <p className=' bg-[#8069EE] m-2 rounded  justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
+                                            <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
                                                 {item.attributes.Description}  </p>
                                         </div>
                                     ))}
@@ -84,7 +101,8 @@ function Home() {
                     </div>
 
                 </div>
-            </div >
+            </div>
+
         </>
     )
 }
@@ -101,7 +119,21 @@ export default Home
 
 
 
+//     < div className = 'mt-48 -ms-96 -mx-32 -mr-5  -me-10'
+// style = {{
+//     backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
+//         // backgroundSize: "cover",
+//         width: '970px', height: '230px',
+//             border: "2px solid black"
+//     // border: "2px solid black", BubbleImgLink  ImgLink
 
+// }}
+//                     >
+{/* <div className='pt-20 -ms-80 -mr-32'>
+                            {services && <img src={services[0].attributes.BubbleImgLink} alt='Image' />}
+                        </div> */}
+
+// </ >
 
 
 // < button className = " bg-[#EDE7E7] rounded-xl p-4" >

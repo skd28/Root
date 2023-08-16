@@ -28,40 +28,44 @@ function About() {
         <>
             <div className='bg-black '>
 
-
-
-
-                <div className='text-4xl text-white py-16 px-6 md:px-16'>
-                    <ul>
-                        <li>
-                            {services && services[0].attributes.Name}
-                        </li>
-                        <li className='mt-3'>
-                            <Image src="/Image/Line 20.png" width={100} height={200} alt="Image Description" />
-                        </li>
-                    </ul>
-                </div>
-
-
-                <div className='grid grid-flow-col  gap-10 items-center mx-20'>
-                    <div className='border border-solid border-gray-300 '>
+                <div className='text-4xl text-white'>
+                    <div className='   ps-16 py-10'>
                         {services && (
-                            <img
-                                src={services[0].attributes.ImgLink}
-                                alt="Image Description"
-                                className="items-center w-60 h-60 "
-                            />
+                            <p className="text-white text-4xl">
+                                {services && services[0].attributes.Name}
+                            </p>
                         )}
-                        {/* <Image src={services.ImgLink} alt="Image Description" width={600} height={800} /> */}
-                    </div>
-                    <div className='text-white text-sm'>
-
-                        <p >
-                            {services && services[0].attributes.Description}
-                        </p>
-                        {/* <p>{services.Description}</p> */}
+                        <div className="w-16 h-1 pt-3">
+                            <div className=" bg-white w-16 h-1 rounded">
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div className=' bg-black  py-8 '>
+                    <div className='grid grid-flow-col '>
+                        <div className='text-white w-[600px] h-[450px] ms-16 mr-5' style={{
+                            border: '2px solid gray'
+                        }}>
+                            {services && (
+                                <img
+                                    src={services[0].attributes.ImgLink}
+                                    alt="Image Description"
+                                    className='w-[532px] h-[400px]'
+                                />
+                            )}
+                        </div>
+                        <div className='text-white  w-[550px] h-[450px] '
+                            style={{
+                                // border: '2px solid red'
+                            }}>
+                            <p >
+                                {services && services[0].attributes.Description}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
@@ -99,3 +103,32 @@ export default About;
 //     //     }
 //     // }
 // };
+
+{/* <ul>
+    <li>
+        {services && services[0].attributes.Name}
+    </li>
+    <li className='mt-3'>
+        <Image src="/Image/Line 20.png" width={100} height={200} alt="Image Description" />
+    </li>
+</ul> */}
+
+{/* <div className='grid grid-flow-col  gap-10 items-center mx-20'>
+    <div className='border border-solid border-gray-300 '>
+        {services && (
+            <img
+                src={services[0].attributes.ImgLink}
+                alt="Image Description"
+                className="items-center w-60 h-60 "
+            />
+        )}
+        {/* <Image src={services.ImgLink} alt="Image Description" width={600} height={800} /> */}
+   // </div>
+    // <div className='text-white text-sm'>
+
+    //     <p >
+    //         {services && services[0].attributes.Description}
+    //     </p>
+    //     {/* <p>{services.Description}</p> */}
+    // </div>
+//</div> */}

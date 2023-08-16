@@ -41,7 +41,7 @@ export default function Home() {
       {/* Second Page */}
 
 
-      <Solutions />
+      {/* <Solutions /> */}
       {/* Third Page */}
 
       {/* <Our_Soution /> */}
@@ -51,13 +51,13 @@ export default function Home() {
       <Service />
       {/*  Fourth Page*/}
 
-      <Our_Service />
+      {/* <Our_Service /> */}
       {/* Fourth First page */}
 
 
       <Our_Development />
       {/* Fifth Page */}
-      {/* <Devlopment /> */}
+
 
       <Growing_Values />
       {/* Six Page */}

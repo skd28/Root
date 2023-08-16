@@ -91,9 +91,12 @@ function Our_Development() {
                     <div style={{
                         // border: '2px solid black',
                     }}>
-                        <p class=" h-10  text-white ms-28  mt-20 rounded-md text-center pt-1  bg-gradient-to-r from-[rgba(217, 217, 217, 0.12)] to-[rgba(217, 217, 217, 0.12)] via-[#EDE7E7]" style={{
+                        <p class=" h-10  text-white ms-28  mt-20 rounded-md text-center pt-1 " style={{
                             width: '220px',
                             border: '1px solid #EDE7E7',
+                            // backgroundColor: '0deg rgba(217, 217, 217, 0.12) rgba(217, 217, 217, 0.12)',
+                            backgroundColor: ' linear-gradient(0deg, #EDE7E7, #EDE7E7)',
+
                         }}>
                             {services && services[0].attributes.subtitle}
                         </p>
@@ -121,19 +124,20 @@ function Our_Development() {
 
 
                 {/* Right */}
-                <div>
-                    <div className='mt-28  mr-28'
+                <div className='relative' >
+                    <div className='mt-48 -ms-96 -mx-32 -mr-5  -me-10'
                         style={{
-                            backgroundImage: `url(${services && services[0].attributes.ImgLink})`,
-                            backgroundSize: "cover",
-                            width: '530px', height: '370px',
-                            // border: "2px solid black",
+                            backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
+                            // backgroundSize: "cover",
+                            width: '970px', height: '230px',
+                            border: "2px solid black"
+                            // border: "2px solid black", BubbleImgLink  ImgLink
 
                         }}
                     >
-                        <div className='pt-20 -ms-80 -mr-32'>
+                        {/* <div className='pt-20 -ms-80 -mr-32'>
                             {services && <img src={services[0].attributes.BubbleImgLink} alt='Image' />}
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>
