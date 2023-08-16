@@ -219,7 +219,7 @@ function Service() {
                 <div className='text-white text-right mb-10 bg-[#164179] rounded  mt-10'
 
                 >
-                    <button className=' p-2 text-xs' onClick={() => router.push('our_services')}>KNOW MORE</button>
+                    <button className=' p-2 text-xs cursor-pointer' onClick={() => router.push('our_services')}>KNOW MORE</button>
 
                 </div>
             </div>

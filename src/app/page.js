@@ -32,26 +32,26 @@ export default function Home() {
   return (
     <>
 
-      {/* <Second /> */}
-      {/* <Navbar /> */}
+
+      <Navbar />
       {/* First Page */}
 
 
-      {/* <About /> */}
+      <About />
       {/* Second Page */}
 
 
-      {/* <Solutions /> */}
+      <Solutions />
       {/* Third Page */}
 
       {/* <Our_Soution /> */}
       {/* Third First Page */}
 
 
-      {/* <Service /> */}
+      <Service />
       {/*  Fourth Page*/}
 
-      {/* <Our_Service /> */}
+      <Our_Service />
       {/* Fourth First page */}
 
 
@@ -63,10 +63,10 @@ export default function Home() {
       {/* Six Page */}
 
 
-      {/* <Our_Usp /> */}
+      <Our_Usp />
       {/* Seventh Page*/}
 
-      {/* <Footer /> */}
+      <Footer />
       {/* Eight Page */}
 
 

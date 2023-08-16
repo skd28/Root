@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Our_Soution() {
+function Home() {
     return (
         <>
             <div className='bg-black'>
@@ -94,43 +94,4 @@ function Our_Soution() {
         </>
     )
 }
-export default Our_Soution
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Our_Soution
+export default Home

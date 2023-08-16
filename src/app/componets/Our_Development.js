@@ -1,14 +1,14 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-
+import { useRouter } from 'next/navigation'
 
 
 
 
 function Our_Development() {
     const [services, setServices] = useState(null);
-
+    const router = useRouter();
     useEffect(() => {
 
         const fetchData = async () => {
@@ -145,7 +145,7 @@ function Our_Development() {
                             <div className="w-full border-t border-gray-300 " />
                         </div>
                         <div className="relative flex items-center justify-between ">
-                            <span className="bg-custom-blue  text-base font-semibold leading-6 text-white ">Learn More</span>
+                            <span className="bg-custom-blue  text-base font-semibold leading-6 text-white cursor-pointer " onClick={() => router.push('development')} >Learn More</span>
                             <button
                                 type="button"
                                 className="inline-flex items-center gap-x-4 rounded-full bg-custom-blue  py-3 text-sm font-semibold text-white shadow-sm  hover:bg-custom-blue "
