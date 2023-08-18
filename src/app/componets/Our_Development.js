@@ -43,7 +43,7 @@ function Our_Development() {
                             <img src={services[0].attributes.BubbleImgLink} alt="Image Description"
                                 className="w-full h-full object-cover" />
                         )}
-                        <div className=' w-80 relative bottom-28 ms-28' >
+                        <div className=' w-80 relative bottom-28 ms-20' >
                             {services && (
                                 <p className="text-white text-3xl align-middle">
                                     {services && services[0].attributes.Title}
@@ -70,7 +70,7 @@ function Our_Development() {
                     <div style={{
                         // border: '2px solid green',
                     }}>
-                        <div className='bg-[#0B2341] text-xs  ms-28  mt-16  text-center justify-center items-center  p-7 w-[537.1329956054688px] h-[120px]   ' style={{
+                        <div className='bg-[#0B2341] text-xs  ms-20  mt-16  text-center justify-center items-center  p-7 w-[537.1329956054688px] h-[120px]   ' style={{
 
                             borderRadius: '14px',
                         }}>
@@ -91,7 +91,7 @@ function Our_Development() {
                     <div style={{
                         // border: '2px solid black',
                     }}>
-                        <p class=" h-10  text-white ms-28  mt-20 rounded-md text-center pt-1 " style={{
+                        <p class=" h-10  text-white ms-20  mt-20 rounded-md text-center pt-1 " style={{
                             width: '220px',
                             border: '1px solid #EDE7E7',
                             // backgroundColor: '0deg rgba(217, 217, 217, 0.12) rgba(217, 217, 217, 0.12)',
@@ -102,7 +102,7 @@ function Our_Development() {
                         </p>
 
 
-                        <div className='ms-28 mt-5 rounded ' style={{
+                        <div className='ms-20 mt-5 rounded ' style={{
                             border: '1px solid #EDE7E7',
                             // border: '0.1px solid black',
                             width: '220px', height: '205px',
@@ -120,29 +120,28 @@ function Our_Development() {
                         </div>
                     </div>
                 </div>
-
-
-
                 {/* Right */}
                 <div className='relative' >
-                    <div className='mt-48 -ms-96 -mx-32 -mr-5  -me-10'
-                        style={{
+
+                    <div className=' w-[645px] h-[200px]  mt-44' style={{
+                        // border: "2px solid black",
+                    }}>
+                        <div className='w-[970px] h-[230px] -ms-80' style={{
                             backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
-                            // backgroundSize: "cover",
-                            width: '970px', height: '230px',
-                            border: "2px solid black"
-                            // border: "2px solid black", BubbleImgLink  ImgLink
 
-                        }}
-                    >
-                        {/* <div className='pt-20 -ms-80 -mr-32'>
-                            {services && <img src={services[0].attributes.BubbleImgLink} alt='Image' />}
-                        </div> */}
+                        }} >
+                            <div className='ps-72  relative bottom-20'>
+                                {services && <img src={services[0].attributes.ImgLink} alt='Image'
+                                    className=' ' style={{
+                                        // border: "2px solid black",
+                                    }} />}
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className='bg-custom-blue pt-10  ps-3'>
+            <div className='bg-custom-blue pt-7 ps-3'>
                 <div className='px-24 pb-20'>
                     <div className="relative ">
                         <div className="absolute inset-0 flex items-center ms-32 " aria-hidden="true">
