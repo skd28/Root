@@ -91,15 +91,25 @@ function Our_Development() {
                     <div style={{
                         // border: '2px solid black',
                     }}>
-                        <p class=" h-10  text-white ms-20  mt-20 rounded-md text-center pt-1 " style={{
+                        <p class=" h-10  text-white ms-20  mt-20 rounded-md text-center pt-1 bg-gradient-to-r from-[rgba(217, 217, 217, 0.12)] via-[#EDE7E7] to-[#EDE7E7] " style={{
                             width: '220px',
                             border: '1px solid #EDE7E7',
-                            // backgroundColor: '0deg rgba(217, 217, 217, 0.12) rgba(217, 217, 217, 0.12)',
-                            backgroundColor: ' linear-gradient(0deg, #EDE7E7, #EDE7E7)',
 
                         }}>
                             {services && services[0].attributes.subtitle}
                         </p>
+
+                        {/* <p class="h-10 text-white ms-20 mt-20 rounded-md text-center pt-1 border-1 border-[#EDE7E7] w-220"
+                            style={{
+                                background: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12)), linear-gradient(0deg, #EDE7E7, #EDE7E7)',
+                            }}
+                        >
+                            {services && services[0].attributes.subtitle}
+                        </p> */}
+
+
+
+
 
 
                         <div className='ms-20 mt-5 rounded ' style={{

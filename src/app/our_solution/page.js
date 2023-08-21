@@ -1,95 +1,96 @@
-import React from 'react'
+"use client"
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation'
 
 function Home() {
+
+    const [services, setServices] = useState(null);
+
+    const router = useRouter();
+
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+            try {
+                const response = await fetch('https://root-blogsite.onrender.com/api/solutions');
+                const data1 = await response.json();
+                console.log(data1);
+                setServices(data1.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+
+
+
     return (
         <>
-            <div className='bg-black'>
-                <ul className='text-center'>
-                    <li className='pt-36 flex items-center justify-center'>
-                        <img src="/Image/OUR SOLUTIONS.png" alt="Image Description" className='' />
-                    </li>
-                    <li className='py-5 ps-72'>
-                        <img src="/Image/Line 20.png" alt="Image Description" className='' />
-                    </li>
-                </ul>
-            </div>
+            <div className='bg-black ' >
+                <div className='pt-5 ps-5' >
+                    {services && <img src={services[0].attributes.RootLogolLnk} alt='Image not Found' />}
 
-            <div className='bg-black py-12'>
-                <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat  py-40"
-                    style={{
-                        backgroundImage: 'url("/Image/g2.png")',
-                    }}>
-                    {/* <div>
-
-                        <img src="/Image/v1.png" alt="Image Description" className='' />
-                        <img src="/Image/v2.png" alt="Image Description" className='' />
-                        <img src="/Image/v3.png" alt="Image Description" className='' />
-                    </div> */}
                 </div>
+                <div className='w-[1250px] h-[134px] flex' style={{
+                    border: '2px solid red',
+                }}>
+                    <div className="w-5 h-5 ms-5">
+                        <div className=" bg-white w-5 h-5 rounded">  </div>
+                    </div>
+                    <div className='ms-38'>
+                        {services && (
+                            <p className=" text-white text-9xl">
+                                {services && services[0].attributes.Title}
+                            </p>
+                        )}
+                    </div>
+                </div>
+
+                <div className='text-white'>
+                    {services &&
+                        services.map((item, index) => (
+
+                            <div key={item.id}>
+                                {console.log("Key:", item.id)}
+
+                                {item.id === 1 || item.id % 2 !== 0 ? (
+                                    <div className='ms-96 ps-52 mt-16' style={{
+                                        // border: '2px solid blue',
+                                    }}>
+                                        <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
+                                        <div className='text-[#856EF4] text-4xl pt-5'>
+                                            {item.attributes.SubTitle}
+                                        </div>
+                                        <p className='w-[503px] h-[123px] text-justify pt-8'>
+                                            {item.attributes.Description}
+                                        </p>
+                                    </div>
+                                ) : (
+                                    <div className='ms-20 mt-10' style={{
+                                        // border: '2px solid red',
+                                        // marginLeft: '20px'
+                                    }}>
+                                        <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
+                                        <div className='text-[#856EF4] text-4xl pt-5'>
+                                            {item.attributes.SubTitle}
+                                        </div>
+                                        <p className='w-[503px] h-[123px] text-justify pt-8 '>
+                                            {item.attributes.Description}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                </div>
+
+
             </div>
 
-            <div className='bg-black'>
-                <div>
-                    <ul className=''>
-                        <li className='flex items-center justify-center'>
-                            <img src="/Image/Line 14.png" alt="Image Description" className='' />
-                        </li>
-                        <li className=' ps-3 flex items-center justify-center'>
-                            <img src="/Image/g3.png" alt="Image Description" className='' />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className='bg-black'>
-                <div>
-                    <ul>
-                        <li>
-                            <img src="/Image/g4.png" alt="Image Description" className='' />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className='bg-black'>
-                <div>
-                    <ul>
-                        <li>
-                            <img src="/Image/g5.png" alt="Image Description" className='' />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className='bg-black'>
-                <div>
-                    <ul>
-                        <li>
-                            <img src="/Image/g6.png" alt="Image Description" className='' />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className='bg-black'>
-                <div>
-                    <ul>
-                        <li>
-                            <img src="/Image/g7.png" alt="Image Description" className='' />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className='bg-black'>
-                <div>
-                    <ul>
-                        <li>
-                            <img src="/Image/g8.png" alt="Image Description" className='' />
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
         </>
     )

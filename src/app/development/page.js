@@ -39,8 +39,8 @@ function Home() {
     return (
         <>
             <div className='bg-[#0B2341]'>
-                <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-36 "
-                    style={{ backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})` }}>
+                <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-20 "
+                    style={{ backgroundImage: `url(${services && services[0].attributes.backgroundimgtopLink})` }}>
                     <div className=' text-center  py-96 text-3xl pr-12  text-white'>
                         <p >
                             {services && services[0].attributes.Title}
@@ -57,24 +57,226 @@ function Home() {
 
 
 
-            <div className='bg-[#0B2341] py-10'>
-                <div className=' grid grid-flow-col'>
-                    <div>
-                        <div style={{
-                            backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
-                            height: '200px',
-                            width: '400px',
+            <div className='bg-[#0B2341] '>
+
+                <div className='relative  '>
+                    <div className='relative right-3/4' style={{
+                        backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
+                        height: '750px', width: '1800px',
+                        backgroundColor: "#0B234",
+                    }}>
+
+
+                        <div className='relative left-1/2 ms-14 text-white pt-32' style={{
+                            width: "69%",
+                            //  border: '2px solid red',
+
                         }}>
-                            <h1 className='text-white'>Hello I am Image</h1>
-                            {/* <div className=' w-[500px] h-[400px] ps-20 mt-32'
-                                style={{
+                            <div className='grid grid-flow-col gap-20 '>
+                                <div className='pt-44 ps-40'
+                                    style={{
+                                        //  border: '2px solid red',
+                                    }}>
+                                    {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='w-96 h-96' />}
+                                </div>
+                                <div style={{
                                     // border: '2px solid red',
                                 }}>
+                                    <div className='grid grid-flow-col mt-28 ms-16 '>
+                                        <div className='grid grid-flow-row text-white  '>
+                                            <div className=''>
+                                                {services &&
+                                                    services.slice(currentSlide, currentSlide + 3).map((item, index) => (
+                                                        <div key={item.id}>
+                                                            <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
+                                                                {item.attributes.subtitle2}
+                                                            </span>
 
-                                {services && <img src={services[0].attributes.GIFlink} alt="Image Description"
-                                    className=' w-96 h-96' />}
-                            </div> */}
+                                                            <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
+                                                                {item.attributes.Description}  </p>
+                                                        </div>
+                                                    ))}
+                                            </div>
+                                        </div>
+                                        <div className=' flex flex-col justify-center items-center text-center mr-5'>
+                                            <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
+                                            <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
+                                            <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        {/* <div className='grid grid-flow-col relative  '>
+                            <div className=' w-96 h-96'>
+                                {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='' />}
+                            </div>
+
+                            <div>
+                                <div className=' text-white w-1/2 ' style={{
+                                    // width: '35%',
+                                    // float: 'right',
+                                    //  height: '650px',
+                                }}>
+                                    <div className='grid grid-flow-col mt-28 ms-16 '>
+                                        <div className='grid grid-flow-row text-white  '>
+                                            <div className=''>
+                                                {services &&
+                                                    services.slice(currentSlide, currentSlide + 3).map((item, index) => (
+                                                        <div key={item.id}>
+                                                            <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
+                                                                {item.attributes.subtitle2}
+                                                            </span>
+
+                                                            <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
+                                                                {item.attributes.Description}  </p>
+                                                        </div>
+                                                    ))}
+                                            </div>
+                                        </div>
+                                        <div className=' flex flex-col justify-center items-center text-center mr-5'>
+                                            <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
+                                            <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
+                                            <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> */}
+
+
+                    </div>
+                </div>
+
+
+
+                <div>
+                    {/* <div className='bg-[#0B2341] text-white relative ' style={{ width: '65%', float: 'left', height: '650px', }}>
+
+                        <div className='relative  right-full bottom-28 ' style={{ backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`, height: '750px', width: '1800px', }}>
+                            {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className=' w-96 h-96' />}
+                        </div>
+                    </div> */}
+
+
+                    {/* <div className='bg-[#0B2341] text-white' style={{ width: '35%', float: 'right', height: '650px', }}>
+                        <div className='grid grid-flow-col mt-28 ms-16 '>
+                            <div className='grid grid-flow-row text-white  '>
+                                <div className=''>
+                                    {services &&
+                                        services.slice(currentSlide, currentSlide + 3).map((item, index) => (
+                                            <div key={item.id}>
+                                                <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
+                                                    {item.attributes.subtitle2}
+                                                </span>
+
+                                                <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
+                                                    {item.attributes.Description}  </p>
+                                            </div>
+                                        ))}
+                                </div>
+                            </div>
+                            <div className=' flex flex-col justify-center items-center text-center mr-5'>
+                                <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
+                                <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
+                                <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
+                            </div>
+                        </div>
+                    </div> */}
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default Home
+
+
+
+
+
+
+// GIFlink   backgorudImgbottomlink    backgorudImglinkTop
+
+
+
+
+
+// < div className = 'bg-[#0B234]' >
+//     <div>
+//         <div className='bg-[#0B2341] text-white relative ' style={{ width: '65%', float: 'left', height: '650px', }}>
+
+//             <div className='relative  right-full bottom-28 ' style={{ backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`, height: '750px', width: '1800px', }}>
+//                 {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className=' w-96 h-96' />}
+//             </div>
+//         </div>
+
+
+//         <div className='bg-[#0B2341] text-white' style={{ width: '35%', float: 'right', height: '650px', }}>
+//             <div className='grid grid-flow-col mt-28 ms-16 '>
+//                 <div className='grid grid-flow-row text-white  '>
+//                     <div className=''>
+//                         {services &&
+//                             services.slice(currentSlide, currentSlide + 3).map((item, index) => (
+//                                 <div key={item.id}>
+//                                     <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
+//                                         {item.attributes.subtitle2}
+//                                     </span>
+
+//                                     <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
+//                                         {item.attributes.Description}  </p>
+//                                 </div>
+//                             ))}
+//                     </div>
+//                 </div>
+//                 <div className=' flex flex-col justify-center items-center text-center mr-5'>
+//                     <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
+//                     <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
+//                     <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//         </ >
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* {services && <img src={services[0].attributes.GIFlink} alt="Image Description"
+                    className=' w-96 h-96' />} */}
+
+
+{/* <div className='relative  right-3/4' style={{
+                    backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
+                    height: '700px',
+                    width: '1800px',
+                }}>
+                </div> */}
+
+{/* <div className='grid grid-flow-col relative '>
+                    <div>
+                        <div className=' w-[500px] h-[400px] ps-20 mt-32'
+                            style={{
+                                // border: '2px solid red',
+                            }}>
+
+                            {services && <img src={services[0].attributes.GIFlink} alt="Image Description"
+                                className=' w-96 h-96' />}
+
+                        </div>
+
+
                     </div>
 
                     <div className='grid grid-flow-col  mt-12 ms-32'>
@@ -100,103 +302,5 @@ function Home() {
                         </div>
                     </div>
 
-                </div>
-            </div>
+                </div> */}
 
-        </>
-    )
-}
-
-export default Home
-
-
-
-
-
-
-// GIFlink   backgorudImgbottomlink    backgorudImglinkTop
-
-
-
-
-//     < div className = 'mt-48 -ms-96 -mx-32 -mr-5  -me-10'
-// style = {{
-//     backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
-//         // backgroundSize: "cover",
-//         width: '970px', height: '230px',
-//             border: "2px solid black"
-//     // border: "2px solid black", BubbleImgLink  ImgLink
-
-// }}
-//                     >
-{/* <div className='pt-20 -ms-80 -mr-32'>
-                            {services && <img src={services[0].attributes.BubbleImgLink} alt='Image' />}
-                        </div> */}
-
-// </ >
-
-
-// < button className = " bg-[#EDE7E7] rounded-xl p-4" >
-//     Custom Web Development
-//                             </ >
-// <p className='bg-[#8069EE] mr-60 p-7 rounded-xl my-5 '>Providing unique web apps and websites, guaranteeing quality and on-time delivery to match your specific requirements with 100% results.</p>
-//                         </div >
-//                         <div>
-//                             <button className=" bg-[#EDE7E7] rounded-xl p-4">
-//                                 Custom Web Development
-//                             </button>
-
-//                             <p className='bg-[#8069EE] mr-60 p-7 rounded-xl my-5 '>Empowering flexibility, Leverage customizable solutions to observe, learn, and modify content, ensuring complete control and tailored web development.</p>
-//                         </div>
-//                         <div>
-//                             <button className=" bg-[#EDE7E7] rounded-xl p-4">
-//                                 Custom Web Development
-//                             </button>
-//                             <p className='bg-[#8069EE] mr-60 p-7 rounded-xl my-5 '>Our skilled team creates user-friendly and visually appealing websites, making sure they look great and interactive to the end user.
-
-//                             </p>
-
-// < input type = "radio" name = "radioGroup" class="form-radio text-blue-500" />
-//                         <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
-//                         <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
-
-
-
-
-
-// className = 'bg-cyan-700 p-4 rounded-full justify-center m-2'
-
-
-//     < div className = "relative overflow-hidden  bg-cover bg-center bg-no-repeat "
-// style = {{
-//     backgroundImage: 'url("/Image/R1.png")',
-//                                                 }}>
-//     <button className='bg-cyan-700 rounded-full  justify-center p-4'>
-//         {item.attributes.name}
-//     </button>
-//                                             </ >
-
-//     <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat "
-//         style={{
-//             backgroundImage: 'url("/Image/R1.png")',
-//         }}>
-//         <p className='bg-cyan-800 rounded-2xl justify-center items-center text-center mx-5 mr-60 p-7 my-5  ' >
-//             {item.attributes.description}  </p>
-
-//     </div>
-
-
-{/* <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat  "
-                                                style={{
-                                                    backgroundImage: 'url("/Image/R1.png")',
-                                                }}>
-                                                <button className=''>
-                                                    {item.attributes.name}
-                                                </button>
-                                            </div>
-
-                                            <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat m-5"
-                                                style={{
-                                                    backgroundImage: 'url("/Image/R1.png")',
-                                                }}>
-                                            </div> */}

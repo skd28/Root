@@ -3,11 +3,11 @@ import Navbar from "./componets/Navbar";
 import About from "./componets/About";
 
 import Solutions from "./componets/Solutions";
-import Our_Soution from "./componets/Our_Solution";
+
 
 
 import Service from "./componets/Service";
-import Our_Service from "./componets/Our_Service";
+
 
 
 import Our_Development from "./componets/Our_Development";
@@ -33,27 +33,20 @@ export default function Home() {
     <>
 
 
-      <Navbar />
+      {/* <Navbar /> */}
       {/* First Page */}
 
-
-      <About />
+      {/* 
+      <About /> */}
       {/* Second Page */}
 
 
-      <Solutions />
+      {/* <Solutions /> */}
       {/* Third Page */}
 
-      {/* <Our_Soution /> */}
-      {/* Third First Page */}
 
-
-      <Service />
+      {/* <Service /> */}
       {/*  Fourth Page*/}
-
-      {/* <Our_Service /> */}
-      {/* Fourth First page */}
-
 
       <Our_Development />
       {/* Fifth Page */}
@@ -63,10 +56,10 @@ export default function Home() {
       {/* Six Page */}
 
 
-      <Our_Usp />
+      {/* <Our_Usp /> */}
       {/* Seventh Page*/}
 
-      <Footer />
+      {/* <Footer /> */}
       {/* Eight Page */}
 
 

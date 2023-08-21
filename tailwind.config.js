@@ -23,7 +23,11 @@ module.exports = {
           ' writing-mode': 'vertical-rl',
           'text-orientation': 'upright',
         }
-      )
+      ),
+      backgroundColor: {
+        'gradient': 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12)), linear-gradient(0deg, #EDE7E7, #EDE7E7)'
+      },
+
     },
   },
   plugins: [],

@@ -28,12 +28,10 @@ function Our_Service() {
         <>
 
             <div className='bg-black ' style={{
-                border: '2px solid red',
+                // border: '2px solid red',
             }}>
-                <div className='bg-black text-white w-[500px] h-[600px]  ' style={{
-                    width: "20%",
-                    // height: "800px",
-                    float: "left",
+                <div className='bg-black text-white w-[500px] h-[600px]  relative ' style={{
+                    width: "20%", float: "left",
                     // border: '2px solid blue',
                 }}>
 
@@ -41,31 +39,24 @@ function Our_Service() {
                         <img src={service.length > 0 && service[0].attributes.Rootlogolink} alt="Image Description" />
                     </div>
 
-                    <div className=' -mr-48 ' style={{
-                        border: '2px solid blue',
+                    <div className=' relative left-28 mt-80 h-52 w-80  ' style={{// border: '2px solid blue',
                     }}>
-                        <p className='text-4xl text-white' style={{
-                            border: '2px solid blue',
+                        <p className='text-4xl text-white space-x-10' style={{
+                            // border: '2px solid blue',
                         }}>
                             {service.length > 0 && service[0].attributes.Title}
                         </p>
+                        <span>{<img src={`/Image/Line 20.png`} alt="Image Description" />}</span>
+                        <span>{'>'}</span>
                     </div>
 
                 </div>
-
-
-
                 <div style={{
-                    width: "80%",
-                    float: "right",
+                    width: "80%", float: "right",
                     // border: '2px solid blue',
                 }}>
                     <div className=''
-                    //     style={{
-                    //     backgroundImage: `url(${service.length > 0 && service[0].attributes.SecurityAuditServicesImgLink})`,
-                    //     height: '700px',
-                    //     width: '1000px',
-                    // }}
+
                     >
                         {service.length > 0 && service[0].attributes.SecurityAuditServicesImgLink && (
                             <img src={service[0].attributes.SecurityAuditServicesImgLink} alt="Image Description" className=' w-[1100px] h-[600px]'
@@ -74,14 +65,19 @@ function Our_Service() {
                                 }} />)
                         }
 
-
-
                     </div>
-
                 </div>
-
-
             </div>
+
+            <div>
+                {service.length > 0 && service[0].attributes.MiddleGifLink && (
+                    <img src={service[0].attributes.MiddleGifLink} alt="Image Description" className=' w-[1100px] h-[600px]'
+                        style={{
+                            // border: '2px solid blue',
+                        }} />)
+                }
+            </div>
+
 
 
 
@@ -95,41 +91,5 @@ export default Our_Service
 
 
 
-// {/* <div className="absolute top-10 left-40 transform -translate-x-1/2 pb-10">
-//                     {service.length > 0 && service[0].attributes.Rootlogolink &&
-//                         (
-//                             <img src={service[0].attributes.Rootlogolink} alt="Image Description" />
-//                         )
-//                     }
-//                 </div> */}
-
-// <div
-//     className="relative overflow-hidden  bg-no-repeat py-56 bg-balck ms-40  "
-//     style={{
-//         backgroundImage: `url(${service.length > 0 && service[0].attributes.SecurityAuditServicesImgLink})`,
-//         // border: '2px solid red',
-//     }}
-// >
-//     {/* <div className="absolute top-10 left-40 transform -translate-x-1/2 pb-10">
-//                         {service.length > 0 && service[0].attributes.Rootlogolink &&
-//                             (
-//                                 <img src={service[0].attributes.Rootlogolink} alt="Image Description" />
-//                             )
-//                         }
-//                     </div> */}
-//     {/* <div className=' mx-32 mt-40 text-white'>
-//                         {service.length > 0 && service[0].attributes.Title
-
-//                         }
-//                     </div> */}
-// </div>
 
 
-
-{/* {service.length > 0 && service[0].attributes.SecurityAuditServicesImgLink && (
-                            <img src={service[0].attributes.SecurityAuditServicesImgLink} alt="Image Description" className=' w-[1100px] h-[600px]'
-                                style={{
-                                    // border: '2px solid blue',
-                                }} />
-                        )
-                        } */}
