@@ -33,19 +33,19 @@ export default function Home() {
     <>
 
 
-      {/* <Navbar /> */}
+      <Navbar />
       {/* First Page */}
 
-      {/* 
-      <About /> */}
+
+      <About />
       {/* Second Page */}
 
 
-      {/* <Solutions /> */}
+      <Solutions />
       {/* Third Page */}
 
 
-      {/* <Service /> */}
+      <Service />
       {/*  Fourth Page*/}
 
       <Our_Development />
@@ -56,10 +56,10 @@ export default function Home() {
       {/* Six Page */}
 
 
-      {/* <Our_Usp /> */}
+      <Our_Usp />
       {/* Seventh Page*/}
 
-      {/* <Footer /> */}
+      <Footer />
       {/* Eight Page */}
 
 
