@@ -36,13 +36,13 @@ function Home() {
                     {services && <img src={services[0].attributes.RootLogolLnk} alt='Image not Found' />}
 
                 </div>
-                <div className='w-[1250px] h-[134px] flex' style={{
-                    border: '2px solid red',
+                <div className='w-[1250px] h-[134px] flex pt-8' style={{
+                    // border: '2px solid red',
                 }}>
-                    <div className="w-5 h-5 ms-5">
-                        <div className=" bg-white w-5 h-5 rounded">  </div>
+                    <div className="w-1 h-32 ps-10">
+                        <div className=" bg-white w-1 h-32 rounded">  </div>
                     </div>
-                    <div className='ms-38'>
+                    <div className='ps-32'>
                         {services && (
                             <p className=" text-white text-9xl">
                                 {services && services[0].attributes.Title}
@@ -50,13 +50,16 @@ function Home() {
                         )}
                     </div>
                 </div>
+                {/* <div className='bg-black '>
+                    {services && <img src={services[0].attributes.HiderGifLink} alt='Image not Found' />}
+                </div> */}
 
                 <div className='text-white'>
                     {services &&
                         services.map((item, index) => (
 
                             <div key={item.id}>
-                                {console.log("Key:", item.id)}
+                                {/* //  {console.log("Key:", item.id)} */}
 
                                 {item.id === 1 || item.id % 2 !== 0 ? (
                                     <div className='ms-96 ps-52 mt-16' style={{
@@ -87,8 +90,11 @@ function Home() {
                             </div>
                         ))}
                 </div>
-
-
+                <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right' style={{
+                    // border: '2px solid red',
+                }}>
+                    <span class="text-3xl" onClick={() => router.push('solution')}  >{'←'}</span>
+                </div>
             </div>
 
 

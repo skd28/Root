@@ -18,6 +18,8 @@ import Our_Usp from "./componets/Our_Usp"
 
 import Footer from "./componets/Footer";
 
+import try_solution from "./solution/page"
+
 
 
 
@@ -42,6 +44,7 @@ export default function Home() {
 
 
       <Solutions />
+
       {/* Third Page */}
 
 

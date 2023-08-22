@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-function Home() {
+function try_solution() {
 
 
     const [services, setServices] = useState(null);
@@ -12,7 +12,7 @@ function Home() {
         const fetchData = async () => {
 
             try {
-                const response = await fetch('https://root-blogsite.onrender.com/api/solutins/');
+                const response = await fetch('https://root-blogsite.onrender.com/api/solutions');
                 const data1 = await response.json();
                 console.log(data1);
                 setServices(data1.data);
@@ -109,7 +109,7 @@ function Home() {
     )
 }
 
-export default Home
+export default try_solution
 
 
 

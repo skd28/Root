@@ -38,7 +38,7 @@ function Our_Usp() {
                 </div>
             </div>
             <div className='bg-custom-blue py-5'>
-                <div className='bg-[#0B2341] w-[1280px]  h-[419px] left-[5864px] text-center justify-start items-center '>
+                <div className='bg-[#0B2341] w-[1258px]  h-[419px] left-[5864px] text-center justify-start items-center '>
                     <div className='grid grid-flow-col text-center justify-start items-center '>
 
                         <div className='text-white ms-16'>
