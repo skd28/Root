@@ -88,11 +88,15 @@ function Home() {
                                                 {services &&
                                                     services.slice(currentSlide, currentSlide + 3).map((item, index) => (
                                                         <div key={item.id}>
-                                                            <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
+                                                            <span className='bg-[#8069EE] m-2 rounded-2xl text-xs  p-2 px-12 justify-center items-center text-center'
+                                                            >
                                                                 {item.attributes.subtitle2}
                                                             </span>
 
-                                                            <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
+                                                            <p className=' bg-[#8069EE] m-2 rounded-2xl   justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5'
+                                                                style={{
+                                                                    fontSize: '11px'
+                                                                }} >
                                                                 {item.attributes.Description}  </p>
                                                         </div>
                                                     ))}

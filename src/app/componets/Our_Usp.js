@@ -25,7 +25,7 @@ function Our_Usp() {
     return (
         <>
             <div className=' bg-custom-blue'>
-                <div className=' bg-custom-blue  ps-16 py-14 '>
+                <div className=' bg-custom-blue  ps-10 py-14 '>
                     {services && (
                         <p className="text-white text-4xl">
                             {services && services[0].attributes.Name}
@@ -43,12 +43,12 @@ function Our_Usp() {
 
                         <div className='text-white ms-16'>
                             <div className='grid grid-flow-row'>
-                                <span className='bg-custom-blue rounded-xl h-9 w-[290px] text-center my-2 text-lg space-x-3 ' style={{ border: ' 2px solid black', }}> {services && services[0].attributes.Title1}</span>
-                                <span className='bg-custom-blue rounded-xl h-9 w-[400px] text-center  my-2 space-x-3 text-lg' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title2}</span>
-                                <span className='bg-custom-blue rounded-xl h-9 w-[240px] text-center my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title3}</span>
-                                <span className='bg-custom-blue rounded-xl h-9 w-[270px] text-center  my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title4}</span>
-                                <span className='bg-custom-blue rounded-xl h-9 w-[280px] text-center my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title5}</span>
-                                <span className='bg-custom-blue rounded-xl h-9 w-[540px] text-center  my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title6}</span>
+                                <span className='bg-custom-blue rounded-2xl h-9 w-[290px] text-center my-2 text-lg space-x-3 ' style={{ border: ' 2px solid black', }}> {services && services[0].attributes.Title1}</span>
+                                <span className='bg-custom-blue rounded-2xl h-9 w-[400px] text-center  my-2 space-x-3 text-lg' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title2}</span>
+                                <span className='bg-custom-blue rounded-2xl h-9 w-[240px] text-center my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title3}</span>
+                                <span className='bg-custom-blue rounded-2xl h-9 w-[270px] text-center  my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title4}</span>
+                                <span className='bg-custom-blue rounded-2xl h-9 w-[280px] text-center my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title5}</span>
+                                <span className='bg-custom-blue rounded-2xl h-9 w-[540px] text-center  my-2 space-x-3 text-lg ' style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title6}</span>
                             </div>
 
                         </div>

@@ -30,15 +30,17 @@ function Our_Development() {
     return (
         <>
 
-            <div className='bg-custom-blue'>
+            <div className='bg-custom-blue relative'>
 
                 {/* Heading Part */}
-                <div className='bg-[#0B2341] '>
-                    <div className='-mt-24' style={{
-                        // border: "2px solid blue",
-                        width: "100%",
-                        height: '500'
-                    }}>
+                <div className='bg-[#0B2341]  relative'>
+                    <div
+                        //  className='-mt-10'
+                        style={{
+                            // border: "2px solid blue",
+                            width: "100%",
+                            height: '500'
+                        }}>
                         {services && (
                             <img src={services[0].attributes.BubbleImgLink} alt="Image Description"
                                 className="w-full h-full object-cover" />
@@ -89,39 +91,28 @@ function Our_Development() {
                     {/* Lower */}
 
                     <div style={{
-                        // border: '2px solid black',
+                        // border: '2px solid black', bg-gradient-to-r from-cyan-500 to-blue-500 
                     }}>
-                        <p class=" h-10  text-white ms-20  mt-20 rounded-md text-center pt-1 bg-gradient-to-r from-[rgba(217, 217, 217, 0.12)] via-[#EDE7E7] to-[#EDE7E7] " style={{
+                        <p class=" h-10  text-white ms-20  mt-20 rounded-2xl text-center pt-1  bg-gradient-to-r from-indigo-500  via-blue-900 via-yellow-800  via-orange-500 via-green-500 to-pink-500" style={{
                             width: '220px',
                             border: '1px solid #EDE7E7',
-
+                            //   backgroundImage: 'linear-gradient(to top, var(from-cyan-500))'
                         }}>
                             {services && services[0].attributes.subtitle}
                         </p>
 
-                        {/* <p class="h-10 text-white ms-20 mt-20 rounded-md text-center pt-1 border-1 border-[#EDE7E7] w-220"
-                            style={{
-                                background: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12)), linear-gradient(0deg, #EDE7E7, #EDE7E7)',
-                            }}
-                        >
-                            {services && services[0].attributes.subtitle}
-                        </p> */}
 
 
-
-
-
-
-                        <div className='ms-20 mt-5 rounded ' style={{
+                        <div className='ms-20 mt-5 rounded-2xl ' style={{
                             border: '1px solid #EDE7E7',
                             // border: '0.1px solid black',
                             width: '220px', height: '205px',
                             // top: '4486.067px', left: '96.767px',
                         }}>
-                            <p className='text-white text-xs text-justify  px-5 py-2 ' style={{
+                            <p className='text-white text-xs text-justify  px-5 py-2  bg-gradient-to-r from-indigo-500  via-blue-900 via-yellow-800  via-orange-500 via-green-800 to-pink-500 ' style={{
                                 width: '200px', height: '200px',
 
-                                // top: '4507px',
+                                // top: '4507px', bg-gradient-to-r from-cyan-500 to-blue-500
                                 // left: '118px',
                             }}>
                                 {services && services[0].attributes.content}

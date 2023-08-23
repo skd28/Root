@@ -38,7 +38,7 @@ function About() {
             <div className='bg-black '>
 
                 <div className='text-4xl text-white'>
-                    <div className='   ps-16 py-10'>
+                    <div className='   ps-10 py-10'>
                         {services && (
                             <p className="text-white text-4xl">
                                 {services[0].attributes.Name}
@@ -71,7 +71,8 @@ function About() {
                         >
                             {services && (
                                 <p className="whitespace-pre-wrap">
-                                    {LineBreaks(services[0].attributes.Description)}
+                                    {services[0].attributes.Description}
+                                    {/* {LineBreaks(services[0].attributes.Description)} */}
                                 </p>
                             )}
                         </div>

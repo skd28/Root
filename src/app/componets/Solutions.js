@@ -39,7 +39,7 @@ function Solutions() {
     return (
         <>
             <div className='bg-[#164179] py-5'>
-                <div className='ms-20 pt-7'>
+                <div className='ps-10 pt-7'>
                     <p className='text-white text-4xl'>
                         {services && services[0].attributes.Title}
                     </p>

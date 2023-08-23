@@ -14,20 +14,18 @@ module.exports = {
       },
       colors: {
         'custom-blue': '#164179',
+        'custom-from': '#D9D9D9',
+        'custom-to': '#EDE7E7',
       },
-      backgroundImage: ({
-        'custom-gradient': 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12)), linear-gradient(0deg, #EDE7E7, #EDE7E7)',
-      }),
       writting: (
         {
           ' writing-mode': 'vertical-rl',
           'text-orientation': 'upright',
         }
       ),
-      backgroundColor: {
-        'gradient': 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12)), linear-gradient(0deg, #EDE7E7, #EDE7E7)'
+      backgroundImage: {
+        'gradient-linear': 'linear-gradient(to right, var(custom-from), var(custom-to))',
       },
-
     },
   },
   plugins: [],

@@ -70,7 +70,7 @@ function Footer() {
             {/* Test My Code  */}
 
             <div className='bg-custom-blue '>
-                <div className='text-white text-4xl pt-14 pl-20 pb-10'>
+                <div className='text-white text-4xl pt-14 ps-10 pb-10'>
                     <h1 className='text-white'>
                         <a className=''>Services</a>
                         <div className='pt-3'>
