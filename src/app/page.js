@@ -6,7 +6,7 @@ import Solutions from "./componets/Solutions";
 
 
 
-import Service from "./componets/Service";
+import Audit_Service from "./componets/Audit_Service";
 
 
 
@@ -16,9 +16,9 @@ import Growing_Values from "./componets/Growing_Values";
 
 import Our_Usp from "./componets/Our_Usp"
 
-import Footer from "./componets/Footer";
+import Services from "./componets/Services";
 
-import try_solution from "./solution/page"
+
 
 
 
@@ -48,7 +48,7 @@ export default function Home() {
       {/* Third Page */}
 
 
-      <Service />
+      <Audit_Service />
       {/*  Fourth Page*/}
 
       <Our_Development />
@@ -62,7 +62,7 @@ export default function Home() {
       <Our_Usp />
       {/* Seventh Page*/}
 
-      <Footer />
+      <Services />
       {/* Eight Page */}
 
 

@@ -35,7 +35,7 @@ function About() {
 
     return (
         <>
-            <div className='bg-black '>
+            <div className='bg-black  h-screen'>
 
                 <div className='text-4xl text-white'>
                     <div className='   ps-10 py-10'>
@@ -51,28 +51,31 @@ function About() {
                     </div>
                 </div>
 
-                <div className=' bg-black pb-5'>
+                <div className=' bg-black'>
                     <div className='grid grid-flow-col '>
-                        <div className='text-white w-[600px] h-[480px] ms-16 mr-5' style={{
+                        <div className='text-white w-[370px] h-[370px] ms-16 mr-3 ' style={{
                             border: '2px solid gray',
                         }}>
                             {services && (
                                 <img
                                     src={services[0].attributes.ImgLink}
                                     alt="Image Description"
-                                    className='w-[532px] h-[400px]'
+                                    className='w-[350px] h-[350px]'
+                                    style={{
+                                        // border: '2px solid red',
+                                    }}
                                 />
                             )}
                         </div>
-                        <div className='text-white  w-[550px] h-[480px] text-sm '
+                        <div className='text-white  w-[660px] h-[410px] text-sm '
                             style={{
-                                // border: '2px solid gray',
+                                // border: '2px solid gray',whitespace-pre-wrap
                             }}
                         >
                             {services && (
-                                <p className="whitespace-pre-wrap">
+                                <p className=" whitespace-pre-wrap text-justify">
                                     {services[0].attributes.Description}
-                                    {/* {LineBreaks(services[0].attributes.Description)} */}
+
                                 </p>
                             )}
                         </div>

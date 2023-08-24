@@ -46,7 +46,7 @@ const data1 =
 };
 // const apiEndpoint = 'Api link';
 
-function Footer() {
+function Services() {
 
     const [use, setUse] = useState([]);
 
@@ -71,12 +71,12 @@ function Footer() {
 
             <div className='bg-custom-blue '>
                 <div className='text-white text-4xl pt-14 ps-10 pb-10'>
-                    <h1 className='text-white'>
-                        <a className=''>Services</a>
+                    <div className='text-white'>
+                        <h1>Services</h1>
                         <div className='pt-3'>
                             <img src={`/Image/Line 20.png`} alt="Image Description" />
                         </div>
-                    </h1>
+                    </div>
                 </div>
                 <div className='text-center text-white pt-10 pb-20 '>
                     {use.map(item => (
@@ -89,23 +89,25 @@ function Footer() {
                     ))}
                 </div>
 
-                <footer className='bg-black py-4 px-10  drop-shadow-2xl '>
+                <div className='bg-black py-4 px-10  drop-shadow-2xl '>
                     <div className='sm:flex sm:justify-between'>
                         <p className='text-white text-xs'>
                             Copyright © 2023 Root Technologies - All Rights Reserved.
                         </p>
-                        <ul className='mt-8 flex flex-wrap justify-start gap-4  sm:mt-0 lg:justify-end text-xs'>
-                            <li>
-                                <a href='#' className='text-white transition hover:opacity-75'>
-                                    Powered by <a className='underline underline-offset-8'>GoDaddy</a>
-                                </a>
-                            </li>
-                        </ul>
+                        <div className='mt-8 flex flex-wrap justify-start gap-4  sm:mt-0 lg:justify-end text-xs text-white' >
+
+                            <span>  Powered by
+                                <a href='https://www.godaddy.com/en-in/websites/website-builder?isc=pwugc&utm_source=
+                                wsb&utm_medium=applications&utm_campaign=en-in_corp_applications_base' target="_blank" ><u>GoDaddy</u></a>
+                            </span>
+
+                        </div>
+
                     </div>
-                </footer>
+                </div>
             </div>
         </>
     )
 }
 
-export default Footer
+export default Services

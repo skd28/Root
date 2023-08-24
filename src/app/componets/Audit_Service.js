@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 import { useRouter } from 'next/navigation'
 
-function Service() {
+function Audit_Service() {
     const [service, setService] = useState([]);
     const router = useRouter();
     useEffect(() => {
@@ -86,7 +86,7 @@ function Service() {
     );
 }
 
-export default Service;
+export default Audit_Service;
 
 
 

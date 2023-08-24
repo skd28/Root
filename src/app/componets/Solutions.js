@@ -49,7 +49,7 @@ function Solutions() {
                     </div>
                 </div>
 
-                <div className='grid grid-flow-col text-white ms-8  mt-10 '>
+                <div className='grid grid-flow-col text-white ms-8  mt-5 '>
                     {/* Arrow */}
                     <div className='mt-40'>
                         <span onClick={handlePrev} className='cursor-pointer text-4xl' >{'<<'}</span>
@@ -63,7 +63,7 @@ function Solutions() {
                                         //  border: '2px solid red',
                                     }}>
                                         {/* Heading */}
-                                        <div className='bg-[#8069EE] justify-center items-center text-center rounded-full p-3 w-96 ' style={{
+                                        <div className='bg-[#8069EE] justify-center items-center text-center rounded-2xl  p-3 w-96 ' style={{
                                             //  border: '2px solid blue',
                                         }}>
                                             <span>
@@ -77,7 +77,7 @@ function Solutions() {
                                             <img src={item.attributes.TitleGifLink} className='w-96 h-52' />
                                         </div>
                                         {/* Description */}
-                                        <div className='bg-[#8069EE] justify-center items-center text-justify  rounded-md p-3 w-96 h-60' style={{
+                                        <div className='bg-[#8069EE] justify-center items-center text-justify  rounded-2xl  p-3 w-96 h-60' style={{
                                             // border: '2px solid blue'
                                         }}>
                                             <span>
@@ -100,7 +100,7 @@ function Solutions() {
                                         //  border: '2px solid red',
                                     }}>
                                         {/* Heading */}
-                                        <div className='bg-[#8069EE] justify-center items-center text-center  text-sm rounded-full p-2 w-72 '>
+                                        <div className='bg-[#8069EE] justify-center items-center text-center  text-sm rounded-2xl  p-2 w-72 '>
                                             <span>{item.attributes.SubTitle}</span>
                                         </div>
                                         {/* Image */}
@@ -109,7 +109,7 @@ function Solutions() {
                                             <img src={item.attributes.TitleGifLink} className='w-72  h-40' />
                                         </div>
                                         {/* Description */}
-                                        <div className='bg-[#8069EE] justify-center items-center text-justify text-xs  rounded-md p-2 w-72 h-40'>
+                                        <div className='bg-[#8069EE] justify-center items-center text-justify text-xs  rounded-2xl p-2 w-72 h-40'>
                                             <span> {item.attributes.Description}</span>
                                         </div>
 
@@ -123,6 +123,20 @@ function Solutions() {
                     </div>
                 </div>
 
+            </div>
+
+
+            <div className='text-white p-10 bg-[#164179]  ' style={{
+                border: '2px solid red'
+            }}>
+
+                <div className='w-96 h-96' style={{
+                    backgroundImage: 'url("/Image/Rectangle1.png")'
+                }}>
+                    <img src='/Image/Rectangle 45.png' alt='Rectangle 45' className='w-96 h-20' />
+
+                    <img src='/Image/Rectangle2.png' alt='Rectangle2' className='w-96 h-40 mt-40' />
+                </div>
             </div>
         </>
     )
