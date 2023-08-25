@@ -1,69 +1,31 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 
-const data1 =
-{
-    "data": [
-        {
-            "id": 1,
-            "attributes": {
-                "Name": "Network Support & Maintenance",
-                "Description": "We can set up and maintain your business's network, or help troubleshoot and maintain your existing network. ",
-                "createdAt": "2023-07-29T05:37:12.532Z",
-                "updatedAt": "2023-07-29T05:37:14.550Z",
-                "publishedAt": "2023-07-29T05:37:14.542Z"
-            }
-        },
-        {
-            "id": 2,
-            "attributes": {
-                "Name": "IT Support",
-                "Description": "We are available to consult with you or your staff when problems arise with your software. This service can be either remote or on-site assistance.",
-                "createdAt": "2023-07-29T05:38:09.713Z",
-                "updatedAt": "2023-07-29T05:38:12.362Z",
-                "publishedAt": "2023-07-29T05:38:12.358Z"
-            }
-        },
-        {
-            "id": 3,
-            "attributes": {
-                "Name": "Cloud Services & Data Management",
-                "Description": "We will work with you to establish the appropriate cloud size and available resources for your business. ",
-                "createdAt": "2023-07-29T05:49:22.644Z",
-                "updatedAt": "2023-07-29T05:49:24.431Z",
-                "publishedAt": "2023-07-29T05:49:24.425Z"
-            }
-        }
-    ],
-    "meta": {
-        "pagination": {
-            "page": 1,
-            "pageSize": 25,
-            "pageCount": 1,
-            "total": 3
-        }
-    }
-};
-// const apiEndpoint = 'Api link';
+
 
 function Services() {
 
-    const [use, setUse] = useState([]);
+    const [services, setServices] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            setUse(data1.data.map(item => item.attributes));
-            // try {
-            //      const response = await fetch(apiEndpoint);
-            //      const data1 = await response.json();
-            //     setServices(data1.data);
-            // } catch (error) {
-            //     console.error('Error fetching data:', error);
-            // }
+            try {
+                const token = "2a4b19af469342efca5eb50970b470c9dfe750bfbf94d0d36ff054c075ecf1a3bdd463fcf46e97acbabaa0982583ba12d14edfe76c9d8f66d021a63ef91bb2147010385a0b3cdaac30f06d3cd6c7d0ef1983066e65d17538f2d242490ff2670fa57c824124315fbae2df2a1b954b0bd6376818cb6cb1eb10972059f13a32b07b";
+                const response = await fetch('https://root-blogsite.onrender.com/api/services/', {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                const data1 = await response.json();
+                console.log(data1);
+                setServices(data1.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
         };
 
         fetchData();
-    }, [])
+    }, []);
 
     return (
         <>
@@ -72,29 +34,49 @@ function Services() {
             <div className='bg-custom-blue '>
                 <div className='text-white text-4xl pt-14 ps-10 pb-10'>
                     <div className='text-white'>
-                        <h1>Services</h1>
+                        {services && (
+                            <p className="text-white text-4xl">
+                                {services[0].attributes.Name}
+                            </p>
+                        )}
                         <div className='pt-3'>
                             <img src={`/Image/Line 20.png`} alt="Image Description" />
                         </div>
                     </div>
                 </div>
                 <div className='text-center text-white pt-10 pb-20 '>
-                    {use.map(item => (
-                        <div key={item.id}>
-                            <h3 className='font-semibold py-5 text-base'>{item.Name}</h3>
-                            <div className='text-center justify-center  flex flex-col'>
-                                <p className='px-80 text-sm'>{item.Description}</p>
+                    {services &&
+
+                        services.map(item => (
+                            <div key={item.id}>
+                                <h3 className='font-semibold py-5 text-base'>{item.attributes.Title}</h3>
+                                <div className='text-center justify-center  flex flex-col'>
+                                    <p className='px-80 text-sm'>{item.attributes.description}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))
+                    }
+
+                </div>
+                <div className='mt-8 flex flex-wrap justify-start gap-4  sm:mt-0 lg:justify-end text-xs text-white'
+                >
+
+                    <span>{services && <img src={services[0].attributes.LinkedinLogoLink} alt='imge not found' />}</span>
+                    <span>{services && <img src={services[0].attributes.TwitterLogoLink} alt='imge not found' />}</span>
+                    <span>{services && <img src={services[0].attributes.whatsaapLogoLink} alt='imge not found' />}</span>
+
                 </div>
 
                 <div className='bg-black py-4 px-10  drop-shadow-2xl '>
+
                     <div className='sm:flex sm:justify-between'>
+
                         <p className='text-white text-xs'>
                             Copyright © 2023 Root Technologies - All Rights Reserved.
                         </p>
-                        <div className='mt-8 flex flex-wrap justify-start gap-4  sm:mt-0 lg:justify-end text-xs text-white' >
+                        <div className='mt-8 flex flex-wrap justify-start gap-4  sm:mt-0 lg:justify-end text-xs text-white'
+
+                        >
 
                             <span>  Powered by
                                 <a href='https://www.godaddy.com/en-in/websites/website-builder?isc=pwugc&utm_source=

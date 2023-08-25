@@ -5,19 +5,21 @@ import Image from "next/image";
 function Growing_Values() {
     const [services, setServices] = useState(null);
 
+
     useEffect(() => {
         const fetchData = async () => {
-            // setServices(data1.data[0].attributes);
             try {
-                const response = await fetch(
-                    "https://root-blogsite.onrender.com/api/growing-with-value/"
-                );
+                const token = "2a4b19af469342efca5eb50970b470c9dfe750bfbf94d0d36ff054c075ecf1a3bdd463fcf46e97acbabaa0982583ba12d14edfe76c9d8f66d021a63ef91bb2147010385a0b3cdaac30f06d3cd6c7d0ef1983066e65d17538f2d242490ff2670fa57c824124315fbae2df2a1b954b0bd6376818cb6cb1eb10972059f13a32b07b";
+                const response = await fetch(' https://root-blogsite.onrender.com/api/growing-with-value/', {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
                 const data1 = await response.json();
                 console.log(data1);
                 setServices(data1.data);
-                // console.log(data1.data.attributes)
             } catch (error) {
-                console.error("Error fetching data:", error);
+                console.error('Error fetching data:', error);
             }
         };
 

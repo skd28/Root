@@ -10,13 +10,16 @@ function Solutions() {
 
 
     useEffect(() => {
-
         const fetchData = async () => {
-
             try {
-                const response = await fetch('https://root-blogsite.onrender.com/api/solutions');
+                const token = "2a4b19af469342efca5eb50970b470c9dfe750bfbf94d0d36ff054c075ecf1a3bdd463fcf46e97acbabaa0982583ba12d14edfe76c9d8f66d021a63ef91bb2147010385a0b3cdaac30f06d3cd6c7d0ef1983066e65d17538f2d242490ff2670fa57c824124315fbae2df2a1b954b0bd6376818cb6cb1eb10972059f13a32b07b";
+                const response = await fetch('https://root-blogsite.onrender.com/api/solutions', {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
                 const data1 = await response.json();
-                //    console.log(data1);
+                //console.log(data1);
                 setServices(data1.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -59,42 +62,72 @@ function Solutions() {
                             <div key={item.id}>
 
                                 {index == 1 ? (
-                                    <div className='w-96' style={{
-                                        //  border: '2px solid red',
-                                    }}>
-                                        {/* Heading */}
-                                        <div className='bg-[#8069EE] justify-center items-center text-center rounded-2xl  p-3 w-96 ' style={{
-                                            //  border: '2px solid blue',
-                                        }}>
-                                            <span>
-                                                {item.attributes.SubTitle}
-                                            </span>
-                                        </div>
-                                        {/* Image */}
-                                        <div className='justify-center items-center text-center' style={{
-                                            //  border: '2px solid blue',
-                                        }}>
-                                            <img src={item.attributes.TitleGifLink} className='w-96 h-52' />
-                                        </div>
-                                        {/* Description */}
-                                        <div className='bg-[#8069EE] justify-center items-center text-justify  rounded-2xl  p-3 w-96 h-60' style={{
-                                            // border: '2px solid blue'
-                                        }}>
-                                            <span>
-                                                {item.attributes.Description}
-                                            </span>
-                                            <br />
-                                            {/* Button */}
-                                            <div className='mt-3  place-items-end ps-80' style={{
-                                                // border: '2px solid blue',
-                                            }}>
-                                                <span className='cursor-pointer' onClick={() => router.push('our_solution')} >
-                                                    <img src='/Image/button.png' alt='Image not Found' className='w-10 h-10' />
-                                                </span>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        <div className='w-[374.76px] h-[495px]' style={{ backgroundImage: 'url("/Image/R1.png")' }}>
 
+                                            <div className='w-[374.76px] h-[40px] text-center pt-2' style={{ backgroundImage: 'url("/Image/R3.png")' }} >
+                                                {/* <span > {item.attributes.SubTitle} </span> */}
+
+
+                                            </div>
+
+
+                                            <div>
+                                                <img src={item.attributes.TitleGifLink} className='w-[374.76px] h-[200.px]' />
+                                            </div>
+
+
+                                            <div className='w-[374px] h-[188px]  text-justify ' style={{ backgroundImage: 'url("/Image/R2.png")' }}>
+                                                {/* <span className=' text-sm '> {item.attributes.Description}</span> */}
+
+                                                {/* <div className='place-items-end ps-80' style={{
+                                                    // border: '2px solid blue',
+                                                }}>
+                                                    <span className='cursor-pointer' onClick={() => router.push('our_solution')} >
+                                                        <img src='/Image/button.png' alt='Image not Found' className='w-8 h-8' />
+                                                    </span>
+                                                </div> */}
+                                            </div>
+
+
+                                        </div>
                                     </div>
+                                    // <div className='w-96' style={{
+                                    //     //  border: '2px solid red',
+                                    // }}>
+                                    //     {/* Heading */}
+                                    //     <div className='bg-[#8069EE] justify-center items-center text-center rounded-2xl  p-3 w-96 ' style={{
+                                    //         //  border: '2px solid blue',
+                                    //     }}>
+                                    //         <span>
+                                    //             {item.attributes.SubTitle}
+                                    //         </span>
+                                    //     </div>
+                                    //     {/* Image */}
+                                    //     <div className='justify-center items-center text-center' style={{
+                                    //         //  border: '2px solid blue',
+                                    //     }}>
+                                    //         <img src={item.attributes.TitleGifLink} className='w-96 h-52' />
+                                    //     </div>
+                                    //     {/* Description */}
+                                    //     <div className='bg-[#8069EE] justify-center items-center text-justify  rounded-2xl  p-3 w-96 h-60' style={{
+                                    //         // border: '2px solid blue'
+                                    //     }}>
+                                    //         <span>
+                                    //             {item.attributes.Description}
+                                    //         </span>
+                                    //         <br />
+                                    //         {/* Button */}
+                                    //         <div className='mt-3  place-items-end ps-80' style={{
+                                    //             // border: '2px solid blue',
+                                    //         }}>
+                                    //             <span className='cursor-pointer' onClick={() => router.push('our_solution')} >
+                                    //                 <img src='/Image/button.png' alt='Image not Found' className='w-10 h-10' />
+                                    //             </span>
+                                    //         </div>
+                                    //     </div>
+
+                                    // </div>
                                 ) : (
                                     <div className=' w-72 my-10' style={{
                                         //  border: '2px solid red',
@@ -130,12 +163,10 @@ function Solutions() {
                 border: '2px solid red'
             }}>
 
-                <div className='w-96 h-96' style={{
-                    backgroundImage: 'url("/Image/Rectangle1.png")'
-                }}>
-                    <img src='/Image/Rectangle 45.png' alt='Rectangle 45' className='w-96 h-20' />
+                <div className='w-[374.76px] h-[496.47px]' style={{ backgroundImage: 'url("/Image/R1.png")' }}  >
+                    <img src='/Image/R3.png' alt='Rectangle 45' className='w-[374.76px] h-[57.84px]' />
 
-                    <img src='/Image/Rectangle2.png' alt='Rectangle2' className='w-96 h-40 mt-40' />
+                    <img src='/Image/R2.png' alt='Rectangle2' className='w-[371px] h-[188px] mt-72' />
                 </div>
             </div>
         </>
