@@ -19,7 +19,7 @@ import Our_Usp from "./componets/Our_Usp"
 import Services from "./componets/Services";
 
 
-
+import Key_Patterns from "./componets/Key_Pattners"
 
 
 
@@ -61,6 +61,8 @@ export default function Home() {
 
       <Our_Usp />
       {/* Seventh Page*/}
+
+      <Key_Patterns />
 
       <Services />
       {/* Eight Page */}

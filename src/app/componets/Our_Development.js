@@ -98,22 +98,23 @@ function Our_Development() {
                     {/* Lower */}
 
                     <div style={{
-                        // border: '2px solid black', bg-gradient-to-r from-cyan-500 to-blue-500 
+                        // border: '2px solid black', bg-gradient-to-r from-cyan-500 to-blue-500   bg-gradient-to-l from-[#D9D9D9] to-[#6779BF]
                     }}>
-                        <p class=" h-10  text-white ms-20  mt-20 rounded-2xl text-center pt-2  bg-gradient-to-r from-[#D9D9D9] to-[#6779BF]" style={{
+                        <p class=" h-10  text-white ms-20  mt-20 rounded-2xl text-center pt-2 " style={{
                             width: '220px',
                             border: '1px solid #EDE7E7',
-                            //   backgroundImage: 'linear-gradient(to top, var(from-cyan-500))'
+                            backgroundImage: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12))',
+
                         }}>
                             {services && services[0].attributes.subtitle}
                         </p>
 
 
-
-                        <div className='ms-20 mt-5 rounded-2xl bg-gradient-to-r from-[#8069EE] to-[#6779BF] ' style={{
+                        {/* bg-gradient-to-r from-[#8069EE] form-51% via-[#8069EE] via-13% to-[#6779BF] to-0% */}
+                        <div className='ms-20 mt-5 rounded-2xl  ' style={{
                             border: '1px solid #EDE7E7',
-
                             width: '220px', height: '216px',
+                            background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
 
                         }}>
                             <p className='text-white text-xs text-justify  whitespace-pre-wrap px-2 py-4 pr-1 ' style={{

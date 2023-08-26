@@ -81,8 +81,9 @@ function Audit_Service() {
                 <button className=' p-2 text-xs cursor-pointer bg-[#164179] ' onClick={() => router.push('our_services')}>KNOW MORE</button>
             </div>
 
-            <div className=' bg-custom-blue w-full h-10' style={{
-                // border: '2px solid blue',
+            <div className=' bg-custom-blue w-full h-10   ' style={{
+                //  border: '2px solid blue',
+                boxShadow: '0 -15px 5px black',
             }}>
             </div>
 
@@ -97,5 +98,5 @@ export default Audit_Service;
 
 
 
-
+  //  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',
 

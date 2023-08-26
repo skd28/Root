@@ -1,23 +1,16 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-
-
-
-
-
+import Lotiee from 'lottie-react';
+import try_ani from './try_ani.json';
 
 function Home() {
     const [services, setServices] = useState(null);
     const [currentSlide, setCurrentSlide] = useState(0);
-
-
-
-
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const token = "2a4b19af469342efca5eb50970b470c9dfe750bfbf94d0d36ff054c075ecf1a3bdd463fcf46e97acbabaa0982583ba12d14edfe76c9d8f66d021a63ef91bb2147010385a0b3cdaac30f06d3cd6c7d0ef1983066e65d17538f2d242490ff2670fa57c824124315fbae2df2a1b954b0bd6376818cb6cb1eb10972059f13a32b07b";
-                const response = await fetch(' https://root-blogsite.onrender.com/api/our-development-2nds', {
+                const response = await fetch('https://root-blogsite.onrender.com/api/our-development-2nds', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -83,7 +76,8 @@ function Home() {
                                     style={{
                                         //  border: '2px solid red',
                                     }}>
-                                    {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='w-96 h-96' />}
+                                    <Lotiee animationData={try_ani} className='w-96 h-96' />
+                                    {/* {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='w-96 h-96' />} */}
                                 </div>
                                 <div style={{
                                     // border: '2px solid red',
@@ -94,14 +88,17 @@ function Home() {
                                                 {services &&
                                                     services.slice(currentSlide, currentSlide + 3).map((item, index) => (
                                                         <div key={item.id}>
-                                                            <span className='bg-[#8069EE] m-2 rounded-2xl text-xs  p-2 px-12 justify-center items-center text-center'
-                                                            >
+                                                            <span className=' m-2 rounded-2xl text-xs  p-2 px-12 justify-center items-center text-center'
+                                                                style={{
+                                                                    backgroundImage: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12))',
+                                                                }} >
                                                                 {item.attributes.subtitle2}
                                                             </span>
 
                                                             <p className=' bg-[#8069EE] m-2 rounded-2xl   justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5'
                                                                 style={{
-                                                                    fontSize: '11px'
+                                                                    fontSize: '11px',
+                                                                    background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
                                                                 }} >
                                                                 {item.attributes.Description}  </p>
                                                         </div>
@@ -110,93 +107,20 @@ function Home() {
                                         </div>
                                         <div className=' flex flex-col justify-center items-center text-center mr-5'>
                                             <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
-                                            <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
+                                            <input type="radio" name="radioGroup" className="form-radio text-blue-500" />
                                             <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        {/* <div className='grid grid-flow-col relative  '>
-                            <div className=' w-96 h-96'>
-                                {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='' />}
-                            </div>
-
-                            <div>
-                                <div className=' text-white w-1/2 ' style={{
-                                    // width: '35%',
-                                    // float: 'right',
-                                    //  height: '650px',
-                                }}>
-                                    <div className='grid grid-flow-col mt-28 ms-16 '>
-                                        <div className='grid grid-flow-row text-white  '>
-                                            <div className=''>
-                                                {services &&
-                                                    services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                                                        <div key={item.id}>
-                                                            <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
-                                                                {item.attributes.subtitle2}
-                                                            </span>
-
-                                                            <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
-                                                                {item.attributes.Description}  </p>
-                                                        </div>
-                                                    ))}
-                                            </div>
-                                        </div>
-                                        <div className=' flex flex-col justify-center items-center text-center mr-5'>
-                                            <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
-                                            <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
-                                            <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> */}
-
-
                     </div>
                 </div>
-
-
-
-                <div>
-                    {/* <div className='bg-[#0B2341] text-white relative ' style={{ width: '65%', float: 'left', height: '650px', }}>
-
-                        <div className='relative  right-full bottom-28 ' style={{ backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`, height: '750px', width: '1800px', }}>
-                            {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className=' w-96 h-96' />}
-                        </div>
-                    </div> */}
-
-
-                    {/* <div className='bg-[#0B2341] text-white' style={{ width: '35%', float: 'right', height: '650px', }}>
-                        <div className='grid grid-flow-col mt-28 ms-16 '>
-                            <div className='grid grid-flow-row text-white  '>
-                                <div className=''>
-                                    {services &&
-                                        services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                                            <div key={item.id}>
-                                                <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
-                                                    {item.attributes.subtitle2}
-                                                </span>
-
-                                                <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
-                                                    {item.attributes.Description}  </p>
-                                            </div>
-                                        ))}
-                                </div>
-                            </div>
-                            <div className=' flex flex-col justify-center items-center text-center mr-5'>
-                                <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
-                                <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
-                                <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
-                            </div>
-                        </div>
-                    </div> */}
-                </div>
             </div>
+
+            {/* <div className='bg-transparent'>
+
+            </div> */}
         </>
     )
 }
@@ -208,48 +132,6 @@ export default Home
 
 
 
-// GIFlink   backgorudImgbottomlink    backgorudImglinkTop
-
-
-
-
-
-// < div className = 'bg-[#0B234]' >
-//     <div>
-//         <div className='bg-[#0B2341] text-white relative ' style={{ width: '65%', float: 'left', height: '650px', }}>
-
-//             <div className='relative  right-full bottom-28 ' style={{ backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`, height: '750px', width: '1800px', }}>
-//                 {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className=' w-96 h-96' />}
-//             </div>
-//         </div>
-
-
-//         <div className='bg-[#0B2341] text-white' style={{ width: '35%', float: 'right', height: '650px', }}>
-//             <div className='grid grid-flow-col mt-28 ms-16 '>
-//                 <div className='grid grid-flow-row text-white  '>
-//                     <div className=''>
-//                         {services &&
-//                             services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-//                                 <div key={item.id}>
-//                                     <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
-//                                         {item.attributes.subtitle2}
-//                                     </span>
-
-//                                     <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
-//                                         {item.attributes.Description}  </p>
-//                                 </div>
-//                             ))}
-//                     </div>
-//                 </div>
-//                 <div className=' flex flex-col justify-center items-center text-center mr-5'>
-//                     <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
-//                     <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
-//                     <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//         </ >
 
 
 
@@ -263,54 +145,4 @@ export default Home
 
 
 
-{/* {services && <img src={services[0].attributes.GIFlink} alt="Image Description"
-                    className=' w-96 h-96' />} */}
-
-
-{/* <div className='relative  right-3/4' style={{
-                    backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
-                    height: '700px',
-                    width: '1800px',
-                }}>
-                </div> */}
-
-{/* <div className='grid grid-flow-col relative '>
-                    <div>
-                        <div className=' w-[500px] h-[400px] ps-20 mt-32'
-                            style={{
-                                // border: '2px solid red',
-                            }}>
-
-                            {services && <img src={services[0].attributes.GIFlink} alt="Image Description"
-                                className=' w-96 h-96' />}
-
-                        </div>
-
-
-                    </div>
-
-                    <div className='grid grid-flow-col  mt-12 ms-32'>
-                        <div className='grid grid-flow-row text-white px-16 '>
-                            <div className=''>
-                                {services &&
-                                    services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                                        <div key={item.id}>
-                                            <span className='bg-[#8069EE] m-2 rounded-xl text-xs p-2 px-12 justify-center items-center text-center '>
-                                                {item.attributes.subtitle2}
-                                            </span>
-
-                                            <p className=' bg-[#8069EE] m-2 rounded text-xs justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5' >
-                                                {item.attributes.Description}  </p>
-                                        </div>
-                                    ))}
-                            </div>
-                        </div>
-                        <div className=' flex flex-col justify-center items-center text-center mr-20'>
-                            <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
-                            <input type="radio" name="radioGroup" class="form-radio text-blue-500" />
-                            <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
-                        </div>
-                    </div>
-
-                </div> */}
 
