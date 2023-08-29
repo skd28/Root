@@ -40,15 +40,15 @@ function About() {
         <>
             <div className='bg-black  h-screen'>
 
-                <div className='text-4xl text-white'>
-                    <div className='   ps-10 py-10'>
+                <div className=' '>
+                    <div className='   ps-10 xl:py-10  lg:py-8 md:py-7 sm:py-4'>
                         {services && (
-                            <p className="text-white text-4xl">
+                            <p className="text-white xl:text-4xl lg:text-3xl md:text-xl sm:text-lg ">
                                 {services[0].attributes.Name}
                             </p>
                         )}
-                        <div className="w-16 h-1 pt-3">
-                            <div className=" bg-white w-16 h-1 rounded">
+                        <div className="  xl:w-16 lg:w-14 md:w-12 sm:w-10 h-1 pt-3  sm:pt-1  md:pt-2 ">
+                            <div className=" bg-white xl:w-16 lg:w-14 md:w-12 sm:w-10 h-1 rounded">
                             </div>
                         </div>
                     </div>
@@ -56,27 +56,27 @@ function About() {
 
                 <div className=' bg-black'>
                     <div className='grid grid-flow-col '>
-                        <div className='text-white w-[370px] h-[370px] ms-16 mr-3 ' style={{
+                        <div className=' xl:w-[370px] xl:h-[370px] lg:w-[320px] lg:h-[320px] md:w-[270px] md:h-[270px] sm:w-[220px] sm:h-[220px] ms-16 mr-3 ' style={{
                             border: '2px solid gray',
                         }}>
                             {services && (
                                 <img
                                     src={services[0].attributes.ImgLink}
                                     alt="Image Description"
-                                    className='w-[350px] h-[350px]'
+                                    className='xl:w-[350px] xl:h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] sm:w-[200px] sm:h-[200px]'
                                     style={{
                                         // border: '2px solid red',
                                     }}
                                 />
                             )}
                         </div>
-                        <div className='text-white  w-[660px] h-[410px] text-sm '
+                        <div className='text-white  xl:w-[660px] xl:h-[410px] lg:w-[600px] lg:h-[370px]  md:w-[550px] md:h-[320px] sm:w-[500px] sm:h-[280px]  xl:text-sm md:text-xs lg:text-xs '
                             style={{
                                 // border: '2px solid gray',whitespace-pre-wrap
                             }}
                         >
                             {services && (
-                                <p className=" whitespace-pre-wrap text-justify">
+                                <p className=" whitespace-pre-wrap text-justify text-white">
                                     {services[0].attributes.Description}
 
                                 </p>

@@ -27,6 +27,7 @@ module.exports = {
         'gradient-linear': 'linear-gradient(to right, var(custom-from), var(custom-to))',
       },
       screens: {
+        'bs': { 'min': '360px', 'max': '639px' },
         'sm': { 'min': '640px', 'max': '767px' },
         // => @media (min-width: 640px and max-width: 767px) { ... }
 
