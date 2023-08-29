@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-
+import Lotiee from 'lottie-react';
+import Usp from '../animation/usp.json';
 
 function Our_Usp() {
 
@@ -62,13 +63,14 @@ function Our_Usp() {
                             // border: ' 2px solid black',
                         }}>
 
-                            <div className='w-[481px]  h-[410px] text-center justify-start items-center top-6 ps-24 pt-10' style={{
+                            <div className='w-[481px]  h-[410px] text-center justify-start items-center top-6 ps-24 pt-5' style={{
                                 // border: ' 2px solid black',
                             }} >
-                                {services && (
+                                <Lotiee animationData={Usp} className='text-center justify-start items-center w-96 h-96  ' />
+                                {/* {services && (
                                     <img src={services[0].attributes.GIFlink} alt="Image Description" className='text-center justify-start items-center w-80 h-80 '
                                     />
-                                )}
+                                )} */}
                             </div>
                         </div>
 

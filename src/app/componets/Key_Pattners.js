@@ -27,8 +27,9 @@ function Key_Patterns() {
     return (
         <>
             <div>
-                <div className='text-4xl text-white'>
-                    <div className='   ps-10 py-10'>
+                <div className=''>
+                    Hello
+                    <div className='ps-10 py-10'>
                         {services && (
                             <p className="text-white text-4xl">
                                 {services[0].attributes.Name}
@@ -36,9 +37,11 @@ function Key_Patterns() {
                         )}
                         <div className="w-16 h-1 pt-3">
                             <div className=" bg-white w-16 h-1 rounded">
+
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </>

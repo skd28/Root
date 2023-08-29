@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 
-const Navbar = () => {
+const page = () => {
     const [services, setServices] = useState(null);
 
     useEffect(() => {
@@ -54,7 +54,7 @@ const Navbar = () => {
                                         // border: '2px solid black',
                                     }}>
                                     {services &&
-                                        <p className='xl:text-4xl xl:space-x-10 lg:text-2xl lg:space-x-5  md:text-xl md:space-x-2  sm:text-lg sm:space-x-0 '>
+                                        <p className='xl:text-4xl xl:space-x-10 lg:text-2xl lg:space-x-5  md:text-xl md:space-x-2  sm:text-lg sm:space-x-0'>
                                             {services && services[0].attributes.Title}
                                         </p>}
                                 </li>
@@ -64,7 +64,7 @@ const Navbar = () => {
                                     //  border:'2px solid black',
                                 }}>
                                     {services &&
-                                        <p className='text-sm'>
+                                        <p className='text-sm '>
                                             {services && services[0].attributes.Title2}
                                         </p>}
                                 </li>
@@ -83,9 +83,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
-
-
-
-
-
+export default page;
