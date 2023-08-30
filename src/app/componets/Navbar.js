@@ -49,7 +49,7 @@ const Navbar = () => {
                     </div>
 
 
-                    <div className='xl:pt-64 ps-10 lg:pt-64  md:pt-64  sm:pt-60 bs:pt-16 bs:ps-5 '>
+                    <div className='xl:pt-64 ps-10 lg:pt-56  md:pt-48   sm:pt-36 bs:pt-16 bs:ps-5 '>
 
                         <div>
                             <div className=''>

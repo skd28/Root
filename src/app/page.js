@@ -26,7 +26,7 @@ export default function Home() {
     <>
 
 
-      <Navbar />
+      {/* <Navbar /> */}
       {/* First Page */}
 
       {/* <About /> */}
@@ -45,12 +45,12 @@ export default function Home() {
       {/* <Our_Development /> */}
       {/* Fifth Page */}
 
-
-      {/* <Growing_Values /> */}
+      {/* 
+      <Growing_Values /> */}
       {/* Six Page */}
 
 
-      {/* <Our_Usp /> */}
+      <Our_Usp />
       {/* Seventh Page*/}
 
       {/* <Key_Patterns /> */}
