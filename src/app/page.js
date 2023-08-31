@@ -29,7 +29,7 @@ export default function Home() {
       {/* <Navbar /> */}
       {/* First Page */}
 
-      {/* <About /> */}
+      <About />
 
       {/* Second Page */}
 
@@ -50,7 +50,7 @@ export default function Home() {
       {/* Six Page */}
 
 
-      <Our_Usp />
+      {/* <Our_Usp /> */}
       {/* Seventh Page*/}
 
       {/* <Key_Patterns /> */}
