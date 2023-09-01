@@ -34,38 +34,38 @@ function About() {
             <div className='bg-black  h-screen'>
 
                 <div className=' '>
-                    <div className='   ps-10 py-10  lg:py-8 md:py-7 sm:py-4'>
+                    <div className='ps-10 py-10 sm:ps-5 sm:py-5 bs:ps-5 bs:py-5'>
                         {services && (
-                            <p className="text-white text-4xl lg:text-3xl md:text-xl sm:text-lg ">
+                            <p className="text-white text-4xl sm:text-2xl bs:text-xl ">
                                 {services[0].attributes.Name}
                             </p>
                         )}
-                        <div className="  w-16 lg:w-14 md:w-12 sm:w-10 h-1 pt-3  sm:pt-1  md:pt-2 ">
-                            <div className=" bg-white w-16 lg:w-14 md:w-12 sm:w-10 h-1 rounded">
+                        <div className="  w-16 h-1 pt-3 sm:pt-2 bs:w-10 ">
+                            <div className=" bg-white w-16  h-1 rounded bs:w-10 ">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className=' bg-black'>
-                    <div className='grid grid-flow-col '>
-                        <div className=' w-[370px] h-[370px] lg:w-[320px] lg:h-[320px] md:w-[270px] md:h-[270px] sm:w-[220px] sm:h-[220px] ms-16 mr-3 ' style={{
+                    <div className='grid grid-flow-col md:grid-flow-row md:ms-10 sm:grid-flow-row bs:grid-flow-row '>
+                        <div className=' w-[370px] h-[370px] ms-16 mr-3  md:ms-3 md:w-[670px] md:h-[400px] sm:ms-2 sm:w-[410px] sm:h-[300px] bs:ms-3 bs:w-[340px] bs:h-[380px] ' style={{
                             border: '2px solid gray',
                         }}>
                             {services && (
                                 <img
                                     src={services[0].attributes.ImgLink}
                                     alt="Image Description"
-                                    className='w-[350px] h-[350px] lg:w-[300px] lg:h-[300px] md:w-[250px] md:h-[250px] sm:w-[200px] sm:h-[200px]'
+                                    className='w-[600px] h-[360px] bs:w-[330px] bs:h[290px] '
                                     style={{
                                         // border: '2px solid red',
                                     }}
                                 />
                             )}
                         </div>
-                        <div className='text-white  w-[660px] h-[410px] lg:w-[600px] lg:h-[370px]  md:w-[550px] md:h-[320px] sm:w-[500px] sm:h-[280px]  text-sm md:text-xs lg:text-xs '
+                        <div className='text-white text-sm w-[660px] h-[390px] md:pt-10 md:text-xl md:w-[680px] md:h-[700px] sm:mt-5 sm:ms-2 sm:w-[410px] sm:h-[600px] bs:ms-3 bs:text-small bs:w-[340px] bs:h-[600px] bs:mt-10'
                             style={{
-                                // border: '2px solid gray',whitespace-pre-wrap
+                                //  border: '2px solid gray',
                             }}
                         >
                             {services && (

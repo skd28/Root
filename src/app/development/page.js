@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Lotiee from 'lottie-react';
-import try_ani from './try_ani.json';
+import animation from './animation.json';
 
 function Home() {
     const [services, setServices] = useState(null);
@@ -38,14 +38,14 @@ function Home() {
     return (
         <>
             <div className='bg-[#0B2341]'>
-                <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-20 "
+                <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-20 bs:px-10 bs:py-36 "
                     style={{ backgroundImage: `url(${services && services[0].attributes.backgroundimgtopLink})` }}>
-                    <div className=' text-center  py-96 text-3xl pr-12  text-white'>
+                    <div className=' text-center text-white py-96 text-3xl pr-12 bs:py-20 bs:text-base bs:pr-5 '>
                         <p >
                             {services && services[0].attributes.Title}
                         </p>
 
-                        <div className="w-20 h-1 ms-80 pt-2">
+                        <div className="w-20 h-1 ms-80 pt-2 bs:ms-16 bs:pt-1">
                             <div className=" bg-white w-20 h-1 rounded">
                             </div>
 
@@ -56,31 +56,38 @@ function Home() {
 
 
 
-            <div className='bg-[#0B2341] '>
+            <div className='bg-[#0B2341]' style={{
+                border: '2px solid red',
+                //  boxShadow: '-25px 25px 5px black',
+            }}>
 
-                <div className='relative  '>
-                    <div className='relative right-3/4' style={{
+                <div className='relative' style={{
+                    // border: '2px solid green',
+                    // boxShadow: '-50px 25px 5px black',
+                }}>
+                    <div className='relative right-3/4 w-[1800px] h-[800px]  bs:w[400px] bs:h[200px] bs:right-full' style={{
                         backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
-                        height: '750px', width: '1800px',
+                        // height: '750px', width: '1800px',
                         backgroundColor: "#0B234",
-                    }}>
+                        //  border: '2px solid red',
 
+                    }}>
 
                         <div className='relative left-1/2 ms-14 text-white pt-32' style={{
                             width: "69%",
-                            //  border: '2px solid red',
+                            border: '2px solid red',
 
                         }}>
                             <div className='grid grid-flow-col gap-20 '>
                                 <div className='pt-44 ps-40'
                                     style={{
-                                        //  border: '2px solid red',
+                                        border: '2px solid red',
                                     }}>
-                                    <Lotiee animationData={try_ani} className='w-96 h-96' />
-                                    {/* {services && <img src={services[0].attributes.GIFlink} alt="Image Description" className='w-96 h-96' />} */}
+                                    <Lotiee animationData={animation} className='w-96 h-96' />
+
                                 </div>
                                 <div style={{
-                                    // border: '2px solid red',
+                                    border: '2px solid red',
                                 }}>
                                     <div className='grid grid-flow-col mt-28 ms-16 '>
                                         <div className='grid grid-flow-row text-white  '>
@@ -114,13 +121,20 @@ function Home() {
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
+
                 </div>
+                {/* <div className='text-white pb-5' style={{
+                    //  background: 'url("/Image/Our_development_Footer")'
+                    backgroundImage: 'linear-gradient(180deg, #0B2341 0%, #000000 100%)',
+                }}>
+                    Hello
+                </div> */}
             </div>
 
-            {/* <div className='bg-transparent'>
 
-            </div> */}
         </>
     )
 }

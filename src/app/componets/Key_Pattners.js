@@ -1,9 +1,10 @@
 "use client"
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useRef } from 'react';
+import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 function Key_Patterns() {
 
     const [services, setServices] = useState(null);
+    const sliderRef = useRef(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -14,7 +15,11 @@ function Key_Patterns() {
                         Authorization: `Bearer ${token}`
                     }
                 });
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 const data1 = await response.json();
+
                 console.log(data1);
                 setServices(data1.data);
             } catch (error) {
@@ -24,25 +29,46 @@ function Key_Patterns() {
 
         fetchData();
     }, []);
+
+    const slideLeft = () => {
+        var slider = document.getElementById('slider');
+        slider.scrollLeft = slider.scrollLeft - 500;
+    };
+
+    const slideRight = () => {
+        var slider = document.getElementById('slider');
+        slider.scrollLeft = slider.scrollLeft + 500;
+    };
     return (
         <>
-            <div>
-                <div className=''>
-                    Hello
-                    <div className='ps-10 py-10'>
-                        {services && (
-                            <p className="text-white text-4xl">
-                                {services[0].attributes.Name}
-                            </p>
-                        )}
-                        <div className="w-16 h-1 pt-3">
-                            <div className=" bg-white w-16 h-1 rounded">
-
-                            </div>
-                        </div>
-                    </div>
-
+            <div className='bg-custom-blue h-screen'>
+                <div className='ps-10 py-10'>
+                    {services && (<p className="text-white text-4xl">
+                        {services[0].attributes.Name}
+                    </p>)}
+                    <div className="w-20 h-1 pt-3"> <div className=" bg-white w-20 h-1 rounded"> </div> </div>
                 </div>
+
+                <div className='bg-[#0B2341]' style={{
+                    //  border: '2px solid red',
+                    boxShadow: 'inset 0 -15px 5px black ,inset 0 15px 5px black ',
+                }} >
+                    <div className='relative flex items-center'>
+                        <MdChevronLeft className='opacity-50 cursor-pointer hover:opacity-100 text-white' onClick={slideLeft} size={40} />
+                        <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
+
+                            {services && services.map((item) => (
+                                <img className='w-[300px] inline-block p-10 cursor-pointer hover:scale-105 ease-in-out duration-300' src={item.attributes.companylogolink
+                                } alt='/' />
+                            ))
+                            }
+
+                        </div>
+                        <MdChevronRight className='opacity-50 cursor-pointer hover:opacity-100 text-white' onClick={slideRight} size={40} />
+
+                    </div>
+                </div>
+
             </div>
         </>
     )

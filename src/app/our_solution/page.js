@@ -30,33 +30,40 @@ function Home() {
         fetchData();
     }, []);
 
-
+    const handleBackButtonClick = () => {
+        // Use the router object to navigate back to the first page
+        if (typeof window !== 'undefined') {
+            router.push('/');
+        }
+    };
 
 
     return (
         <>
             <div className='bg-black ' >
-                <div className='pt-5 ps-5' >
+                <div className='pt-5 ps-5  py-10' style={{
+                    backgroundImage: ' linear-gradient(342.74deg, rgba(0, 21, 42, 0.43) 72.06%, rgba(255, 255, 255, 0) 145.85%)',
+                }} >
                     {services && <img src={services[0].attributes.RootLogolLnk} alt='Image not Found' />}
 
                 </div>
-                <div className='w-[1250px] h-[134px] flex pt-8' style={{
-                    // border: '2px solid red',
-                }}>
-                    <div className="w-1 h-32 ps-10">
-                        <div className=" bg-white w-1 h-32 rounded">  </div>
-                    </div>
-                    <div className='ps-32'>
-                        {services && (
-                            <p className=" text-white text-9xl">
-                                {services && services[0].attributes.Title}
+
+                <div className='flex flex-row justify-center'>
+                    {services && (
+                        <>
+                            <p className="text-white font-bold " style={{
+                                fontSize: '140px',
+                            }}>
+                                {services[0].attributes.Title.split(' ')[0]}
                             </p>
-                        )}
-                    </div>
+                            <p className="text-white ps-14" style={{
+                                fontSize: '140px',
+                            }}>
+                                {services[0].attributes.Title.split(' ').slice(1).join(' ')}
+                            </p>
+                        </>
+                    )}
                 </div>
-                {/* <div className='bg-black '>
-                    {services && <img src={services[0].attributes.HiderGifLink} alt='Image not Found' />}
-                </div> */}
 
                 <div className='text-white'>
                     {services &&
@@ -97,7 +104,7 @@ function Home() {
                 <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right' style={{
                     // border: '2px solid red',
                 }}>
-                    <span class="text-3xl" onClick={() => router.push('solution')}  >{'←'}</span>
+                    <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
                 </div>
             </div>
 

@@ -31,7 +31,7 @@ function Audit_Service() {
         <>
             <div className='bg-[#164179] py-5 pb-8'>
 
-                <div className="text-white text-4xl ps-10 ">
+                <div className="text-white text-4xl ps-10 md:text-3xl sm:text-2xl bs:text-xl ">
                     {service.length > 0 && (
                         <p className="text-white text-4xl">
                             {service[0].attributes.Name}
@@ -70,12 +70,7 @@ function Audit_Service() {
 
                     </div>
                 ))}
-                {/* <div className='text-white text-right mb-10 bg-[#164179] rounded  mt-10'
 
-                >
-                    <button className=' p-2 text-xs cursor-pointer' onClick={() => router.push('our_services')}>KNOW MORE</button>
-
-                </div> */}
             </div>
             <div className='pb-14 text-white bg-[#0B2341] text-center '>
                 <button className=' p-2 text-xs cursor-pointer bg-[#164179] ' onClick={() => router.push('our_services')}>KNOW MORE</button>
