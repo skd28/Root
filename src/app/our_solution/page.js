@@ -41,28 +41,35 @@ function Home() {
     return (
         <>
             <div className='bg-black ' >
-                <div className='pt-5 ps-5  py-10' style={{
+                <div className='pt-5 ps-5  py-10  sm:py-2 bs:py-5' style={{
                     backgroundImage: ' linear-gradient(342.74deg, rgba(0, 21, 42, 0.43) 72.06%, rgba(255, 255, 255, 0) 145.85%)',
                 }} >
                     {services && <img src={services[0].attributes.RootLogolLnk} alt='Image not Found' />}
 
                 </div>
 
-                <div className='flex flex-row justify-center'>
-                    {services && (
-                        <>
-                            <p className="text-white font-bold " style={{
-                                fontSize: '140px',
-                            }}>
-                                {services[0].attributes.Title.split(' ')[0]}
-                            </p>
-                            <p className="text-white ps-14" style={{
-                                fontSize: '140px',
-                            }}>
-                                {services[0].attributes.Title.split(' ').slice(1).join(' ')}
-                            </p>
-                        </>
-                    )}
+                <div className='flex flex-row justify-center ' >
+                    <div className='w-1 h-32 pt-10 pr-7 sm:pt-5 sm:h-12 sm:pr-3 bs:pr-3 bs:pt-3 bs:h-10'>
+                        <div className='bg-white h-32 rounded w-1 sm:h-12 bs:h-10'></div>
+                    </div>
+                    <div className='flex flex-row' style={{
+                        // backgroundImage: 'linear-gradient(90deg, #211D40 35.93%, rgba(198, 193, 243, 0.46) 87.33%)',
+                    }}>
+                        {services && (
+                            <>
+                                <p className=" font-semibold text-[#ffffff] text-[140px]  opacity-60 sm:text-[60px] bs:text-[40px]" style={{
+                                    // fontSize: '140px',
+                                }}>
+                                    {services[0].attributes.Title.split(' ')[0]}
+                                </p>
+                                <p className=" ps-14  text-[#ffffff] text-[140px]  opacity-25 sm:ps-3  sm:text-[60px] bs:text-[40px] bs:ps-5" style={{
+                                    // fontSize: '140px',
+                                }}>
+                                    {services[0].attributes.Title.split(' ').slice(1).join(' ')}
+                                </p>
+                            </>
+                        )}
+                    </div>
                 </div>
 
                 <div className='text-white'>
@@ -73,19 +80,19 @@ function Home() {
                                 {/* //  {console.log("Key:", item.id)} */}
 
                                 {item.id === 1 || item.id % 2 !== 0 ? (
-                                    <div className='ms-96 ps-52 mt-16' style={{
+                                    <div className='ms-96 ps-52 mt-16 sm:ms-4 sm:ps-1 sm:mt-32  bs:ms-4 bs:ps-1 bs:mt-32' style={{
                                         // border: '2px solid blue',
                                     }}>
                                         <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
                                         <div className='text-[#856EF4] text-4xl pt-5'>
                                             {item.attributes.SubTitle}
                                         </div>
-                                        <p className='w-[503px] h-[123px] text-justify pt-8'>
+                                        <p className='w-[503px] h-[123px] text-justify pt-8 sm:w-[330px]  sm:h-[100px] bs:w-[330px]  bs:h-[100px]'>
                                             {item.attributes.Description}
                                         </p>
                                     </div>
                                 ) : (
-                                    <div className='ms-20 mt-10' style={{
+                                    <div className='ms-20 mt-10 sm:ms-4 sm:mt-32 bs:ms-4 bs:mt-32' style={{
                                         // border: '2px solid red',
                                         // marginLeft: '20px'
                                     }}>
@@ -93,7 +100,7 @@ function Home() {
                                         <div className='text-[#856EF4] text-4xl pt-5'>
                                             {item.attributes.SubTitle}
                                         </div>
-                                        <p className='w-[503px] h-[123px] text-justify pt-8 '>
+                                        <p className='w-[503px] h-[123px] text-justify pt-8  sm:w-[330px]  sm:h-[100px] bs:w-[330px]  bs:h-[100px]'>
                                             {item.attributes.Description}
                                         </p>
                                     </div>
@@ -101,7 +108,7 @@ function Home() {
                             </div>
                         ))}
                 </div>
-                <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right' style={{
+                <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right sm:pt-20 sm:pr-5 bs:pt-20 bs:pr-5' style={{
                     // border: '2px solid red',
                 }}>
                     <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>

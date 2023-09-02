@@ -41,25 +41,25 @@ function Our_Development() {
 
                 {/* Heading Part */}
                 <div className='bg-[#0B2341]  relative'>
-                    <div
-                        //  className='-mt-10'
+                    <div className='pt-5 ps-10'
                         style={{
                             // border: "2px solid blue",
-                            width: "100%",
+                            width: "95%",
                             height: '500'
                         }}>
                         {services && (
-                            <img src={services[0].attributes.BubbleImgLink} alt="Image Description"
+                            <img src={services[0].attributes.topbubbleImgLink} alt="Image Description"
                                 className="w-full h-full object-cover" />
                         )}
-                        <div className=' w-80 relative bottom-28 ms-20' >
+                        <div className=' w-96 relative bottom-24 ms-20 sm:bottom-16 sm:ms-5 bs:bottom-5 bs:ms-0 ' >
                             {services && (
-                                <p className="text-white text-3xl align-middle">
+                                <p className="text-white text-4xl align-middle sm:text-xl bs:text-base ">
                                     {services && services[0].attributes.Title}
                                 </p>
                             )}
-                            <div className="pt-3">
-                                <img src={`/Image/Line 20.png`} alt="Image Description" />
+                            <div className="  w-24 h-1 pt-3 sm:pt-2 bs:pt-1 bs:w-16 ">
+                                <div className=" bg-white w-24  h-1 rounded bs:w-16 ">
+                                </div>
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@ function Our_Development() {
                 </div>
             </div >
 
-            <div className='grid grid-flow-col bg-custom-blue' style={{
+            <div className='grid grid-flow-col bg-custom-blue sm:grid-flow-row bs:grid-flow-row' style={{
                 // border: '2px solid black',
             }}>
                 {/* Left */}
@@ -79,17 +79,11 @@ function Our_Development() {
                     <div style={{
                         // border: '2px solid green',
                     }}>
-                        <div className='bg-[#0B2341] text-xs  ms-20  mt-16  text-center justify-center items-center  p-7  w-[537.1329956054688px] h-[120px]   ' style={{
-
+                        <div className='bg-[#0B2341]   ms-20  mt-16  text-center justify-center items-center  p-7  w-[537.1329956054688px] h-[120px] md:ms-1  sm:ms-10 bs:ms-3 bs:w-[340px] ' style={{
                             borderRadius: '14px',
                         }}>
                             {services && (
-                                <p className="text-white text-justify pt-2  " style={{
-                                    width: '449px',
-                                    height: '94px',
-                                    // top: '4271px',
-                                    // left: '143px',
-                                }}>
+                                <p className="text-white text-xs text-justify pt-2 w-[449px] h-[94px] sm:text-sm sm:pt-1 bs:w[300px] bs:pr-40 bs:pt-0" >
                                     {services && services[0].attributes.Description}
                                 </p>
                             )}
@@ -97,56 +91,46 @@ function Our_Development() {
                     </div>
                     {/* Lower */}
 
-                    <div style={{
-                        // border: '2px solid black', bg-gradient-to-r from-cyan-500 to-blue-500   bg-gradient-to-l from-[#D9D9D9] to-[#6779BF]
-                    }}>
-                        <p class=" h-10  text-white ms-20  mt-20 rounded-2xl text-center pt-2 " style={{
-                            width: '220px',
-                            border: '1px solid #EDE7E7',
-                            backgroundImage: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12))',
+                    <div className='grid grid-flow-col bs:grid-flow-row'>
+                        <div>
+                            <p className=" h-10  text-white ms-20  mt-20 rounded-2xl text-center pt-2 w-[220px] md:ms-1  sm:w-[320px] sm:h-12 sm:pt-1 sm:text-2xl sm:ms-40 bs:text-lg bs:h-12 bs:mt-7 bs:w-[250px] bs:ms-10" style={{
 
-                        }}>
-                            {services && services[0].attributes.subtitle}
-                        </p>
+                                border: '1px solid #EDE7E7',
+                                backgroundImage: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12))',
 
-
-                        {/* bg-gradient-to-r from-[#8069EE] form-51% via-[#8069EE] via-13% to-[#6779BF] to-0% */}
-                        <div className='ms-20 mt-5 rounded-2xl  ' style={{
-                            border: '1px solid #EDE7E7',
-                            width: '220px', height: '216px',
-                            background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
-
-                        }}>
-                            <p className='text-white text-xs text-justify  whitespace-pre-wrap px-2 py-4 pr-1 ' style={{
-                                width: '170', height: '180',
                             }}>
-                                {services && services[0].attributes.content}
+                                {services && services[0].attributes.subtitle}
                             </p>
 
-                        </div>
-                    </div>
-                </div>
-                {/* Right */}
-                <div className='relative' >
+                            <div className='ms-20 mt-5 rounded-2xl w-[220px] h-[216px] sm:w-[320px] md:ms-1  sm:h-[260px] sm:ms-40 bs:ms-10 bs:w-[250px] bs:h-[225px]' style={{
+                                border: '1px solid #EDE7E7',
+                                background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
 
-                    <div className=' w-[645px] h-[200px]  mt-44' style={{
-                        // border: "2px solid black",
-                    }}>
-                        <div className='w-[970px] h-[230px] -ms-80' style={{
-                            backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
+                            }}>
+                                <p className='text-white text-xs text-justify  whitespace-pre-wrap px-2 py-4 pr-1 w-[170] h-[180] sm:py-2 sm:px-5  sm:text-base bs:text-sm ' >
+                                    {services && services[0].attributes.content}
+                                </p>
 
-                        }} >
-                            <div className='ps-72  relative bottom-20'>
-                                {services && <img src={services[0].attributes.ImgLink} alt='Image'
-                                    className=' ' style={{
-                                        // border: "2px solid black",
-                                    }} />}
                             </div>
+                        </div>
 
+                        <div className='-mx-10 mr-2 relative ' style={{
+                            backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
+                            width: '61rem',
+                            height: '15rem',
+                            //  border: "2px solid black",
+                        }}>
+                            {services && <img src={services[0].attributes.ImgLink} alt='Image' className='ms-80 relative bottom-20' style={{
+                                width: '30rem',
+                                height: '25rem',
+                                // border: "2px solid black",
+                            }}
+                            />}
                         </div>
                     </div>
                 </div>
             </div>
+
             <div className='bg-custom-blue pt-7 ps-3'>
                 <div className='px-24 pb-20'>
                     <div className="relative ">
@@ -172,6 +156,45 @@ function Our_Development() {
 }
 
 export default Our_Development
+
+
+
+
+
+
+//     < div className = 'relative' style = {{
+//     // border: "2px solid black",
+// }} >
+// {/* <div className='mt-40 ' style={{
+//                         backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
+//                         width: '65rem',
+//                         height: '15rem',
+//                         border: "2px solid black",
+//                     }}>
+//                         {services && <img src={services[0].attributes.ImgLink} alt='Image'
+//                             style={{
+//                             }} />}
+
+//                     </div> */}
+
+// {/* <div className=' w-[645px] h-[200px]  mt-44  md:w-[500px] md:h-[] bs:mt-32 bs:w-[340px]' style={{
+//                         border: "2px solid black",
+//                     }}>
+//                         <div className='w-[970px] h-[230px] -ms-80 md:-ms-0 md:w-full  md:h-full  bs:w-[300px] bs:ms-40' style={{
+//                             backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
+//                             width: "90%",
+//                             //  border: "2px solid black",
+//                         }} >
+//                             <div className='ps-72  relative bottom-20'>
+//                                 {services && <img src={services[0].attributes.ImgLink} alt='Image'
+//                                     style={{
+//                                         // border: "2px solid black",
+//                                     }} />}
+//                             </div>
+
+//                         </div>
+//                     </div> */}
+//                 </ >
 
 
 
