@@ -43,19 +43,19 @@ function Solutions() {
         <>
             <div className='bg-[#164179] py-10'>
                 <div className='ps-10 pt-7'>
-                    <p className='text-white text-4xl'>
+                    <p className='text-white text-4xl bs:text-xl'>
                         {services && services[0].attributes.Title}
                     </p>
-                    <div className="w-24 h-1 pt-3">
-                        <div className=" bg-white w-24 h-1 rounded">
+                    <div className="w-24 h-1 pt-3 bs:w-20 bs:pt-2">
+                        <div className=" bg-white w-24 h-1 rounded bs:w-20">
                         </div>
                     </div>
                 </div>
 
-                <div className='grid grid-flow-col text-white ms-8  mt-5 '>
+                <div className='grid grid-flow-col text-white ms-8 mt-5 sm:grid-flow-row  bs:grid-flow-row'>
                     {/* Arrow */}
-                    <div className='mt-40'>
-                        <span onClick={handlePrev} className='cursor-pointer text-4xl' >{'<<'}</span>
+                    <div className='mt-40 bs:mt-10 bs:ms-32'>
+                        <span onClick={handlePrev} className='cursor-pointer text-4xl bs:text-xl' >{'<<'}</span>
                     </div>
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
@@ -63,39 +63,31 @@ function Solutions() {
 
                                 {index == 1 ? (
                                     <div>
-                                        <div className='w-[374px] h-[498px]  rounded-2xl' style={{
-                                            //  backgroundImage: 'url("/Image/R1.png")'
+                                        <div className='w-[360px] h-[498px]  rounded-2xl sm:mt-12 sm:w-[360px]  bs:w-[330px] bs:mt-9' style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                         }}>
                                             {/* Heading */}
-                                            <div className='w-[374.76px] h-[57px] text-center pt-4  rounded-2xl' style={{
-                                                // backgroundImage: 'url("/Image/R3.png")'
+                                            <div className='w-[360px] h-[57px] text-center pt-4  rounded-2xl  bs:w-[330px]' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                                //  border: '2px solid red',
                                             }} >
                                                 <span > {item.attributes.SubTitle} </span>
                                             </div>
                                             {/* Image */}
-                                            <div className='w-[374.76px]  h-[248px] my-1 rounded-2xl ' style={{
-                                                //  border: '2px solid red',
+                                            <div className='w-[360px]  h-[248px] my-1 rounded-2xl  bs:w-[330px]  ' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }}>
                                                 <img src={item.attributes.TitleGifLink} className='w-[374.76px]  h-[245px] rounded-2xl ' />
                                             </div>
                                             {/* Description     */}
-                                            <div className='w-[374px] h-[188px]  text-justify  rounded-2xl' style={{
-                                                // backgroundImage: 'url("/Image/R2.png")',
-                                                // border: '2px solid red',
+                                            <div className='w-[360px] h-[188px]  text-justify  rounded-2xl  bs:w-[330px] ' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }}>
                                                 <div>
                                                     <p className=' text-sm text-justify p-3' style={{
-                                                        //border: '2px solid blue',
                                                     }}> {item.attributes.Description}</p>
                                                 </div>
 
                                                 <div className='rounded-2xl pt-3 ms-3' style={{
-                                                    //   border: '2px solid blue',
                                                     float: 'right',
                                                     width: '8%'
 
@@ -109,8 +101,7 @@ function Solutions() {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className=' w-[300px] h-[400px] mt-12  rounded-2xl' style={{
-                                        //  border: '2px solid red',
+                                    <div className=' w-[300px] h-[400px] mt-12  rounded-2xl bs:ms-3' style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }}>
                                         {/* Heading */}
@@ -137,8 +128,8 @@ function Solutions() {
                             </div>
                         ))}
                     {/* Arrow */}
-                    <div className='mt-40'>
-                        <span onClick={handleNext} className='cursor-pointer text-4xl'>{'>>'}</span>
+                    <div className='mt-40 bs:mt-10 bs:ms-32 '>
+                        <span onClick={handleNext} className='cursor-pointer text-4xl bs:text-xl'>{'>>'}</span>
                     </div>
                 </div>
 
@@ -148,82 +139,3 @@ function Solutions() {
 }
 
 export default Solutions
-
-
-
-// {
-//     (index == 1) && <div style={{
-//         border: '2px solid red',
-//     }}>
-//         {item.attributes.Description}
-//     </div>
-// }
-
-
-{/* <div className='bg-[#8069EE] w-5/6 h-56 rounded p-4 '>
-                                                {item.attributes.Description}
-                                                <br />
-                                                {(index === 1) && <span className='place-items-end cursor-pointer' onClick={() => router.push('our_solution')} >Summit   </span>}
-                                            </div> */}
-
-
-{/* <div className='bg-[#8069EE] justify-center items-center text-center rounded w-5/6 h-10 p-2'>{item.attributes.SubTitle}</div>
-
-                                        <img src={item.attributes.TitleGifLink} className='w-5/6 h-52' style={{ backgroundColor: 'transparent' }} />
-
-                                        <div>
-                                            {index == 1 ? (
-                                                <div style={{
-                                                    border: '2px solid red',
-                                                }}>
-                                                    {item.attributes.Description}
-                                                    <br />
-                                                    <span className='place-items-end cursor-pointer' onClick={() => router.push('our_solution')} >Summit   </span>
-                                                </div>
-                                            ) : (
-                                                <div style={{
-                                                    border: '2px solid blue',
-                                                }}>
-                                                    {item.attributes.Description}
-                                                </div>
-                                            )
-                                            }
-                                        </div> */}
-
-
-                                          // <div className='w-96' style={{
-                                    //     //  border: '2px solid red',
-                                    // }}>
-                                    //     {/* Heading */}
-                                    //     <div className='bg-[#8069EE] justify-center items-center text-center rounded-2xl  p-3 w-96 ' style={{
-                                    //         //  border: '2px solid blue',
-                                    //     }}>
-                                    //         <span>
-                                    //             {item.attributes.SubTitle}
-                                    //         </span>
-                                    //     </div>
-                                    //     {/* Image */}
-                                    //     <div className='justify-center items-center text-center' style={{
-                                    //         //  border: '2px solid blue',
-                                    //     }}>
-                                    //         <img src={item.attributes.TitleGifLink} className='w-96 h-52' />
-                                    //     </div>
-                                    //     {/* Description */}
-                                    //     <div className='bg-[#8069EE] justify-center items-center text-justify  rounded-2xl  p-3 w-96 h-60' style={{
-                                    //         // border: '2px solid blue'
-                                    //     }}>
-                                    //         <span>
-                                    //             {item.attributes.Description}
-                                    //         </span>
-                                    //         <br />
-                                    //         {/* Button */}
-                                    //         <div className='mt-3  place-items-end ps-80' style={{
-                                    //             // border: '2px solid blue',
-                                    //         }}>
-                                    //             <span className='cursor-pointer' onClick={() => router.push('our_solution')} >
-                                    //                 <img src='/Image/button.png' alt='Image not Found' className='w-10 h-10' />
-                                    //             </span>
-                                    //         </div>
-                                    //     </div>
-
-                                    // </div>

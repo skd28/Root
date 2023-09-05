@@ -53,9 +53,9 @@ export default function Home() {
       <Our_Usp />
       {/* Seventh Page*/}
 
-      {/* <Key_Patterns /> */}
+      <Key_Patterns />
 
-      {/* <Services /> */}
+      <Services />
       {/* Eight Page */}
     </>
   )
