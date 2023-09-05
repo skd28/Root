@@ -59,7 +59,7 @@ function Key_Patterns() {
 
                             {services && services.map((item) => (
                                 <img className='w-[300px] inline-block p-10 cursor-pointer hover:scale-105 ease-in-out duration-300' src={item.attributes.companylogolink
-                                } alt='/' />
+                                } alt='Image not found' />
                             ))
                             }
 
