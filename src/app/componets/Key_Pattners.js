@@ -15,12 +15,12 @@ function Key_Patterns() {
                         Authorization: `Bearer ${token}`
                     }
                 });
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+                // if (!response.ok) {
+                //     throw new Error('Network response was not ok');
+                // }
                 const data1 = await response.json();
 
-                console.log(data1);
+                // console.log(data1);
                 setServices(data1.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
