@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import Lotiee from 'lottie-react';
 import animation from './animation.json';
+import { useRouter } from 'next/navigation'
 
 function Home() {
     const [services, setServices] = useState(null);
     const [currentSlide, setCurrentSlide] = useState(0);
+    const router = useRouter();
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -34,6 +36,12 @@ function Home() {
             setCurrentSlide((prevIndex) => prevIndex + 1);
         }
     };
+    const handleBackButtonClick = () => {
+        // Use the router object to navigate back to the first page
+        if (typeof window !== 'undefined') {
+            router.push('/');
+        }
+    };
 
     return (
         <>
@@ -57,8 +65,8 @@ function Home() {
 
 
             <div className='bg-[#0B2341]' style={{
-                border: '2px solid red',
-                //  boxShadow: '-25px 25px 5px black',
+                // border: '2px solid red',
+                boxShadow: 'inset 0 -30px  black',
             }}>
 
                 <div className='relative' style={{
@@ -75,19 +83,19 @@ function Home() {
 
                         <div className='relative left-1/2 ms-14 text-white pt-32' style={{
                             width: "69%",
-                            border: '2px solid red',
+                            //  border: '2px solid red',
 
                         }}>
                             <div className='grid grid-flow-col gap-20 '>
                                 <div className='pt-44 ps-40'
                                     style={{
-                                        border: '2px solid red',
+                                        // border: '2px solid red',
                                     }}>
                                     <Lotiee animationData={animation} className='w-96 h-96' />
 
                                 </div>
                                 <div style={{
-                                    border: '2px solid red',
+                                    //  border: '2px solid red',
                                 }}>
                                     <div className='grid grid-flow-col mt-28 ms-16 '>
                                         <div className='grid grid-flow-row text-white  '>
@@ -118,7 +126,11 @@ function Home() {
                                             <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
                                         </div>
                                     </div>
+                                    <div className='text-right text-white cursor-pointer' >
+                                        <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
 
@@ -126,12 +138,8 @@ function Home() {
 
 
                 </div>
-                {/* <div className='text-white pb-5' style={{
-                    //  background: 'url("/Image/Our_development_Footer")'
-                    backgroundImage: 'linear-gradient(180deg, #0B2341 0%, #000000 100%)',
-                }}>
-                    Hello
-                </div> */}
+
+
             </div>
 
 

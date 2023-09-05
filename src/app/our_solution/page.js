@@ -49,20 +49,20 @@ function Home() {
                 </div>
 
                 <div className='flex flex-row justify-center ' >
-                    <div className='w-1 h-32 pt-10 pr-7 sm:pt-5 sm:h-12 sm:pr-3 bs:pr-3 bs:pt-3 bs:h-10'>
-                        <div className='bg-white h-32 rounded w-1 sm:h-12 bs:h-10'></div>
+                    <div className='w-1 h-32 pt-10 pr-7 lg:h-24 lg:pt-9 md:pt-7  md:h-20 sm:pt-5 sm:h-12 sm:pr-3 bs:pr-3 bs:pt-3 bs:h-10'>
+                        <div className='bg-white h-32 rounded w-1 lg:h-24 md:h-16 sm:h-12 bs:h-10'></div>
                     </div>
                     <div className='flex flex-row' style={{
                         // backgroundImage: 'linear-gradient(90deg, #211D40 35.93%, rgba(198, 193, 243, 0.46) 87.33%)',
                     }}>
                         {services && (
                             <>
-                                <p className=" font-semibold text-[#ffffff] text-[140px]  opacity-60 sm:text-[60px] bs:text-[40px]" style={{
+                                <p className=" font-semibold text-[#ffffff] text-[140px]  opacity-60 lg:text-[110px] md:text-[80px] sm:text-[60px] bs:text-[40px]" style={{
                                     // fontSize: '140px',
                                 }}>
                                     {services[0].attributes.Title.split(' ')[0]}
                                 </p>
-                                <p className=" ps-14  text-[#ffffff] text-[140px]  opacity-25 sm:ps-3  sm:text-[60px] bs:text-[40px] bs:ps-5" style={{
+                                <p className=" ps-14  text-[#ffffff] text-[140px]  opacity-25 lg:text-[110px] md:text-[80px] sm:ps-3  sm:text-[60px] bs:text-[40px] bs:ps-5" style={{
                                     // fontSize: '140px',
                                 }}>
                                     {services[0].attributes.Title.split(' ').slice(1).join(' ')}
@@ -77,10 +77,8 @@ function Home() {
                         services.map((item, index) => (
 
                             <div key={item.id}>
-                                {/* //  {console.log("Key:", item.id)} */}
-
                                 {item.id === 1 || item.id % 2 !== 0 ? (
-                                    <div className='ms-96 ps-52 mt-16 sm:ms-4 sm:ps-1 sm:mt-32  bs:ms-4 bs:ps-1 bs:mt-32' style={{
+                                    <div className='ms-96 ps-52 mt-16  lg:ms-44  lg:ps-80 md:ms-20 md:ps-40 sm:ms-4 sm:ps-1 sm:mt-32  bs:ms-4 bs:ps-1 bs:mt-32' style={{
                                         // border: '2px solid blue',
                                     }}>
                                         <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
@@ -92,7 +90,7 @@ function Home() {
                                         </p>
                                     </div>
                                 ) : (
-                                    <div className='ms-20 mt-10 sm:ms-4 sm:mt-32 bs:ms-4 bs:mt-32' style={{
+                                    <div className='ms-20 mt-10 lg:ms-10 md:ms-8 sm:ms-4 sm:mt-32 bs:ms-4 bs:mt-32' style={{
                                         // border: '2px solid red',
                                         // marginLeft: '20px'
                                     }}>

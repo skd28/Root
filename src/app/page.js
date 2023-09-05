@@ -26,27 +26,27 @@ export default function Home() {
     <>
 
 
-      {/* <Navbar /> */}
+      <Navbar />
       {/* First Page */}
 
-      {/* <About /> */}
+      <About />
 
       {/* Second Page */}
 
 
-      {/* <Solutions /> */}
+      <Solutions />
 
       {/* Third Page */}
 
 
-      {/* <Audit_Service /> */}
+      <Audit_Service />
       {/*  Fourth Page*/}
 
       <Our_Development />
       {/* Fifth Page */}
 
 
-      {/* <Growing_Values /> */}
+      <Growing_Values />
       {/* Six Page */}
 
 
