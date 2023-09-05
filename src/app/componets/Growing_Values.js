@@ -43,37 +43,27 @@ function Growing_Values() {
 
 
             {/* Left Part */}
-            <div className="bg-custom-blue" style={{
+            <div className="bg-custom-blue " style={{
                 width: "60%", height: "700px", float: "left",
-                //  border: '2px solid red',
             }}>
-                <div className="ms-24" style={{
-                    //  border: '2px solid red',
-                }}>
-                    <div className=" flex" style={{
-                        //  border: '2px solid red',
-                    }}>
+                <div className="ms-24" >
+                    <div className=" flex" >
                         <div >
                             <div className="rotate-180 text-white text-3xl" style={{ writingMode: "vertical-rl", width: "40" }}>
                                 {services && services[0].attributes.Title}
                             </div>
-                            <div className="w-5 h-5 pt-14 ms-3">
+                            <div className="w-5 h-5 pt-10 ms-3">
                                 <div className=" bg-white w-5 h-5 rounded">  </div>
                             </div>
                         </div>
                     </div>
-
-
                     <div >
                         <div>
-                            <div className="ms-5  relative" style={{ backgroundImage: 'url("/Image/Vector 5.png")', backgroundSize: "cover", height: "430px", width: "640px" }}>
-
+                            <div className="ms-5  relative" style={{ backgroundImage: 'url("/Image/Vector 5.png")', backgroundSize: "cover", height: "440px", width: "663px" }}>
                                 <div className="relative" style={{
                                     width: "70%",
                                     float: 'left',
-                                    // border: '2px solid red',
-                                }}
-                                >
+                                }} >
                                     <div className="grid grid-flow-row ms-10 relative">
                                         <div className=" relative bottom-40">
                                             <Lotiee animationData={Growing_Values1} className='w-96 h-96 items-center ' />
@@ -82,29 +72,25 @@ function Growing_Values() {
                                             )} */}
                                         </div>
                                         <div>
-                                            <p className="w-96 text-sm relative bottom-24">
+                                            <p className="w-80 text-sm relative bottom-24">
                                                 {services && <p className="text-white text-justify">{services[0].attributes.Description}</p>}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="mt-52 relative" style={{
+                                <div className="mt-48 relative" style={{
                                     width: "20%",
                                     float: 'right',
-                                    //  border: '2px solid red',
                                 }}>
-                                    <div className="grid grid-flow-col relative ">
+                                    <div className="grid grid-flow-col">
                                         <div className=" relative top-20 left-16">
                                             <p className="rotate-180 text-white text-3xl justify-end" style={{ writingMode: "vertical-rl", width: "40" }}>
                                                 {services && services[1].attributes.Title}
                                             </p>
                                         </div>
-                                        <div className="relative left-16 top-2" >
-                                            <img src="/Image/Vector 4.png" alt="Image not show" style={{
-                                                width: "800",
-
-                                            }} />
+                                        <div className=" relative left-[70px]" >
+                                            <img src="/Image/Vector 4.png" alt="Image not show" className="w-[49px]" />
                                         </div>
                                     </div>
 
@@ -115,22 +101,16 @@ function Growing_Values() {
                 </div>
             </div>
             {/* Right Part */}
-            <div >
-                <div className="bg-custom-blue pr-28" style={{
-                    width: "40%", height: "700px", float: "right",
-                    // border: '2px solid red',
-                }} >
 
-                    {services && (<p className="text-white text-justify  text-sm mt-8  pr-20">{services && services[1].attributes.Description}  </p>)}
-
-
-                    <div className="mt-20 ">
-                        <Lotiee animationData={Growing_Values2} className='w-96 h-96' />
-                    </div>
-
-
+            <div className="bg-custom-blue pr-28 " style={{
+                width: "40%", height: "700px", float: "right",
+            }} >
+                {services && (<p className="text-white text-justify  text-sm mt-8  pr-20">{services && services[1].attributes.Description}  </p>)}
+                <div className="mt-14 ">
+                    <Lotiee animationData={Growing_Values2} className='w-96 h-96' />
                 </div>
             </div>
+
 
 
         </>

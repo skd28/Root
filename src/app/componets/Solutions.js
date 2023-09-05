@@ -43,19 +43,19 @@ function Solutions() {
         <>
             <div className='bg-[#164179] py-10'>
                 <div className='ps-10 pt-7'>
-                    <p className='text-white text-4xl bs:text-xl'>
+                    <p className='text-white text-4xl lg:text-3xl md:text-3xl sm:text-2xl bs:text-xl'>
                         {services && services[0].attributes.Title}
                     </p>
-                    <div className="w-24 h-1 pt-3 bs:w-20 bs:pt-2">
-                        <div className=" bg-white w-24 h-1 rounded bs:w-20">
+                    <div className="w-24 h-1 pt-3 lg:pt-2 md:pt-2  sm:w-20 bs:w-20 bs:pt-2">
+                        <div className=" bg-white w-24 h-1 rounded sm:w-20 bs:w-20">
                         </div>
                     </div>
                 </div>
 
-                <div className='grid grid-flow-col text-white ms-8 mt-5 sm:grid-flow-row  bs:grid-flow-row'>
+                <div className='grid grid-flow-col text-white ms-8 mt-5 lg:ms-2 md:grid-flow-row sm:grid-flow-row sm:mt-2  bs:grid-flow-row'>
                     {/* Arrow */}
-                    <div className='mt-40 bs:mt-10 bs:ms-32'>
-                        <span onClick={handlePrev} className='cursor-pointer text-4xl bs:text-xl' >{'<<'}</span>
+                    <div className='mt-40  md:ms-72  md:mt-32 sm:ms-40 sm:mt-14 bs:mt-10  bs:ms-32 '>
+                        <span onClick={handlePrev} className='cursor-pointer text-4xl sm:text-2xl bs:text-xl' >{'<<'}</span>
                     </div>
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
@@ -63,23 +63,23 @@ function Solutions() {
 
                                 {index == 1 ? (
                                     <div>
-                                        <div className='w-[360px] h-[498px]  rounded-2xl sm:mt-12 sm:w-[360px]  bs:w-[330px] bs:mt-9' style={{
+                                        <div className='w-[360px] h-[498px]  rounded-2xl lg:w-[310px] md:w-[440px] md:ms-28  md:mt-20  sm:mt-12 sm:w-[360px] sm:ms-5  bs:w-[330px] bs:mt-9' style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                         }}>
                                             {/* Heading */}
-                                            <div className='w-[360px] h-[57px] text-center pt-4  rounded-2xl  bs:w-[330px]' style={{
+                                            <div className='w-[360px] h-[57px] text-center pt-4  rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px]' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }} >
                                                 <span > {item.attributes.SubTitle} </span>
                                             </div>
                                             {/* Image */}
-                                            <div className='w-[360px]  h-[248px] my-1 rounded-2xl  bs:w-[330px]  ' style={{
+                                            <div className='w-[360px]  h-[248px] my-1 rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px]  ' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }}>
-                                                <img src={item.attributes.TitleGifLink} className='w-[374.76px]  h-[245px] rounded-2xl ' />
+                                                <img src={item.attributes.TitleGifLink} className='w-[374.76px]  h-[245px] rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px] ' />
                                             </div>
                                             {/* Description     */}
-                                            <div className='w-[360px] h-[188px]  text-justify  rounded-2xl  bs:w-[330px] ' style={{
+                                            <div className='w-[360px] h-[188px]  text-justify  rounded-2xl lg:w-[310px] md:w-[440px] bs:w-[330px] ' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }}>
                                                 <div>
@@ -101,23 +101,23 @@ function Solutions() {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className=' w-[300px] h-[400px] mt-12  rounded-2xl bs:ms-3' style={{
+                                    <div className=' w-[300px] h-[400px] mt-12  rounded-2xl md:ms-36 lg:w-[260px] md:w-[390px] md:mt-20  sm:ms-10 bs:ms-3' style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }}>
                                         {/* Heading */}
-                                        <div className=' justify-center items-center text-center  text-sm rounded-2xl  p-2 w-[300px] h-[40px] ' style={{
+                                        <div className=' justify-center items-center text-center  text-sm rounded-2xl  p-2 w-[300px] h-[40px] lg:w-[260px] md:w-[390px]' style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                         }}>
                                             <span>{item.attributes.SubTitle}</span>
                                         </div>
                                         {/* Image */}
-                                        <div className='mt-1 rounded-2xl' style={{
+                                        <div className='mt-1 rounded-2xl lg:w-[260px] md:w-[390px]' style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                         }}>
-                                            <img src={item.attributes.TitleGifLink} className='w-[300px]  h-[200px] rounded-2xl' />
+                                            <img src={item.attributes.TitleGifLink} className='w-[300px]  h-[200px] rounded-2xl lg:w-[260px] md:w-[390px]' />
                                         </div>
                                         {/* Description */}
-                                        <div className=' justify-center items-center text-justify text-xs  rounded-2xl p-2 w-[300px] h-[150px] mt-1 ' style={{
+                                        <div className=' justify-center items-center text-justify text-xs  rounded-2xl p-2 w-[300px] h-[150px] mt-1 lg:w-[260px] md:w-[390px] ' style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                         }}>
                                             <p >{item.attributes.Description}</p>
@@ -128,7 +128,7 @@ function Solutions() {
                             </div>
                         ))}
                     {/* Arrow */}
-                    <div className='mt-40 bs:mt-10 bs:ms-32 '>
+                    <div className='mt-40 lg:ms-3 md:ms-72  md:mt-32  sm:mt-14 sm:ms-40 bs:mt-10 bs:ms-32 '>
                         <span onClick={handleNext} className='cursor-pointer text-4xl bs:text-xl'>{'>>'}</span>
                     </div>
                 </div>
