@@ -37,7 +37,6 @@ function Home() {
         }
     };
     const handleBackButtonClick = () => {
-        // Use the router object to navigate back to the first page
         if (typeof window !== 'undefined') {
             router.push('/');
         }
@@ -62,42 +61,26 @@ function Home() {
                 </div>
             </div>
 
-
-
             <div className='bg-[#0B2341]' style={{
-                // border: '2px solid red',
                 boxShadow: 'inset 0 -30px  black',
             }}>
-
-                <div className='relative' style={{
-                    // border: '2px solid green',
-                    // boxShadow: '-50px 25px 5px black',
-                }}>
-                    <div className='relative right-3/4 w-[1800px] h-[800px]  bs:w[400px] bs:h[200px] bs:right-full' style={{
+                {/* w-[1800px] h-[800px]  right-3/4 */}
+                <div className=''>
+                    <div className='relative right-[750px] w-[1500px] bg-cover' style={{
                         backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
-                        // height: '750px', width: '1800px',
                         backgroundColor: "#0B234",
-                        //  border: '2px solid red',
-
                     }}>
 
-                        <div className='relative left-1/2 ms-14 text-white pt-32' style={{
+                        <div className='relative left-[850px] ms-20 text-white pt-32' style={{
                             width: "69%",
-                            //  border: '2px solid red',
-
                         }}>
-                            <div className='grid grid-flow-col gap-20 '>
-                                <div className='pt-44 ps-40'
-                                    style={{
-                                        // border: '2px solid red',
-                                    }}>
+                            <div className='grid grid-flow-col gap-20 bs:grid-flow-row '>
+                                <div className='pt-44 ps-20'
+                                >
                                     <Lotiee animationData={animation} className='w-96 h-96' />
-
                                 </div>
-                                <div style={{
-                                    //  border: '2px solid red',
-                                }}>
-                                    <div className='grid grid-flow-col mt-28 ms-16 '>
+                                <div>
+                                    <div className='grid grid-flow-col mt-28 ms-10  bs:grid-flow-row'>
                                         <div className='grid grid-flow-row text-white  '>
                                             <div className=''>
                                                 {services &&
@@ -126,23 +109,15 @@ function Home() {
                                             <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
                                         </div>
                                     </div>
-                                    <div className='text-right text-white cursor-pointer' >
+                                    <div className='text-right ms-20 text-white cursor-pointer  pt-1' >
                                         <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
-
-
             </div>
-
-
         </>
     )
 }

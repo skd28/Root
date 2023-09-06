@@ -58,7 +58,7 @@ function Key_Patterns() {
                         <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
 
                             {services && services.map((item, index) => (
-                                <img className='w-[300px] inline-block p-10 cursor-pointer hover:scale-105 ease-in-out duration-300' src={item.attributes.companylogolink
+                                <img key={index} className='w-[300px] inline-block p-10 cursor-pointer hover:scale-105 ease-in-out duration-300' src={item.attributes.companylogolink
                                 } alt='Image not found' />
                             ))
                             }

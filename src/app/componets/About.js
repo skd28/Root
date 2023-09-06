@@ -31,54 +31,41 @@ function About() {
 
     return (
         <>
-            <div className='bg-black  h-screen'>
+            <div className='bg-black pb-20 md:pb-5 sm:pb-5 bs:pb-5'>
 
-                <div className=' '>
-                    <div className='ps-10 py-10 sm:ps-5 sm:py-5 bs:ps-5 bs:py-5'>
-                        {services && (
-                            <p className="text-white text-4xl sm:text-2xl bs:text-xl ">
-                                {services[0].attributes.Name}
-                            </p>
-                        )}
-                        <div className="  w-16 h-1 pt-3 sm:pt-2 bs:w-10 ">
-                            <div className=" bg-white w-16  h-1 rounded bs:w-10 ">
-                            </div>
+                <div className='ps-10 py-10 sm:ps-5 sm:py-5 bs:ps-5 bs:py-5'>
+                    {services && (
+                        <p className="text-white text-4xl sm:text-2xl bs:text-xl ">
+                            {services[0].attributes.Name}
+                        </p>
+                    )}
+                    <div className="  w-16 h-1 pt-3 sm:pt-2 bs:w-10 ">
+                        <div className=" bg-white w-16  h-1 rounded bs:w-10 ">
                         </div>
                     </div>
                 </div>
 
-                <div className=' bg-black'>
-                    <div className='grid grid-flow-col md:grid-flow-row md:ms-10 sm:grid-flow-row bs:grid-flow-row '>
-                        <div className=' w-[370px] h-[370px] ms-16 mr-3  md:ms-3 md:w-[670px] md:h-[400px] sm:ms-2 sm:w-[410px] sm:h-[300px] bs:ms-3 bs:w-[340px] bs:h-[380px] ' style={{
+                <div className='grid grid-flow-col md:grid-flow-row  md:ms-10 sm:grid-flow-row bs:grid-flow-row '>
+                    <div className=' w-[370px] h-[370px] ms-16 mr-3 border-4  md:ms-3 md:w-[670px] md:h-[400px]
+                         sm:ms-2 sm:w-[410px] sm:h-[300px] bs:ms-5 bs:w-[340px] bs:h-[380px] ' style={{
                             border: '2px solid gray',
                         }}>
-                            {services && (
-                                <img
-                                    src={services[0].attributes.ImgLink}
-                                    alt="Image Description"
-                                    className='w-[600px] h-[360px] bs:w-[330px] bs:h[290px] '
-                                    style={{
-                                        // border: '2px solid red',
-                                    }}
-                                />
-                            )}
-                        </div>
-                        <div className='text-white text-sm w-[660px] h-[390px] md:pt-10 md:text-xl md:w-[680px] md:h-[700px] sm:mt-5 sm:ms-2 sm:w-[410px] sm:h-[600px] bs:ms-3 bs:text-small bs:w-[340px] bs:h-[600px] bs:mt-10'
-                            style={{
-                                //  border: '2px solid gray',
-                            }}
-                        >
-                            {services && (
-                                <p className=" whitespace-pre-wrap text-justify text-white">
-                                    {services[0].attributes.Description}
-
-                                </p>
-                            )}
-                        </div>
+                        {services && (
+                            <img
+                                src={services[0].attributes.ImgLink}
+                                alt="Image Description"
+                                className='w-[600px] h-[360px] bs:w-[330px] bs:h[290px] '
+                            />
+                        )}
+                    </div>
+                    <div className='text-white text-sm w-[660px] h-[390px]  md:pt-10 md:text-xl md:w-[680px]
+                         md:h-[700px] sm:mt-5 sm:ms-2 sm:w-[410px] sm:h-[600px] bs:ms-5 bs:text-small bs:w-[340px] bs:h-[650px] bs:mt-10'  >
+                        {services && (
+                            <p className=" whitespace-pre-wrap text-justify  text-white">
+                                {services[0].attributes.Description}</p>
+                        )}
                     </div>
                 </div>
-
-
             </div>
 
 

@@ -26,23 +26,23 @@ export default function Home() {
     <>
 
 
-      {/* <Navbar /> */}
+      <Navbar />
       {/* First Page */}
 
-      {/* <About /> */}
+      <About />
 
       {/* Second Page */}
 
 
-      {/* <Solutions /> */}
+      <Solutions />
 
       {/* Third Page */}
 
 
-      {/* <Audit_Service /> */}
+      <Audit_Service />
       {/*  Fourth Page*/}
 
-      {/* <Our_Development /> */}
+      <Our_Development />
       {/* Fifth Page */}
 
 
@@ -50,12 +50,12 @@ export default function Home() {
       {/* Six Page */}
 
 
-      {/* <Our_Usp /> */}
+      <Our_Usp />
       {/* Seventh Page*/}
 
-      {/* <Key_Patterns /> */}
+      <Key_Patterns />
 
-      {/* <Services /> */}
+      <Services />
       {/* Eight Page */}
     </>
   )
