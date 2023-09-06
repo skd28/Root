@@ -35,15 +35,10 @@ const Navbar = () => {
                     style={{
                         backgroundImage: `url(${services && services[0].attributes.imglink})`,
                     }}>
-                    <div className='py-10 ps-10 md:py-6 lg:py-8  sm:py-4  bs:py-2  bs:ps-5' style={{
-                        // border: '2px solid red',
-                    }} >
+                    <div className='py-10 ps-10 md:py-6 lg:py-8  sm:py-4  bs:py-2  bs:ps-5'  >
                         {services && (
                             <img src={services[0].attributes.rootlogolink} alt="Image Description"
                                 className=" w-[170px] h-[90px] lg:w-[150xp] lg:h-[72px] md:w-[120px] md:h-[60px] sm:w-[100px] sm:h-[48px] bs:w-[70px] bs:h-[30px]  "
-                                style={{
-                                    // border: '2px solid red',
-                                }}
                             />
                         )}
                     </div>
@@ -65,9 +60,7 @@ const Navbar = () => {
                                 </div>
 
 
-                                <div className='sm:pt-3 bs:pt-3' style={{
-                                    //  border:'2px solid black',
-                                }}>
+                                <div className='sm:pt-3 bs:pt-3'>
                                     {services &&
                                         <p className='text-sm text-white bs:text-xs'>
                                             {services && services[0].attributes.Title2}

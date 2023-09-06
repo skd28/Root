@@ -49,7 +49,7 @@ function Key_Patterns() {
                     <div className="w-20 h-1 pt-3"> <div className=" bg-white w-20 h-1 rounded"> </div> </div>
                 </div>
 
-                <div className='bg-[#0B2341] border-4 mt-12' style={{
+                <div className='bg-[#0B2341]  mt-12' style={{
                     //  border: '2px solid red',
                     boxShadow: 'inset 0 -15px 5px black ,inset 0 15px 5px black ',
                 }} >
