@@ -24,7 +24,7 @@ function Services() {
     return (
         <>
             <div className='bg-custom-blue '>
-                <div className=' pt-14 ps-10 pb-10 lg:pt-12 md:pt-10 sm:pt-8 bs:pt-6 sm:ps-7 bs:ps-5 sm:pb-7 bs:pb-5'>
+                <div className=' pt-8 ps-10 pb-10 lg:pt-12 md:pt-10 sm:pt-8 bs:pt-6 sm:ps-7 bs:ps-5 sm:pb-7 bs:pb-5'>
                     <div>
                         {services && (<p className="text-white text-4xl lg:text-3xl md:text-2xl sm:text-xl bs:text-lg"> {services[0].attributes.Name} </p>)}
                         <div className="  w-20 lg:w-14 md:w-12 sm:w-10 h-1 pt-3  sm:pt-1  md:pt-2 ">
