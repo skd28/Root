@@ -61,17 +61,17 @@ function Home() {
                 </div>
             </div>
 
-            <div className='bg-[#0B2341]' style={{
-                boxShadow: 'inset 0 -30px  black',
+            <div className='bg-[#0B2341]  border-4 border-red-800' style={{
+                // boxShadow: 'inset 0 -30px  black',
             }}>
-                {/* w-[1800px] h-[800px]  right-3/4 */}
-                <div className=''>
-                    <div className='relative right-[750px] w-[1500px] bg-cover' style={{
+                {/* w-[1800px] h-[800px]  right-3/4 border-4 border-red-800 */}
+                <div>
+                    <div className='relative right-[750px] w-[1500px] bg-cover border-4' style={{
                         backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
                         backgroundColor: "#0B234",
                     }}>
 
-                        <div className='relative left-[850px] ms-20 text-white pt-32' style={{
+                        <div className='relative left-[850px] ms-20 text-white pt-32 border border-green-600' style={{
                             width: "69%",
                         }}>
                             <div className='grid grid-flow-col gap-20 bs:grid-flow-row '>
@@ -109,14 +109,15 @@ function Home() {
                                             <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
                                         </div>
                                     </div>
-                                    <div className='text-right ms-20 text-white cursor-pointer  pt-1' >
+                                    {/* <div className='text-right ms-20 text-white cursor-pointer  pt-1 border-4' >
                                         <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </>
     )

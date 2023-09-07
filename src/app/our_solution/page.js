@@ -1,6 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import location_map from './location_ map.json';
+import Lotiee from 'lottie-react';
 
 function Home() {
 
@@ -31,7 +33,6 @@ function Home() {
     }, []);
 
     const handleBackButtonClick = () => {
-        // Use the router object to navigate back to the first page
         if (typeof window !== 'undefined') {
             router.push('/');
         }
@@ -48,13 +49,11 @@ function Home() {
 
                 </div>
 
-                <div className='flex flex-row justify-center ' >
+                <div className='flex flex-row justify-center' >
                     <div className='w-1 h-32 pt-10 pr-7 lg:h-24 lg:pt-9 md:pt-7  md:h-20 sm:pt-5 sm:h-12 sm:pr-3 bs:pr-3 bs:pt-3 bs:h-10'>
                         <div className='bg-white h-32 rounded w-1 lg:h-24 md:h-16 sm:h-12 bs:h-10'></div>
                     </div>
-                    <div className='flex flex-row' style={{
-                        // backgroundImage: 'linear-gradient(90deg, #211D40 35.93%, rgba(198, 193, 243, 0.46) 87.33%)',
-                    }}>
+                    <div className='flex flex-row' >
                         {services && (
                             <>
                                 <p className=" font-semibold text-[#ffffff] text-[140px]  opacity-60 lg:text-[110px] md:text-[80px] sm:text-[60px] bs:text-[40px]" style={{
@@ -71,6 +70,11 @@ function Home() {
                         )}
                     </div>
                 </div>
+                {/* <div className='border-2 bg-contain bg-no-repeat h-[600px]' style={{
+                    backgroundImage: `url(${services[0].attributes.MapImgLink})`,
+                }}>
+                    <Lotiee animationData={location_map} />
+                </div> */}
 
                 <div className='text-white'>
                     {services &&
@@ -90,10 +94,7 @@ function Home() {
                                         </p>
                                     </div>
                                 ) : (
-                                    <div className='ms-20 mt-10 lg:ms-10 md:ms-8 sm:ms-4 sm:mt-32 bs:ms-4 bs:mt-32' style={{
-                                        // border: '2px solid red',
-                                        // marginLeft: '20px'
-                                    }}>
+                                    <div className='ms-20 mt-10 lg:ms-10 md:ms-8 sm:ms-4 sm:mt-32 bs:ms-4 bs:mt-32' >
                                         <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
                                         <div className='text-[#856EF4] text-4xl pt-5'>
                                             {item.attributes.SubTitle}
@@ -106,9 +107,7 @@ function Home() {
                             </div>
                         ))}
                 </div>
-                <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right sm:pt-20 sm:pr-5 bs:pt-20 bs:pr-5' style={{
-                    // border: '2px solid red',
-                }}>
+                <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right sm:pt-20 sm:pr-5 bs:pt-20 bs:pr-5' >
                     <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
                 </div>
             </div>

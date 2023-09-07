@@ -41,7 +41,7 @@ function Services() {
                         </div>
                     </div>))}
                 </div>
-                <div className='text-white flex flex-row-reverse' >
+                <div className='text-white flex flex-row-reverse  pr-5' >
                     <span>{services && <img src={services[0].attributes.LinkedinLogoLink} alt='imge not found' className='px-1' />}</span>
                     <span>{services && <img src={services[0].attributes.TwitterLogoLink} alt='imge not found' className='px-1' />}</span>
                     <span>{services && <img src={services[0].attributes.whatsaapLogoLink} alt='imge not found' className='px-1' />}</span>
@@ -56,7 +56,7 @@ function Services() {
                         <div className='float-right text-white text-xs pr-5 h-3 md:h-8 sm:h-10 bs:h-12 sm:pr-3 bs:pr-0 bs:pt-3 ' >
                             <span>  Powered by
                                 <a href='https://www.godaddy.com/en-in/websites/website-builder?isc=pwugc&utm_source=
-                                wsb&utm_medium=applications&utm_campaign=en-in_corp_applications_base' target="_blank" ><u>GoDaddy</u></a> </span>
+                                wsb&utm_medium=applications&utm_campaign=en-in_corp_applications_base' target="_blank" ><u>Vercel</u></a> </span>
                         </div>
                     </div>
                 </div>
