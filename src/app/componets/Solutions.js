@@ -1,6 +1,29 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import Lotiee from 'lottie-react';
+import server from '../animation/server.json';
+import user from '../animation/user.json';
+import virtual from '../animation/virtual.json';
+import unified from '../animation/unified.json';
+import security from '../animation/security.json';
+import network from '../animation/network.json';
+import power from '../animation/power.json';
+import intergation from '../animation/intergation.json';
+import datacenter from '../animation/datacenter.json';
+
+const data = [
+    { id: 3, json: datacenter },
+    { id: 4, json: user },
+    { id: 7, json: virtual },
+    { id: 8, json: unified },
+    { id: 9, json: security },
+    { id: 1, json: network },
+    { id: 2, json: power },
+    { id: 5, json: intergation },
+    { id: 6, json: server },
+];
+
 function Solutions() {
 
 
@@ -19,7 +42,7 @@ function Solutions() {
                     }
                 });
                 const data1 = await response.json();
-                //console.log(data1);
+                console.log(data1);
                 setServices(data1.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -60,7 +83,7 @@ function Solutions() {
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
                             <div key={item.id}>
-
+                                {/* {console.log('item: ' + item.id)} */}
                                 {index == 1 ? (
                                     <div>
                                         <div className='w-[360px] h-[498px]  rounded-2xl lg:w-[310px] md:w-[440px] md:ms-28  md:mt-20  sm:mt-12 sm:w-[360px] sm:ms-5  bs:w-[330px] bs:mt-9' style={{
@@ -73,11 +96,23 @@ function Solutions() {
                                                 <span > {item.attributes.SubTitle} </span>
                                             </div>
                                             {/* Image */}
+
                                             <div className='w-[360px]  h-[248px] my-1 rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px]  ' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }}>
                                                 <img src={item.attributes.TitleGifLink} className='w-[374.76px]  h-[245px] rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px] ' />
                                             </div>
+
+                                            {/* <div className='w-96 h-96 items-center'>
+
+                                                <Lotiee
+                                                    options={{
+                                                        animationData: index.json,
+                                                        loop: true, // Set loop to true if you want the animation to loop
+                                                        autoplay: true, // Set autoplay to true if you want the animation to play automatically
+                                                    }}
+                                                />
+                                            </div> */}
                                             {/* Description     */}
                                             <div className='w-[360px] h-[188px]  text-justify  rounded-2xl lg:w-[310px] md:w-[440px] bs:w-[330px] ' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
@@ -116,6 +151,15 @@ function Solutions() {
                                         }}>
                                             <img src={item.attributes.TitleGifLink} className='w-[300px]  h-[200px] rounded-2xl lg:w-[260px] md:w-[390px]' />
                                         </div>
+                                        {/* <div className='w-96 h-96 items-center'>
+                                            <Lotiee
+                                                options={{
+                                                    animationData: index.json,
+                                                    loop: true, // Set loop to true if you want the animation to loop
+                                                    autoplay: true, // Set autoplay to true if you want the animation to play automatically
+                                                }}
+                                            />
+                                        </div> */}
                                         {/* Description */}
                                         <div className=' justify-center items-center text-justify text-xs  rounded-2xl p-2 w-[300px] h-[150px] mt-1 lg:w-[260px] md:w-[390px] ' style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
@@ -134,6 +178,19 @@ function Solutions() {
                 </div>
 
             </div>
+
+            {/* <div className='bg-[#164179]' >
+
+                {data.map(item => (
+                    <div key={item.id}>
+                        {console.log('item: ' + item.id)}
+
+                        Render the Lottie animation
+                        <Lotiee animationData={item.json} className='w-96 h-96 items-center ' />
+                        <span > {item.attributes.SubTitle} </span>
+                    </div>
+                ))}
+            </div> */}
         </>
     )
 }
