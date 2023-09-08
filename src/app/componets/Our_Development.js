@@ -72,18 +72,16 @@ function Our_Development() {
                     {/* Upper */}
                     <div className=''>
 
-
-
-                        <div className='bg-[#0B2341] ms-20 mt-16 text-center justify-center  items-center 
+                        <div className='bg-[#0B2341] ms-20 mt-16 text-center  justify-center  items-center 
                          p-7 w-[537.1329956054688px] h-[120px]  lg:ms-10 md:p-5 md:ms-1 md:w-[420px] md:h-[80px]  sm:p-2 sm:w-[440px] sm:h-[100px]
-                           sm:ms-10 bs:p-0 bs:ms-0 bs:w-[340px] bs:h-[200px]' style={{
+                           sm:ms-10 bs:p-3 bs:ms-4 bs:w-[340px] bs:h-[150px]' style={{
                                 borderRadius: '14px',
                             }}>
 
                             {services && (
                                 <p className="text-white text-xs text-justify  pt-2 w-[449px] h-[94px]  md:pt-0 
-                                 md:w-[380px] md:h-[100px] sm:ms-2 sm:w-[400px] sm:h-[100px] sm:text-sm  sm:pt-1 bs:text-sm bs:w-[400px]
-                                 bs:h-[200px] bs:pr-40 bs:pt-0" >
+                                 md:w-[380px] md:h-[100px] sm:ms-2 sm:w-[400px] sm:h-[100px] sm:text-sm  sm:pt-1 bs:text-sm bs:w-[300px]
+                                 bs:h-[120px] bs:pr-0 bs:pt-0" >
                                     {services && services[0].attributes.Description}
                                 </p>
                             )}
@@ -120,7 +118,7 @@ function Our_Development() {
                         }}>
                             {services && <img src={services[0].attributes.ImgLink} alt='Image' className='ms-80 relative bottom-16 w-[30rem] h-[20rem] 
                            lg:ms-60  lg:bottom-20 md:ms-48 md:w-[280px] md:h-[300px]  md:bottom-28 sm:bottom-28 sm:w-[340px] sm:h-[240px]
-                             sm:ms-20  bs:ms-44 bs:bottom-20 bs:right-40 bs:w-[300px] bs:h-[200px]' />}
+                             sm:ms-20  bs:ms-44 bs:bottom-16 bs:right-40 bs:w-[300px] bs:h-[200px]' />}
                         </div>
                     </div>
                 </div>
