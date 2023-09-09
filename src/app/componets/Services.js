@@ -26,9 +26,9 @@ function Services() {
             <div className='bg-custom-blue '>
                 <div className=' pt-8 ps-10 pb-10 lg:pt-12 md:pt-10 sm:pt-8 bs:pt-6 sm:ps-7 bs:ps-5 sm:pb-7 bs:pb-5'>
                     <div>
-                        {services && (<p className="text-white text-4xl lg:text-3xl md:text-2xl sm:text-xl bs:text-lg"> {services[0].attributes.Name} </p>)}
-                        <div className="  w-20 lg:w-14 md:w-12 sm:w-10 h-1 pt-3  sm:pt-1  md:pt-2 ">
-                            <div className=" bg-white w-20 lg:w-14 md:w-12 sm:w-10 h-1 rounded"> </div>
+                        {services && (<p className="text-white text-4xl lg:text-3xl md:text-2xl sm:text-xl bs:text-xl"> {services[0].attributes.Name} </p>)}
+                        <div className="  w-20 h-1 pt-3 lg:w-14 md:w-12 md:pt-2  sm:w-10  sm:pt-1 bs:w-10 bs:pt-1  ">
+                            <div className=" bg-white w-20 h-1 rounded lg:w-14 md:w-12 sm:w-10 bs:pt-1 bs:w-10"> </div>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ function Services() {
                         </div>
                     </div>))}
                 </div>
-                <div className='text-white flex flex-row-reverse  pr-5' >
+                <div className='text-white flex flex-row-reverse  pr-5 bs:pr-3' >
                     <span>{services && <img src={services[0].attributes.LinkedinLogoLink} alt='imge not found' className='px-1' />}</span>
                     <span>{services && <img src={services[0].attributes.TwitterLogoLink} alt='imge not found' className='px-1' />}</span>
                     <span>{services && <img src={services[0].attributes.whatsaapLogoLink} alt='imge not found' className='px-1' />}</span>
@@ -53,7 +53,7 @@ function Services() {
                             Copyright © 2023 Root Technologies - All Rights Reserved. </p>
                     </div>
                     <div className='bg-black py-3 sm:py-5 bs:py-4' style={{ float: 'right', width: '50%', }}>
-                        <div className='float-right text-white text-xs pr-5 h-3 md:h-8 sm:h-10 bs:h-12 sm:pr-3 bs:pr-0 bs:pt-3 ' >
+                        <div className='float-right text-white text-xs pr-5 h-3 md:h-8 sm:h-10 bs:h-12 sm:pr-3 bs:pr-3 bs:pt-3 ' >
                             <span>  Powered by
                                 <a href='https://www.godaddy.com/en-in/websites/website-builder?isc=pwugc&utm_source=
                                 wsb&utm_medium=applications&utm_campaign=en-in_corp_applications_base' target="_blank" ><u>Vercel</u></a> </span>

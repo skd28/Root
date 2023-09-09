@@ -32,25 +32,26 @@ function Key_Patterns() {
 
     const slideLeft = () => {
         var slider = document.getElementById('slider');
-        slider.scrollLeft = slider.scrollLeft - 500;
+        slider.scrollLeft = slider.scrollLeft - 300;
     };
 
     const slideRight = () => {
         var slider = document.getElementById('slider');
-        slider.scrollLeft = slider.scrollLeft + 500;
+        slider.scrollLeft = slider.scrollLeft + 300;
     };
     return (
         <>
-            <div className='bg-custom-blue h-screen'>
-                <div className='ps-10 py-10'>
-                    {services && (<p className="text-white text-4xl">
+            <div className='bg-custom-blue h-screen md:h-[600px] sm:h-[600px] bs:h-[600px]'>
+                <div className=' pt-8 ps-10 pb-10 lg:pt-12 md:pt-10 sm:pt-8 bs:pt-6 sm:ps-7 bs:ps-5 sm:pb-7 bs:pb-5'>
+                    {services && (<p className="text-white text-4xl lg:text-3xl md:text-2xl sm:text-xl bs:text-xl ">
                         {services[0].attributes.Name}
                     </p>)}
-                    <div className="w-20 h-1 pt-3"> <div className=" bg-white w-20 h-1 rounded"> </div> </div>
+                    <div className="w-20 h-1 pt-3 lg:w-14 md:w-12 md:pt-2  sm:w-10  sm:pt-1 bs:w-10 bs:pt-1 ">
+                        <div className=" bg-white w-20 h-1 rounded lg:w-14 md:w-12 sm:w-10 bs:pt-1 bs:w-10 "> </div> </div>
                 </div>
 
                 <div className='bg-[#0B2341]  mt-12' style={{
-                    //  border: '2px solid red',
+                    // border: '2px solid red',
                     boxShadow: 'inset 0 -15px 5px black ,inset 0 15px 5px black ',
                 }} >
                     <div className='relative flex items-center'>
@@ -58,7 +59,7 @@ function Key_Patterns() {
                         <div id='slider' className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
 
                             {services && services.map((item, index) => (
-                                <img key={index} className='w-[300px] inline-block p-10 cursor-pointer hover:scale-105 ease-in-out duration-300' src={item.attributes.companylogolink
+                                <img key={index} className='w-[300px] inline-block  p-10 cursor-pointer hover:scale-105 ease-in-out duration-300 ' src={item.attributes.companylogolink
                                 } alt='Image not found' />
                             ))
                             }

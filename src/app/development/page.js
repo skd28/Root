@@ -119,15 +119,6 @@ function Home() {
                 </div>
 
             </div>
-
-            <div className='bg-[#0B2341] text-white'>
-                <div>
-                    Left
-                </div>
-                <div>
-                    right
-                </div>
-            </div>
         </>
     )
 }
