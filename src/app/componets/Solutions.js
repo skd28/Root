@@ -66,23 +66,23 @@ function Solutions() {
         <>
             <div className='bg-[#164179] py-10 overflow-scroll'>
                 <div className='ps-10 pt-7'>
-                    <p className='text-white text-4xl text-3xl text-3xl text-2xl text-xl'>
+                    <p className='text-white text-4xl md:text-2xl lg:text-3xl xl:text-4xl'>
                         {services && services[0].attributes.Title}
                     </p>
                     <div className="mt-3 bg-white w-24 h-1 rounded">
                     </div>
                 </div>
 
-                <div className='flex flex-col flex-row text-white mt-2 items-center content-center relative'>
+                <div className='flex flex-col md:flex-row text-white mt-2 items-center content-center relative'>
                     {/* Arrow */}
                     <div className='my-auto mx-auto absolute left-3'>
                         <span onClick={handlePrev} className='cursor-pointer text-4xl' >{'<<'}</span>
                     </div>
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                            <div className={`${index==1?"w-full h-full":"hidden block w-full h-full"}`} key={item.id}>
+                            <div className={`${index==1?"w-full h-full":"hidden md:block w-full h-full"}`} key={item.id}>
                                 {/* {console.log('item: ' + item.id)} */}
-                                        <div className={`${index==1 ?'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4':'flex flex-col w-5/6 mx-auto rounded-2xl w-5/6 justify-center space-y-2'}`} style={{
+                                        <div className={`${index==1 ?'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4':'flex flex-col w-5/6 mx-auto rounded-2xl justify-center space-y-2'}`} style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                         }}>
                                             {/* Heading */}
