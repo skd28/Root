@@ -45,14 +45,14 @@ function Home() {
     return (
         <>
             <div className='bg-[#0B2341]'>
-                <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-20 bs:px-10 bs:py-36 "
+                <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-20 px-10 py-36 "
                     style={{ backgroundImage: `url(${services && services[0].attributes.backgroundimgtopLink})` }}>
-                    <div className=' text-center text-white py-96 text-3xl pr-12 bs:py-20 bs:text-base bs:pr-5 '>
+                    <div className=' text-center text-white py-96 text-3xl pr-12 py-20 text-base pr-5 '>
                         <p >
                             {services && services[0].attributes.Title}
                         </p>
 
-                        <div className="w-20 h-1 ms-80 pt-2 bs:ms-16 bs:pt-1">
+                        <div className="w-20 h-1  pt-2  pt-1">
                             <div className=" bg-white w-20 h-1 rounded">
                             </div>
 
@@ -66,21 +66,21 @@ function Home() {
             }}>
                 {/* w-[1800px] h-[800px]  right-3/4 border-4 border-red-800 */}
                 <div>
-                    <div className='relative right-[750px] w-[1500px] bg-cover bs:right-[100px] ' style={{
+                    <div className='relative right-[750px] w-[1500px] bg-cover right-[100px] ' style={{
                         backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
                         backgroundColor: "#0B234",
                     }}>
 
-                        <div className='relative left-[850px] ms-20 text-white pt-32 w-[69%]' style={{
+                        <div className='relative left-[850px]  text-white pt-32 w-[69%]' style={{
                             // width: "69%",
                         }}>
-                            <div className='grid grid-flow-col  gap-20 bs:grid-flow-row ' style={{ border: '2px solid red', }}>
+                            <div className='grid grid-flow-col  gap-20 grid-flow-row ' style={{ border: '2px solid red', }}>
                                 <div className='pt-44 ps-20'
                                 >
                                     <Lotiee animationData={animation} className='w-96 h-96' />
                                 </div>
                                 <div>
-                                    <div className='grid grid-flow-col mt-28 ms-10  bs:grid-flow-row'>
+                                    <div className='grid grid-flow-col mt-28   grid-flow-row'>
                                         <div className='grid grid-flow-row text-white  '>
                                             <div className=''>
                                                 {services &&
@@ -109,7 +109,7 @@ function Home() {
                                             <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
                                         </div>
                                     </div>
-                                    <div className='text-right ms-20 text-white cursor-pointer  pt-1 ' >
+                                    <div className='text-right  text-white cursor-pointer  pt-1 ' >
                                         <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
                                     </div>
                                 </div>

@@ -49,14 +49,14 @@ function Our_Development() {
                             <img src={services[0].attributes.topbubbleImgLink} alt="Image Description"
                                 className="w-full h-full object-cover" />
                         )}
-                        <div className='relative bottom-24 ms-20  lg:bottom-14 lg:ms-5 md:ms-0  md:bottom-10 sm:bottom-9 sm:w-60 sm:ms-0 bs:bottom-5 bs:ms-0 ' >
+                        <div className='relative bottom-24   bottom-14    bottom-10 bottom-9 w-60  bottom-5  ' >
                             {services && (
-                                <p className="text-white text-4xl align-middle lg:text-4xl md:text-2xl sm:text-lg bs:text-base ">
+                                <p className="text-white text-4xl align-middle text-4xl text-2xl text-lg text-base ">
                                     {services && services[0].attributes.Title}
                                 </p>
                             )}
-                            <div className="  w-24 h-1 pt-3 sm:pt-1 md:pt-2 sm:w-16  bs:pt-1 bs:w-16 ">
-                                <div className=" bg-white w-24  h-1 rounded sm:w-16 bs:w-16 ">
+                            <div className="  w-24 h-1 pt-3 pt-1 pt-2 w-16  pt-1 w-16 ">
+                                <div className=" bg-white w-24  h-1 rounded w-16 w-16 ">
                                 </div>
                             </div>
                         </div>
@@ -65,23 +65,23 @@ function Our_Development() {
                 </div>
             </div >
 
-            <div className='grid grid-flow-col bg-custom-blue px-2  sm:grid-flow-row bs:grid-flow-row'>
+            <div className='grid grid-flow-col bg-custom-blue px-2  grid-flow-row grid-flow-row'>
                 {/* Left */}
                 <div className=' relative ' >
 
                     {/* Upper */}
                     <div className=''>
 
-                        <div className='bg-[#0B2341] ms-20 mt-16 text-center  justify-center  items-center 
-                         p-7 w-[537.1329956054688px] h-[120px]  lg:ms-10 md:p-5 md:ms-1 md:w-[420px] md:h-[80px]  sm:p-2 sm:w-[440px] sm:h-[100px]
-                           sm:ms-10 bs:p-3 bs:ms-4 bs:w-[340px] bs:h-[150px]' style={{
+                        <div className='bg-[#0B2341]  mt-16 text-center  justify-center  items-center
+                         p-7 w-[537.1329956054688px] h-[120px]   p-5  w-[420px] h-[80px]  p-2 w-[440px] h-[100px]
+                            p-3  w-[340px] h-[150px]' style={{
                                 borderRadius: '14px',
                             }}>
 
                             {services && (
-                                <p className="text-white text-xs text-justify  pt-2 w-[449px] h-[94px]  md:pt-0 
-                                 md:w-[380px] md:h-[100px] sm:ms-2 sm:w-[400px] sm:h-[100px] sm:text-sm  sm:pt-1 bs:text-sm bs:w-[300px]
-                                 bs:h-[120px] bs:pr-0 bs:pt-0" >
+                                <p className="text-white text-xs text-justify  pt-2 w-[449px] h-[94px]  pt-0
+                                 w-[380px] h-[100px]  w-[400px] h-[100px] text-sm  pt-1 text-sm w-[300px]
+                                 h-[120px] pr-0 pt-0" >
                                     {services && services[0].attributes.Description}
                                 </p>
                             )}
@@ -89,10 +89,10 @@ function Our_Development() {
                     </div>
                     {/* Lower */}
 
-                    <div className='grid grid-flow-col   sm:grid-flow-row bs:grid-flow-row ' >
+                    <div className='grid grid-flow-col   grid-flow-row grid-flow-row ' >
                         {/* Text Part */}
-                        <div className='  sm:mx-10 sm:my-5 sm:pb-8 bs:pb-8 bs:my-5'>
-                            <p className=" h-10  text-white ms-20  mt-20 rounded-2xl text-center  pt-2 w-[220px] md:mt-10 md:ms-5 md:w-[200px] sm:w-[320px] sm:h-12 sm:pt-1 sm:text-2xl sm:ms-10 bs:text-lg bs:h-12 bs:mt-7 bs:w-[250px] bs:ms-10" style={{
+                        <div className='  mx-10 my-5 pb-8 pb-8 my-5'>
+                            <p className=" h-10  text-white   mt-20 rounded-2xl text-center  pt-2 w-[220px] mt-10  w-[200px] w-[320px] h-12 pt-1 text-2xl  text-lg h-12 mt-7 w-[250px] " style={{
 
                                 border: '1px solid #EDE7E7',
                                 backgroundImage: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12))',
@@ -101,37 +101,37 @@ function Our_Development() {
                                 {services && services[0].attributes.subtitle}
                             </p>
 
-                            <div className='ms-20 mt-5 rounded-2xl w-[220px] h-[216px] sm:w-[320px] md:ms-5 md:w-[200px] sm:h-[260px] sm:ms-10 bs:ms-10 bs:w-[250px] bs:h-[225px]' style={{
+                            <div className=' mt-5 rounded-2xl w-[220px] h-[216px] w-[320px]  w-[200px] h-[260px]   w-[250px] h-[225px]' style={{
                                 border: '1px solid #EDE7E7',
                                 background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
 
                             }}>
-                                <p className='text-white text-xs text-justify  whitespace-pre-wrap px-2 py-4 pr-1 w-[170] h-[180]  sm:py-2 sm:px-5  sm:text-base bs:text-sm ' >
+                                <p className='text-white text-xs text-justify  whitespace-pre-wrap px-2 py-4 pr-1 w-[170] h-[180]  py-2 px-5  text-base text-sm ' >
                                     {services && services[0].attributes.content}
                                 </p>
 
                             </div>
                         </div>
                         {/* Gif */}
-                        <div className='relative bg-contain w-[930px] h-[250px] mt-18   lg:w-[780px]  lg:h-[200px] lg:mt-8  md:w-[540px] md:mt-7 md:h-[130px]  sm:w-[490px]  sm:h-[140px] sm:ms-2 sm:mt-14 bs:ms-0 bs:mt-20 bs:w-[360px] bs:h-[100px]' style={{
+                        <div className='relative bg-contain w-[930px] h-[250px] mt-18   w-[780px]  h-[200px] mt-8  w-[540px] mt-7 h-[130px]  w-[490px]  h-[140px]  mt-14  mt-20 w-[360px] h-[100px]' style={{
                             backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
                         }}>
-                            {services && <img src={services[0].attributes.ImgLink} alt='Image' className='ms-80 relative bottom-16 w-[30rem] h-[20rem] 
-                           lg:ms-60  lg:bottom-20 md:ms-48 md:w-[280px] md:h-[300px]  md:bottom-28 sm:bottom-28 sm:w-[340px] sm:h-[240px]
-                             sm:ms-20  bs:ms-44 bs:bottom-16 bs:right-40 bs:w-[300px] bs:h-[200px]' />}
+                            {services && <img src={services[0].attributes.ImgLink} alt='Image' className=' relative bottom-16 w-[30rem] h-[20rem]
+                             bottom-20  w-[280px] h-[300px]  bottom-28 bottom-28 w-[340px] h-[240px]
+                                bottom-16 right-40 w-[300px] h-[200px]' />}
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className='bg-custom-blue py-8 ps-3  sm:pt-20 bs:pt-20 '>
-                <div className='px-24 lg:px-18 md:px-10  bs:px-5'>
+            <div className='bg-custom-blue py-8 ps-3  pt-20 pt-20 '>
+                <div className='px-24 px-18 px-10  px-5'>
                     <div className="relative ">
-                        <div className="absolute inset-0 flex items-center ms-32 " aria-hidden="true">
+                        <div className="absolute inset-0 flex items-center  " aria-hidden="true">
                             <div className="w-full border-t border-gray-300 " />
                         </div>
                         <div className="relative flex items-center justify-between ">
-                            <span className="bg-custom-blue  text-base font-semibold leading-6 text-white cursor-pointer sm:font-medium " onClick={() => router.push('development')} >Learn More</span>
+                            <span className="bg-custom-blue  text-base font-semibold leading-6 text-white cursor-pointer font-medium " onClick={() => router.push('development')} >Learn More</span>
                             <button
                                 type="button"
                                 className="inline-flex items-center gap-x-4 rounded-full bg-custom-blue  py-3 text-sm font-semibold text-white shadow-sm  hover:bg-custom-blue "

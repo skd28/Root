@@ -41,7 +41,7 @@ function Our_Service() {
                     // border: '2px solid blue',
                 }}>
 
-                    <div className='ms-16 mt-10'>
+                    <div className=' mt-10'>
                         <img src={service.length > 0 && service[0].attributes.Rootlogolink} alt="Image Description" />
                     </div>
 

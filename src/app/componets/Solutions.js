@@ -64,43 +64,39 @@ function Solutions() {
 
     return (
         <>
-            <div className='bg-[#164179] py-10'>
+            <div className='bg-[#164179] py-10 overflow-scroll'>
                 <div className='ps-10 pt-7'>
-                    <p className='text-white text-4xl lg:text-3xl md:text-3xl sm:text-2xl bs:text-xl'>
+                    <p className='text-white text-4xl text-3xl text-3xl text-2xl text-xl'>
                         {services && services[0].attributes.Title}
                     </p>
-                    <div className="w-24 h-1 pt-3 lg:pt-2 md:pt-2  sm:w-20 bs:w-20 bs:pt-2">
-                        <div className=" bg-white w-24 h-1 rounded sm:w-20 bs:w-20">
-                        </div>
+                    <div className="mt-3 bg-white w-24 h-1 rounded">
                     </div>
                 </div>
 
-                <div className='grid grid-flow-col text-white ms-8 mt-5 lg:ms-2 md:grid-flow-row sm:grid-flow-row sm:mt-2  bs:grid-flow-row'>
+                <div className='flex flex-col flex-row text-white mt-2 items-center content-center relative'>
                     {/* Arrow */}
-                    <div className='mt-40  md:ms-72  md:mt-32 sm:ms-40 sm:mt-14 bs:mt-10  bs:ms-32 '>
-                        <span onClick={handlePrev} className='cursor-pointer text-4xl sm:text-2xl bs:text-xl' >{'<<'}</span>
+                    <div className='my-auto mx-auto absolute left-3'>
+                        <span onClick={handlePrev} className='cursor-pointer text-4xl' >{'<<'}</span>
                     </div>
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                            <div key={item.id}>
+                            <div className={`${index==1?"w-full h-full":"hidden block w-full h-full"}`} key={item.id}>
                                 {/* {console.log('item: ' + item.id)} */}
-                                {index == 1 ? (
-                                    <div>
-                                        <div className='w-[360px] h-[498px]  rounded-2xl lg:w-[310px] md:w-[440px] md:ms-28  md:mt-20  sm:mt-12 sm:w-[360px] sm:ms-5  bs:w-[330px] bs:mt-9' style={{
+                                        <div className={`${index==1 ?'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4':'flex flex-col w-5/6 mx-auto rounded-2xl w-5/6 justify-center space-y-2'}`} style={{
                                             backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                         }}>
                                             {/* Heading */}
-                                            <div className='w-[360px] h-[57px] text-center pt-4  rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px]' style={{
+                                            <div className={`${index==1 ?'w5/6 w-full mx-auto text-center text-2xl rounded-2xl':'w-5/6 mx-auto text-center text-xl rounded-2xl'}`} style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }} >
                                                 <span > {item.attributes.SubTitle} </span>
                                             </div>
                                             {/* Image */}
 
-                                            <div className='w-[360px]  h-[248px] my-1 rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px]  ' style={{
+                                            <div className='mx-auto my-1 rounded-2xl' style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }}>
-                                                <img src={item.attributes.TitleGifLink} className='w-[374.76px]  h-[245px] rounded-2xl lg:w-[310px] md:w-[440px]  bs:w-[330px] ' />
+                                                <img src={item.attributes.TitleGifLink} className='mx-auto  h-[245px] rounded-2xl' />
                                             </div>
 
                                             {/* <div className='w-96 h-96 items-center'>
@@ -114,66 +110,23 @@ function Solutions() {
                                                 />
                                             </div> */}
                                             {/* Description     */}
-                                            <div className='w-[360px] h-[188px]  text-justify  rounded-2xl lg:w-[310px] md:w-[440px] bs:w-[330px] ' style={{
+                                            <div className='w-full  text-justify  rounded-2xl'  style={{
                                                 backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                             }}>
-                                                <div>
                                                     <p className=' text-sm text-justify p-3' style={{
                                                     }}> {item.attributes.Description}</p>
-                                                </div>
 
-                                                <div className='rounded-2xl pt-3 ms-3' style={{
-                                                    float: 'right',
-                                                    width: '8%'
-
-                                                }}>
-                                                    <span className='cursor-pointer' onClick={() => router.push('our_solution')} >
+                                                <span className='rounded-2xl pt-3 flex items-end justify-end cursor-pointer' onClick={() => router.push('our_solution')} >
                                                         <img src='/Image/button.png' alt='Image not Found' className='w-6 h-6' />
-                                                    </span>
-                                                </div>
+                                                </span>
                                             </div>
 
                                         </div>
-                                    </div>
-                                ) : (
-                                    <div className=' w-[300px] h-[400px] mt-12  rounded-2xl md:ms-36 lg:w-[260px] md:w-[390px] md:mt-20  sm:ms-10 bs:ms-3' style={{
-                                        backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                    }}>
-                                        {/* Heading */}
-                                        <div className=' justify-center items-center text-center  text-sm rounded-2xl  p-2 w-[300px] h-[40px] lg:w-[260px] md:w-[390px]' style={{
-                                            backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                        }}>
-                                            <span>{item.attributes.SubTitle}</span>
-                                        </div>
-                                        {/* Image */}
-                                        <div className='mt-1 rounded-2xl lg:w-[260px] md:w-[390px]' style={{
-                                            backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                        }}>
-                                            <img src={item.attributes.TitleGifLink} className='w-[300px]  h-[200px] rounded-2xl lg:w-[260px] md:w-[390px]' />
-                                        </div>
-                                        {/* <div className='w-96 h-96 items-center'>
-                                            <Lotiee
-                                                options={{
-                                                    animationData: index.json,
-                                                    loop: true, // Set loop to true if you want the animation to loop
-                                                    autoplay: true, // Set autoplay to true if you want the animation to play automatically
-                                                }}
-                                            />
-                                        </div> */}
-                                        {/* Description */}
-                                        <div className=' justify-center items-center text-justify text-xs  rounded-2xl p-2 w-[300px] h-[150px] mt-1 lg:w-[260px] md:w-[390px] ' style={{
-                                            backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                        }}>
-                                            <p >{item.attributes.Description}</p>
-                                        </div>
-
-                                    </div>
-                                )}
                             </div>
                         ))}
                     {/* Arrow */}
-                    <div className='mt-40 lg:ms-3 md:ms-72  md:mt-32  sm:mt-14 sm:ms-40 bs:mt-10 bs:ms-32 '>
-                        <span onClick={handleNext} className='cursor-pointer text-4xl bs:text-xl'>{'>>'}</span>
+                    <div className='my-auto mx-auto absolute right-1'>
+                        <span onClick={handleNext} className='cursor-pointer text-4xl'>{'>>'}</span>
                     </div>
                 </div>
 

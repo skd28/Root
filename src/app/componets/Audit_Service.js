@@ -31,7 +31,7 @@ function Audit_Service() {
         <>
             <div className='bg-[#164179] py-5 pb-8'>
 
-                <div className="text-white text-4xl ps-10 md:text-3xl sm:text-2xl bs:text-xl ">
+                <div className="text-white text-4xl ps-10 text-3xl text-2xl text-xl ">
                     {service.length > 0 && (
                         <p className="text-white text-4xl">
                             {service[0].attributes.Name}

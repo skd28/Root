@@ -35,40 +35,40 @@ const Navbar = () => {
                     style={{
                         backgroundImage: `url(${services && services[0].attributes.imglink})`,
                     }}>
-                    <div className='py-10 ps-10 md:py-6 lg:py-8  sm:py-4  bs:py-2  bs:ps-5'  >
+                    <div className='py-10 ps-10 py-6 py-8  py-4  py-2  ps-5'  >
                         {services && (
                             <img src={services[0].attributes.rootlogolink} alt="Image Description"
-                                className=" w-[170px] h-[90px] lg:w-[150xp] lg:h-[72px] md:w-[120px] md:h-[60px] sm:w-[100px] sm:h-[48px] bs:w-[70px] bs:h-[30px]  "
+                                className=" w-[170px] h-[90px] w-[150xp] h-[72px] w-[120px] h-[60px] w-[100px] h-[48px] w-[70px] h-[30px]  "
                             />
                         )}
                     </div>
 
 
-                    <div className='pt-64 ps-10 lg:pt-56  md:pt-48   sm:pt-36 bs:pt-16 bs:ps-5 '>
+                    <div className='pt-64 ps-10 pt-56  pt-48   pt-36 pt-16 ps-5 '>
 
                         <div>
                             <div className=''>
 
-                                <div className='text-4xl space-x-10 w-[504px] h-[80px] lg:text-2xl lg:space-x-5  lg:w-[400px] lg:h-[60px]  md:text-xl md:space-x-2  md:w-[300px] md:h-[50px] 
-                               sm:text-lg sm:space-x-0  sm:w-[250px] sm:h-[35px] bs:w-[220px] bs:h-[35px]  ' style={{
+                                <div className='text-4xl space-x-10 w-[504px] h-[80px] text-2xl space-x-5  w-[400px] h-[60px]  text-xl space-x-2  w-[300px] h-[50px]
+                               text-lg space-x-0  w-[250px] h-[35px] w-[220px] h-[35px]  ' style={{
                                         // border: '2px solid black',
                                     }}>
                                     {services &&
-                                        <p className=' text-white text-4xl space-x-10 lg:text-2xl lg:space-x-5  md:text-xl md:space-x-2  sm:text-lg sm:space-x-0 bs:text-sm '>
+                                        <p className=' text-white text-4xl space-x-10 text-2xl space-x-5  text-xl space-x-2  text-lg space-x-0 text-sm '>
                                             {services && services[0].attributes.Title}
                                         </p>}
                                 </div>
 
 
-                                <div className='sm:pt-3 bs:pt-3'>
+                                <div className='pt-3 pt-3'>
                                     {services &&
-                                        <p className='text-sm text-white bs:text-xs'>
+                                        <p className='text-sm text-white text-xs'>
                                             {services && services[0].attributes.Title2}
                                         </p>}
                                 </div>
 
                                 <div className='pt-5 py-10 '>
-                                    <button className='text-white  rounded-full  border-2 px-2 py-2 text-sm bs:text-xs bs:px-1 bs:py-1'>GET QUOTE</button>
+                                    <button className='text-white  rounded-full  border-2 px-2 py-2 text-sm text-xs px-1 py-1'>GET QUOTE</button>
                                 </div>
 
                             </div>
