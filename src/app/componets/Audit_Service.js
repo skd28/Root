@@ -31,9 +31,9 @@ function Audit_Service() {
         <>
             <div className='bg-[#164179] py-5 pb-8'>
 
-                <div className="text-white text-4xl ps-10 text-3xl text-2xl text-xl ">
+                <div className=" px-10  ">
                     {service.length > 0 && (
-                        <p className="text-white text-4xl">
+                        <p className="text-white text-4xl xl:text-4xl  lg:text-3xl md:text-2xl  sm:text-xl">
                             {service[0].attributes.Name}
                         </p>
                     )}
@@ -93,5 +93,5 @@ export default Audit_Service;
 
 
 
-  //  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',
+//  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)',
 

@@ -40,7 +40,8 @@ const Navbar = () => {
                     backgroundImage: 'background: linear-gradient(342.74deg, rgba(242, 245, 248, 0.033) 72.06%, rgba(255, 255, 255, 0) 145.85%)',
                 }}>
                     {services && (
-                        <img src={services[0].attributes.rootlogolink} alt="Image Description"
+                        <img src='https://res.cloudinary.com/dgpftd5nf/image/upload/v1691838114/root_logo_f630515d1d.png'
+                            alt="Image Description"
                             className="w-1/6 h-1/6 px-7 py-7"
                         />
                     )}

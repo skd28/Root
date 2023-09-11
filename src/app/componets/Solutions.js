@@ -82,27 +82,27 @@ function Solutions() {
                     </div>
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                            <div className={`${index == 1 ? "w-full h-full" : "hidden md:block w-full h-full"}`} key={item.id}>
+                            <div className={`${index == 1 ? "w-full h-full scrollbar-hide" : "hidden md:block w-full h-full scrollbar-hide"}`} key={item.id}>
                                 {/* {console.log('item: ' + item.id)} */}
-                                <div className={`${index == 1 ? 'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4' : 'flex flex-col w-5/6 mx-auto rounded-2xl justify-center space-y-2'}`} style={{
+                                <div className={`${index == 1 ? 'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4 scrollbar-hide' : 'flex flex-col w-5/6 mx-auto rounded-2xl justify-center space-y-2 scrollbar-hide'}`} style={{
                                     backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                 }}>
                                     {/* Heading */}
-                                    <div className={`${index == 1 ? 'w5/6 w-full mx-auto text-center text-2xl rounded-2xl' : 'w-5/6 mx-auto text-center text-xl rounded-2xl'}`} style={{
+                                    <div className={`${index == 1 ? 'w5/6 w-full mx-auto text-center text-2xl rounded-2xl scrollbar-hide' : 'w-5/6 mx-auto text-center text-xl rounded-2xl scrollbar-hide'}`} style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }} >
                                         <span > {item.attributes.SubTitle} </span>
                                     </div>
                                     {/* Image */}
 
-                                    <div className='mx-auto rounded-2xl border-4 border-red-900' style={{
+                                    <div className='mx-auto rounded-2xl  scrollbar-hide' style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }}>
                                         <img src={item.attributes.TitleGifLink} className='mx-auto w-Full h-[245px] rounded-2xl' />
                                     </div>
 
                                     {/* Description     */}
-                                    <div className='w-full  text-justify  rounded-2xl' style={{
+                                    <div className='w-full  text-justify  rounded-2xl scrollbar-hide' style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }}>
                                         <p className=' text-sm text-justify p-3' style={{
