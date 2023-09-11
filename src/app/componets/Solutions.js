@@ -65,7 +65,7 @@ function Solutions() {
     return (
         <>
             <div className='bg-[#164179] py-10 overflow-scroll'>
-                <div className='ps-10 pt-7'>
+                <div className='px-10'>
                     <p className='text-white text-4xl md:text-2xl lg:text-3xl xl:text-4xl'>
                         {services && services[0].attributes.Title}
                     </p>
@@ -73,55 +73,47 @@ function Solutions() {
                     </div>
                 </div>
 
-                <div className='flex flex-col md:flex-row text-white mt-2 items-center content-center relative'>
+                <div className='flex flex-col md:flex-row text-white mt-10 items-center content-center relative' style={{
+                    // border: '2px solid red'
+                }}>
                     {/* Arrow */}
                     <div className='my-auto mx-auto absolute left-3'>
                         <span onClick={handlePrev} className='cursor-pointer text-4xl' >{'<<'}</span>
                     </div>
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                            <div className={`${index==1?"w-full h-full":"hidden md:block w-full h-full"}`} key={item.id}>
+                            <div className={`${index == 1 ? "w-full h-full" : "hidden md:block w-full h-full"}`} key={item.id}>
                                 {/* {console.log('item: ' + item.id)} */}
-                                        <div className={`${index==1 ?'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4':'flex flex-col w-5/6 mx-auto rounded-2xl justify-center space-y-2'}`} style={{
-                                            backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                        }}>
-                                            {/* Heading */}
-                                            <div className={`${index==1 ?'w5/6 w-full mx-auto text-center text-2xl rounded-2xl':'w-5/6 mx-auto text-center text-xl rounded-2xl'}`} style={{
-                                                backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                            }} >
-                                                <span > {item.attributes.SubTitle} </span>
-                                            </div>
-                                            {/* Image */}
+                                <div className={`${index == 1 ? 'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4' : 'flex flex-col w-5/6 mx-auto rounded-2xl justify-center space-y-2'}`} style={{
+                                    backgroundColor: 'rgba(217, 217, 217, 0.12)',
+                                }}>
+                                    {/* Heading */}
+                                    <div className={`${index == 1 ? 'w5/6 w-full mx-auto text-center text-2xl rounded-2xl' : 'w-5/6 mx-auto text-center text-xl rounded-2xl'}`} style={{
+                                        backgroundColor: 'rgba(217, 217, 217, 0.12)',
+                                    }} >
+                                        <span > {item.attributes.SubTitle} </span>
+                                    </div>
+                                    {/* Image */}
 
-                                            <div className='mx-auto my-1 rounded-2xl' style={{
-                                                backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                            }}>
-                                                <img src={item.attributes.TitleGifLink} className='mx-auto  h-[245px] rounded-2xl' />
-                                            </div>
+                                    <div className='mx-auto rounded-2xl border-4 border-red-900' style={{
+                                        backgroundColor: 'rgba(217, 217, 217, 0.12)',
+                                    }}>
+                                        <img src={item.attributes.TitleGifLink} className='mx-auto w-Full h-[245px] rounded-2xl' />
+                                    </div>
 
-                                            {/* <div className='w-96 h-96 items-center'>
+                                    {/* Description     */}
+                                    <div className='w-full  text-justify  rounded-2xl' style={{
+                                        backgroundColor: 'rgba(217, 217, 217, 0.12)',
+                                    }}>
+                                        <p className=' text-sm text-justify p-3' style={{
+                                        }}> {item.attributes.Description}</p>
 
-                                                <Lotiee
-                                                    options={{
-                                                        animationData: index.json,
-                                                        loop: true, // Set loop to true if you want the animation to loop
-                                                        autoplay: true, // Set autoplay to true if you want the animation to play automatically
-                                                    }}
-                                                />
-                                            </div> */}
-                                            {/* Description     */}
-                                            <div className='w-full  text-justify  rounded-2xl'  style={{
-                                                backgroundColor: 'rgba(217, 217, 217, 0.12)',
-                                            }}>
-                                                    <p className=' text-sm text-justify p-3' style={{
-                                                    }}> {item.attributes.Description}</p>
+                                        <span className='rounded-2xl pt-3 flex items-end justify-end cursor-pointer' onClick={() => router.push('our_solution')} >
+                                            <img src='/Image/button.png' alt='Image not Found' className='w-6 h-6' />
+                                        </span>
+                                    </div>
 
-                                                <span className='rounded-2xl pt-3 flex items-end justify-end cursor-pointer' onClick={() => router.push('our_solution')} >
-                                                        <img src='/Image/button.png' alt='Image not Found' className='w-6 h-6' />
-                                                </span>
-                                            </div>
-
-                                        </div>
+                                </div>
                             </div>
                         ))}
                     {/* Arrow */}

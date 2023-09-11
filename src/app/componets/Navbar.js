@@ -29,56 +29,47 @@ const Navbar = () => {
     }, []);
     return (
         <>
-            <nav >
 
-                <div className="relative overflow-hidden  bg-cover bg-center bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${services && services[0].attributes.imglink})`,
+
+            <div className="relative overflow-hidden  w-full h-full bg-cover bg-center bg-no-repeat md:w-auto"
+                style={{
+                    backgroundImage: `url(${services && services[0].attributes.imglink})`,
+                }}>
+
+                <div style={{
+                    backgroundImage: 'background: linear-gradient(342.74deg, rgba(242, 245, 248, 0.033) 72.06%, rgba(255, 255, 255, 0) 145.85%)',
+                }}>
+                    {services && (
+                        <img src={services[0].attributes.rootlogolink} alt="Image Description"
+                            className="w-1/6 h-1/6 px-7 py-7"
+                        />
+                    )}
+                </div>
+
+
+
+                <div className='px-7 mt-32 py-14'>
+
+                    <div className='pt-10' style={{
+
                     }}>
-                    <div className='py-10 ps-10 py-6 py-8  py-4  py-2  ps-5'  >
-                        {services && (
-                            <img src={services[0].attributes.rootlogolink} alt="Image Description"
-                                className=" w-[170px] h-[90px] w-[150xp] h-[72px] w-[120px] h-[60px] w-[100px] h-[48px] w-[70px] h-[30px]  "
-                            />
-                        )}
+                        {services &&
+                            <h1 className=' text-white text-4xl  w-2/5  xl:text-4xl  lg:text-3xl md:text-2xl  sm:text-xl '>
+                                {services && services[0].attributes.Title}
+                            </h1>}
                     </div>
-
-
-                    <div className='pt-64 ps-10 pt-56  pt-48   pt-36 pt-16 ps-5 '>
-
-                        <div>
-                            <div className=''>
-
-                                <div className='text-4xl space-x-10 w-[504px] h-[80px] text-2xl space-x-5  w-[400px] h-[60px]  text-xl space-x-2  w-[300px] h-[50px]
-                               text-lg space-x-0  w-[250px] h-[35px] w-[220px] h-[35px]  ' style={{
-                                        // border: '2px solid black',
-                                    }}>
-                                    {services &&
-                                        <p className=' text-white text-4xl space-x-10 text-2xl space-x-5  text-xl space-x-2  text-lg space-x-0 text-sm '>
-                                            {services && services[0].attributes.Title}
-                                        </p>}
-                                </div>
-
-
-                                <div className='pt-3 pt-3'>
-                                    {services &&
-                                        <p className='text-sm text-white text-xs'>
-                                            {services && services[0].attributes.Title2}
-                                        </p>}
-                                </div>
-
-                                <div className='pt-5 py-10 '>
-                                    <button className='text-white  rounded-full  border-2 px-2 py-2 text-sm text-xs px-1 py-1'>GET QUOTE</button>
-                                </div>
-
-                            </div>
-                        </div>
-
+                    <div className='pt-3'>
+                        {services &&
+                            <p className='text-sm text-white '>
+                                {services && services[0].attributes.Title2}
+                            </p>}
+                    </div>
+                    <div className='pt-5 py-10 '>
+                        <button className='text-white  rounded-full  border-2 p-1 '>GET QUOTE</button>
                     </div>
                 </div>
-            </nav>
 
-
+            </div>
         </>
     );
 };
