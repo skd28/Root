@@ -41,13 +41,13 @@ function Key_Patterns() {
     };
     return (
         <>
-            <div className='bg-custom-blue h-screen h-[600px] h-[600px] h-[600px]'>
-                <div className=' pt-8 ps-10 pb-10 pt-12 pt-10 pt-8 pt-6 ps-7 ps-5 pb-7 pb-5'>
-                    {services && (<p className="text-white text-4xl text-3xl text-2xl text-xl text-xl ">
+            <div className='bg-custom-blue h-full'>
+                <div className=' pt-8 ps-10 pb-10 '>
+                    {services && (<p className="text-white text-4xl  ">
                         {services[0].attributes.Name}
                     </p>)}
-                    <div className="w-20 h-1 pt-3 w-14 w-12 pt-2  w-10  pt-1 w-10 pt-1 ">
-                        <div className=" bg-white w-20 h-1 rounded w-14 w-12 w-10 pt-1 w-10 "> </div> </div>
+                    <div className="w-20 h-1 pt-3 ">
+                        <div className=" bg-white w-20 h-1 rounded pt-1 "> </div> </div>
                 </div>
 
                 <div className='bg-[#0B2341]  mt-12' style={{

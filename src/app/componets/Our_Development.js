@@ -37,26 +37,23 @@ function Our_Development() {
     return (
         <>
 
-            <div className='bg-custom-blue relative  '>
+            <div className='bg-custom-blue '>
 
                 {/* Heading Part */}
-                <div className='bg-[#0B2341] relative '>
-                    <div className='pt-5 ps-10  '
+                <div className='bg-[#0B2341]  '>
+                    <div className='pt-5 px-4 w-[95%] h-[500] sm:px-10'
                         style={{
-                            width: "95%", height: '500',
+                            // width: "95%", height: '500',
+                            //  border: '2px solid red',
                         }}>
                         {services && (
-                            <img src={services[0].attributes.topbubbleImgLink} alt="Image Description"
+                            <img src='https://res.cloudinary.com/dgpftd5nf/image/upload/v1693643866/Group_258_1_7737d079f7.png' alt="Image Description"
                                 className="w-full h-full object-cover" />
                         )}
-                        <div className='relative bottom-24   bottom-14    bottom-10 bottom-9 w-60  bottom-5  ' >
-                            {services && (
-                                <p className="text-white text-4xl align-middle text-4xl text-2xl text-lg text-base ">
-                                    {services && services[0].attributes.Title}
-                                </p>
-                            )}
-                            <div className="  w-24 h-1 pt-3 pt-1 pt-2 w-16  pt-1 w-16 ">
-                                <div className=" bg-white w-24  h-1 rounded w-16 w-16 ">
+                        <div className='relative bottom-6 w-[60%] px-auto py-auto sm:bottom-14 sm:pl-14 md:bottom-16 lg:pl-20 lg:bottom-20' >
+                            <h1 className="text-white text-lg  sm:text-xl md:text-2xl lg:text-4xl">OUR DEVELOPMENT</h1>
+                            <div className="  w-[55%] h-1 pt-1  sm:w-[40%]">
+                                <div className=" bg-white w-[55%] h-1 rounded  sm:w-[40%] ">
                                 </div>
                             </div>
                         </div>
@@ -65,23 +62,20 @@ function Our_Development() {
                 </div>
             </div >
 
-            <div className='grid grid-flow-col bg-custom-blue px-2  grid-flow-row grid-flow-row'>
+            <div className='flex flex-col bg-custom-blue  ' >
                 {/* Left */}
-                <div className=' relative ' >
+                <div   >
 
                     {/* Upper */}
-                    <div className=''>
+                    <div  >
 
-                        <div className='bg-[#0B2341]  mt-16 text-center  justify-center  items-center
-                         p-7 w-[537.1329956054688px] h-[120px]   p-5  w-[420px] h-[80px]  p-2 w-[440px] h-[100px]
-                            p-3  w-[340px] h-[150px]' style={{
-                                borderRadius: '14px',
-                            }}>
+                        <div className='bg-[#0B2341]  text-center  justify-center  items-center mx-auto w-4/5 mt-16 p-7 h-[10%] lg:w-2/5 lg:mx-28' style={{
+                            borderRadius: '14px',
+                            //   border: '2px solid red',
+                        }}>
 
                             {services && (
-                                <p className="text-white text-xs text-justify  pt-2 w-[449px] h-[94px]  pt-0
-                                 w-[380px] h-[100px]  w-[400px] h-[100px] text-sm  pt-1 text-sm w-[300px]
-                                 h-[120px] pr-0 pt-0" >
+                                <p className="text-white text-xs text-justify pt-2 w-full h-1/6" >
                                     {services && services[0].attributes.Description}
                                 </p>
                             )}
@@ -89,49 +83,50 @@ function Our_Development() {
                     </div>
                     {/* Lower */}
 
-                    <div className='grid grid-flow-col   grid-flow-row grid-flow-row ' >
+                    <div className=' relative  flex flex-col mx-auto  lg:flex-row ' >
                         {/* Text Part */}
-                        <div className='  mx-10 my-5 pb-8 pb-8 my-5'>
-                            <p className=" h-10  text-white   mt-20 rounded-2xl text-center  pt-2 w-[220px] mt-10  w-[200px] w-[320px] h-12 pt-1 text-2xl  text-lg h-12 mt-7 w-[250px] " style={{
-
+                        <div className=' w-2/3 mx-auto sm:w-1/3 lg:ml-28 lg:w-1/4 ' style={{
+                            //  border: '2px solid red'
+                        }}>
+                            <p className="  text-white   mt-20 rounded-2xl text-center py-2 w-full " style={{
                                 border: '1px solid #EDE7E7',
                                 backgroundImage: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12))',
-
+                                // border: '2px solid black',
                             }}>
                                 {services && services[0].attributes.subtitle}
                             </p>
 
-                            <div className=' mt-5 rounded-2xl w-[220px] h-[216px] w-[320px]  w-[200px] h-[260px]   w-[250px] h-[225px]' style={{
+                            <div className=' mt-5 rounded-2xl  w-full  px-auto' style={{
                                 border: '1px solid #EDE7E7',
                                 background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
-
+                                //  border: '2px solid red',
                             }}>
-                                <p className='text-white text-xs text-justify  whitespace-pre-wrap px-2 py-4 pr-1 w-[170] h-[180]  py-2 px-5  text-base text-sm ' >
+                                <p className='text-white text-xs text-justify  whitespace-pre-wrap py-4  px-2 lg:px-4' >
                                     {services && services[0].attributes.content}
                                 </p>
 
                             </div>
                         </div>
                         {/* Gif */}
-                        <div className='relative bg-contain w-[930px] h-[250px] mt-18   w-[780px]  h-[200px] mt-8  w-[540px] mt-7 h-[130px]  w-[490px]  h-[140px]  mt-14  mt-20 w-[360px] h-[100px]' style={{
+                        <div className=' bg-contain  bg-no-repeat w-full h-1/3  relative  mt-20  sm:mt-28 lg:mt-3' style={{
                             backgroundImage: `url(${services && services[0].attributes.BubbleImgLink})`,
+
                         }}>
-                            {services && <img src={services[0].attributes.ImgLink} alt='Image' className=' relative bottom-16 w-[30rem] h-[20rem]
-                             bottom-20  w-[280px] h-[300px]  bottom-28 bottom-28 w-[340px] h-[240px]
-                                bottom-16 right-40 w-[300px] h-[200px]' />}
+                            {services && <img src={services[0].attributes.ImgLink} alt='Image' className=' w-3/5 h-1/6 relative left-20 bottom-14 sm:bottom-28 lg:left-64
+                           ' />}
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className='bg-custom-blue py-8 ps-3  pt-20 pt-20 '>
-                <div className='px-24 px-18 px-10  px-5'>
+            <div className='bg-custom-blue py-5  px-28 '>
+                <div className=' '>
                     <div className="relative ">
-                        <div className="absolute inset-0 flex items-center  " aria-hidden="true">
+                        <div className="absolute inset-0 flex items-center ml-32 " aria-hidden="true">
                             <div className="w-full border-t border-gray-300 " />
                         </div>
                         <div className="relative flex items-center justify-between ">
-                            <span className="bg-custom-blue  text-base font-semibold leading-6 text-white cursor-pointer font-medium " onClick={() => router.push('development')} >Learn More</span>
+                            <span className="bg-custom-blue  text-base font-semibold leading-6 text-white cursor-pointer   " onClick={() => router.push('development')} >Learn More</span>
                             <button
                                 type="button"
                                 className="inline-flex items-center gap-x-4 rounded-full bg-custom-blue  py-3 text-sm font-semibold text-white shadow-sm  hover:bg-custom-blue "

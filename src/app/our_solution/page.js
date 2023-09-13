@@ -42,64 +42,55 @@ function Home() {
     return (
         <>
             <div className='bg-black ' >
-                <div className='pt-5 ps-5  py-10  py-2 py-5' style={{
+                <div className='py-8 px-3 w-1/2' style={{
                     backgroundImage: ' linear-gradient(342.74deg, rgba(0, 21, 42, 0.43) 72.06%, rgba(255, 255, 255, 0) 145.85%)',
                 }} >
-                    {services && <img src={services[0].attributes.RootLogolLnk} alt='Image not Found' />}
+                    {services && <img src='https://res.cloudinary.com/dgpftd5nf/image/upload/v1691838114/root_logo_f630515d1d.png' alt='Image not Found' />}
 
                 </div>
 
-                <div className='flex flex-row justify-center' >
-                    <div className='w-1 h-32 pt-10 pr-7 h-24 pt-9 pt-7  h-20 pt-5 h-12 pr-3 pr-3 pt-3 h-10'>
-                        <div className='bg-white h-32 rounded w-1 h-24 h-16 h-12 h-10'></div>
+                <div className='flex flex-row justify-center border-4 border-blue-400' >
+                    <div className='w-1 h-[40px] pl-3'>
+                        <div className='bg-white h-[40px] rounded w-1 '></div>
                     </div>
-                    <div className='flex flex-row' >
-                        {services && (
-                            <>
-                                <p className=" font-semibold text-[#ffffff] text-[140px]  opacity-60 text-[110px] text-[80px] text-[60px] text-[40px]" style={{
-                                    // fontSize: '140px',
-                                }}>
-                                    {services[0].attributes.Title.split(' ')[0]}
-                                </p>
-                                <p className=" ps-14  text-[#ffffff] text-[140px]  opacity-25 text-[110px] text-[80px] ps-3  text-[60px] text-[40px] ps-5" style={{
-                                    // fontSize: '140px',
-                                }}>
-                                    {services[0].attributes.Title.split(' ').slice(1).join(' ')}
-                                </p>
-                            </>
-                        )}
+                    <div className='flex flex-row text-white' >
+                        <h1 className=" font-semibold text-[#ffffff] text-[35px]  opacity-60 " >OUR</h1>
+                        <h1 className=" text-[#ffffff] text-[35px] px-2 opacity-25 ">SOLUTIONS</h1>
                     </div>
                 </div>
-                {/* <div className='border-2 bg-contain bg-no-repeat h-[600px]' style={{
-                    backgroundImage: `url(${services[0].attributes.MapImgLink})`,
-                }}>
-                    <Lotiee animationData={location_map} />
-                </div> */}
+                <div>
+                    <div className='relative' style={{
+                        backgroundImage: `url('https://res.cloudinary.com/dgpftd5nf/image/upload/v1693978560/mapimg_3634f3c0ff.png')`,
+                    }}>
+                        <Lotiee animationData={location_map} className='w-full h-full absolute top-0 left-0' style={{ zIndex: 1 }}></Lotiee>
+                    </div>
+                </div>
 
-                <div className='text-white'>
+
+                <div className='text-white' style={{ border: '2px solid red', }}>
                     {services &&
                         services.map((item, index) => (
 
                             <div key={item.id}>
                                 {item.id === 1 || item.id % 2 !== 0 ? (
-                                    <div className='ms-96 ps-52 mt-16    ps-80  ps-40  ps-1 mt-32   ps-1 mt-32' style={{
-                                        // border: '2px solid blue',
+                                    <div className='' style={{
+                                        border: '2px solid yellow',
                                     }}>
                                         <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
                                         <div className='text-[#856EF4] text-4xl pt-5'>
                                             {item.attributes.SubTitle}
                                         </div>
-                                        <p className='w-[503px] h-[123px] text-justify pt-8 w-[330px]  h-[100px] w-[330px]  h-[100px]'>
+                                        <p className='w-[503px] h-[123px] text-justify pt-8 '>
                                             {item.attributes.Description}
                                         </p>
                                     </div>
                                 ) : (
-                                    <div className=' mt-10    mt-32  mt-32' >
+                                    <div className=' mt-10' style={{ border: '2px solid red', }} >
                                         <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
                                         <div className='text-[#856EF4] text-4xl pt-5'>
                                             {item.attributes.SubTitle}
                                         </div>
-                                        <p className='w-[503px] h-[123px] text-justify pt-8  w-[330px]  h-[100px] w-[330px]  h-[100px]'>
+                                        <p className='w-[503px] h-[123px] text-justify pt-8  '>
                                             {item.attributes.Description}
                                         </p>
                                     </div>
@@ -107,13 +98,31 @@ function Home() {
                             </div>
                         ))}
                 </div>
-                <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right pt-20 pr-5 pt-20 pr-5' >
+                <div className='bg-black text-white cursor-pointer py-5  pr-16 text-right pt-20 ' >
                     <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
                 </div>
             </div>
-
-
         </>
     )
 }
 export default Home
+
+
+
+
+// {
+//     services && (
+//         <>
+//             <p className=" font-semibold text-[#ffffff] text-[140px]  opacity-60 " style={{
+//                 // fontSize: '140px',
+//             }}>
+//                 {services[0].attributes.Title.split(' ')[0]}
+//             </p>
+//             <p className=" ps-14  text-[#ffffff] text-[140px]  opacity-25 " style={{
+//                 // fontSize: '140px',
+//             }}>
+//                 {services[0].attributes.Title.split(' ').slice(1).join(' ')}
+//             </p>
+//         </>
+//     )
+// }

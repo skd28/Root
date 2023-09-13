@@ -42,7 +42,7 @@ export default function Home() {
       <Audit_Service />
       {/*  Fourth Page*/}
 
-      {/* <Our_Development /> */}
+      <Our_Development />
       {/* Fifth Page */}
 
 
@@ -50,12 +50,12 @@ export default function Home() {
       {/* Six Page */}
 
 
-      {/* <Our_Usp /> */}
+      <Our_Usp />
       {/* Seventh Page*/}
 
-      {/* <Key_Patterns /> */}
+      <Key_Patterns />
 
-      {/* <Services /> */}
+      <Services />
       {/* Eight Page */}
     </>
   )

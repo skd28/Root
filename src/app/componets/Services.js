@@ -24,36 +24,43 @@ function Services() {
     return (
         <>
             <div className='bg-custom-blue '>
-                <div className=' pt-8 ps-10 pb-10 pt-12 pt-10 pt-8 pt-6 ps-7 ps-5 pb-7 pb-5'>
+                <div className=' pt-8 ps-10 pb-10 '>
                     <div>
-                        {services && (<p className="text-white text-4xl text-3xl text-2xl text-xl text-xl"> {services[0].attributes.Name} </p>)}
-                        <div className="  w-20 h-1 pt-3 w-14 w-12 pt-2  w-10  pt-1 w-10 pt-1  ">
-                            <div className=" bg-white w-20 h-1 rounded w-14 w-12 w-10 pt-1 w-10"> </div>
+                        {services && (<p className="text-white text-4xl lg:text-4xl md:text-3xl sm:text-xl"> {services[0].attributes.Name} </p>)}
+                        <div className="  w-20 h-1 pt-3   ">
+                            <div className=" bg-white w-20 h-1 rounded "> </div>
                         </div>
                     </div>
                 </div>
 
-                <div className='text-center pt-10 pb-20 pt-8 pt-6  pt-4 pt-2 pb-16 pb-14 pb-12 pb-5'>
+                <div className='text-center pt-10 pb-20' style={{
+                    //  border: '2px solid red',
+                }}>
                     {services && services.map(item => (<div key={item.id}>
-                        <h3 className='font-semibold py-5 text-base text-white text-sm font-medium font-normal'>{item.attributes.Title}</h3>
-                        <div className='text-center justify-center  flex flex-col'>
-                            <p className='px-80 text-sm text-white text-xs px-72 px-56 px-48 px-10'>{item.attributes.description}</p>
+                        <h3 className='font-semibold py-5 text-base text-white'>{item.attributes.Title}</h3>
+                        <div className='text-center justify-center flex flex-col ' style={{
+                            // border: '2px solid red',
+                        }}>
+                            <p className=' text-sm text-white  px-auto lg:px-80 md:px-40 sm:px-20'>{item.attributes.description}</p>
                         </div>
                     </div>))}
                 </div>
-                <div className='text-white flex flex-row-reverse  pr-5 pr-3' >
+                <div className='text-white flex flex-row-reverse  pr-5 ' >
                     <span>{services && <img src={services[0].attributes.LinkedinLogoLink} alt='imge not found' className='px-1' />}</span>
                     <span>{services && <img src={services[0].attributes.TwitterLogoLink} alt='imge not found' className='px-1' />}</span>
                     <span>{services && <img src={services[0].attributes.whatsaapLogoLink} alt='imge not found' className='px-1' />}</span>
                 </div>
                 <div >
 
-                    <div className='bg-black py-3 py-5 py-4' style={{ float: 'left', width: '50%', }}>
-                        <p className='text-white text-xs ps-5 ps-3 ps-1 h-3 h-8 h-10 h-12'>
+                    <div className='bg-black py-3' style={{
+                        float: 'left', width: '50%',
+                        //border: '2px solid red',
+                    }}>
+                        <p className='text-white text-xs ps-5  h-4'>
                             Copyright © 2023 Root Technologies - All Rights Reserved. </p>
                     </div>
-                    <div className='bg-black py-3 py-5 py-4' style={{ float: 'right', width: '50%', }}>
-                        <div className='float-right text-white text-xs pr-5 h-3 h-8 h-10 h-12 pr-3 pr-3 pt-3 ' >
+                    <div className='bg-black py-3 ' style={{ float: 'right', width: '50%', }}>
+                        <div className='float-right text-white text-xs pr-5 h-4' >
                             <span>  Powered by
                                 <a href='https://www.godaddy.com/en-in/websites/website-builder?isc=pwugc&utm_source=
                                 wsb&utm_medium=applications&utm_campaign=en-in_corp_applications_base' target="_blank" ><u>Vercel</u></a> </span>
