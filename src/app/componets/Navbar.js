@@ -31,7 +31,7 @@ const Navbar = () => {
         <>
 
 
-            <div className="relative overflow-hidden  w-full h-full bg-cover bg-center bg-no-repeat md:w-auto"
+            <div className="relative overflow-hidden  w-full h-full bg-cover bg-center bg-no-repeat "
                 style={{
                     backgroundImage: `url(${services && services[0].attributes.imglink})`,
                 }}>
@@ -39,12 +39,10 @@ const Navbar = () => {
                 <div style={{
                     backgroundImage: 'background: linear-gradient(342.74deg, rgba(242, 245, 248, 0.033) 72.06%, rgba(255, 255, 255, 0) 145.85%)',
                 }}>
-                    {services && (
-                        <img src='https://res.cloudinary.com/dgpftd5nf/image/upload/v1691838114/root_logo_f630515d1d.png'
-                            alt="Image Description"
-                            className="w-1/6 h-1/6 px-7 py-7"
-                        />
-                    )}
+                    <img src='https://res.cloudinary.com/dgpftd5nf/image/upload/v1691838114/root_logo_f630515d1d.png'
+                        alt="Image Description"
+                        className="w-2/5 h-1/6 px-7 py-7 lg:w-1/5 lg:h-1/5"
+                    />
                 </div>
 
 
@@ -55,7 +53,7 @@ const Navbar = () => {
 
                     }}>
                         {services &&
-                            <h1 className=' text-white text-4xl  w-2/5  xl:text-4xl  lg:text-3xl md:text-2xl  sm:text-xl '>
+                            <h1 className=' text-white text-4xl  w-1/2  lg:w-2/5 '>
                                 {services && services[0].attributes.Title}
                             </h1>}
                     </div>

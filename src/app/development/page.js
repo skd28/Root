@@ -45,55 +45,54 @@ function Home() {
     return (
         <>
             <div className='bg-[#0B2341]'>
-                <div className=" relative overflow-hidden  bg-cover bg-center bg-no-repeat px-36 py-20 px-10 py-36 "
-                    style={{ backgroundImage: `url(${services && services[0].attributes.backgroundimgtopLink})` }}>
-                    <div className=' text-center text-white py-96 text-3xl pr-12 py-20 text-base pr-5 '>
-                        <p >
+                <div className="  bg-cover bg-center bg-no-repeat w-full h-full border-4 "
+                    style={{ backgroundImage: `url('https://res.cloudinary.com/dgpftd5nf/image/upload/v1691386777/background_img_1443f7bf67.png')` }}>
+                    <div className=' text-center text-white py-48 '>
+                        <p style={{ border: '2px solid yellow' }} >
                             {services && services[0].attributes.Title}
                         </p>
-
-                        <div className="w-20 h-1  pt-2  pt-1">
-                            <div className=" bg-white w-20 h-1 rounded">
+                        <div className=''>
+                            <div className=" bg-white w-1/2 h-1 prounded">
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
 
             <div className='bg-[#0B2341]  ' style={{
-                boxShadow: 'inset 0 -30px  black',
+                // boxShadow: 'inset 0 -30px  black',
             }}>
                 {/* w-[1800px] h-[800px]  right-3/4 border-4 border-red-800 */}
                 <div>
-                    <div className='relative right-[750px] w-[1500px] bg-cover right-[100px] ' style={{
-                        backgroundImage: `url(${services && services[0].attributes.backgorudImgbottomlink})`,
+                    <div className=' relative right-[00px] w-full bg-cover' style={{
+                        backgroundImage: `url('https://res.cloudinary.com/dgpftd5nf/image/upload/v1691393550/background_img_bottom_73ea7913ab.png')`,
                         backgroundColor: "#0B234",
                     }}>
 
-                        <div className='relative left-[850px]  text-white pt-32 w-[69%]' style={{
+                        <div className=' relative left-[00px]  text-white' style={{
                             // width: "69%",
+                            border: '2px solid yellow',
                         }}>
-                            <div className='grid grid-flow-col  gap-20 grid-flow-row ' style={{ border: '2px solid red', }}>
-                                <div className='pt-44 ps-20'
+                            <div className='flex flex-col w-full' style={{ border: '2px solid red', }}>
+                                <div className=''
                                 >
-                                    <Lotiee animationData={animation} className='w-96 h-96' />
+                                    <Lotiee animationData={animation} className='w-1/2 h-1/2' />
                                 </div>
-                                <div>
-                                    <div className='grid grid-flow-col mt-28   grid-flow-row'>
+                                <div className='border-4' >
+                                    <div className='grid grid-flow-col '>
                                         <div className='grid grid-flow-row text-white  '>
                                             <div className=''>
                                                 {services &&
                                                     services.slice(currentSlide, currentSlide + 3).map((item, index) => (
                                                         <div key={item.id}>
-                                                            <span className=' m-2 rounded-2xl text-xs  p-2 px-12 justify-center items-center text-center'
+                                                            <span className='  rounded-2xl text-xs   justify-center items-center text-center'
                                                                 style={{
                                                                     backgroundImage: 'linear-gradient(0deg, rgba(217, 217, 217, 0.12), rgba(217, 217, 217, 0.12))',
                                                                 }} >
                                                                 {item.attributes.subtitle2}
                                                             </span>
 
-                                                            <p className=' bg-[#8069EE] m-2 rounded-2xl   justify-center items-center text-justify  w-5/6 h-24 p-5 py-3 mb-5 mt-5'
+                                                            <p className=' bg-[#8069EE]  rounded-2xl   justify-center items-center text-justify  w-5/6 h-24 '
                                                                 style={{
                                                                     fontSize: '11px',
                                                                     background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
@@ -103,13 +102,13 @@ function Home() {
                                                     ))}
                                             </div>
                                         </div>
-                                        <div className=' flex flex-col justify-center items-center text-center mr-5'>
+                                        <div className=' flex flex-col justify-center items-center text-center '>
                                             <input type="radio" name="radioGroup" onClick={handlePrev} className="form-radio text-blue-500" />
                                             <input type="radio" name="radioGroup" className="form-radio text-blue-500" />
                                             <input type="radio" name="radioGroup" onClick={handleNext} className="form-radio text-blue-500" />
                                         </div>
                                     </div>
-                                    <div className='text-right  text-white cursor-pointer  pt-1 ' >
+                                    <div className='text-right  text-white cursor-pointer   ' >
                                         <span class="text-3xl" onClick={handleBackButtonClick} >{'←'}</span>
                                     </div>
                                 </div>

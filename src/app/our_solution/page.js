@@ -42,20 +42,20 @@ function Home() {
     return (
         <>
             <div className='bg-black ' >
-                <div className='py-8 px-3 w-1/2' style={{
+                <div className='py-8 px-3 w-1/2 sm:w-3/5 md:w-2/3 lg:w-5/6' style={{
                     backgroundImage: ' linear-gradient(342.74deg, rgba(0, 21, 42, 0.43) 72.06%, rgba(255, 255, 255, 0) 145.85%)',
                 }} >
                     {services && <img src='https://res.cloudinary.com/dgpftd5nf/image/upload/v1691838114/root_logo_f630515d1d.png' alt='Image not Found' />}
 
                 </div>
 
-                <div className='flex flex-row justify-center border-4 border-blue-400' >
-                    <div className='w-1 h-[40px] pl-3'>
-                        <div className='bg-white h-[40px] rounded w-1 '></div>
+                <div className='flex flex-row justify-center ' >
+                    <div className='w-1 h-[35px] pt-2 px-5 sm:h-[73px] sm:pt-3  md:h-[90px] md:pt-5'>
+                        <div className='bg-white h-[35px] rounded w-1 sm:h-[73px] sm:pt-3 md:h-[90px] md:pt-5 lg:h-[140px] lg:pt-8 '></div>
                     </div>
                     <div className='flex flex-row text-white' >
-                        <h1 className=" font-semibold text-[#ffffff] text-[35px]  opacity-60 " >OUR</h1>
-                        <h1 className=" text-[#ffffff] text-[35px] px-2 opacity-25 ">SOLUTIONS</h1>
+                        <h1 className=" font-semibold text-[#ffffff] text-[35px]  opacity-60 sm:text-[70px] md:text-[90px] lg:text-[130px] " >OUR</h1>
+                        <h1 className=" text-[#ffffff] text-[35px] px-2 opacity-25 sm:text-[70px] md:text-[90px] lg:text-[130px] ">SOLUTIONS</h1>
                     </div>
                 </div>
                 <div>
@@ -67,30 +67,30 @@ function Home() {
                 </div>
 
 
-                <div className='text-white' style={{ border: '2px solid red', }}>
+                <div className='text-white'>
                     {services &&
                         services.map((item, index) => (
 
                             <div key={item.id}>
                                 {item.id === 1 || item.id % 2 !== 0 ? (
-                                    <div className='' style={{
-                                        border: '2px solid yellow',
+                                    <div className='px-4 sm:px-8 lg:w-1/2 lg:ml-[500px] lg:pl-28' style={{
+                                        //  border: '2px solid yellow',
                                     }}>
-                                        <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
-                                        <div className='text-[#856EF4] text-4xl pt-5'>
+                                        <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-full py-5 lg:w-1/2' />
+                                        <div className='text-[#856EF4] text-4xl py-5'>
                                             {item.attributes.SubTitle}
                                         </div>
-                                        <p className='w-[503px] h-[123px] text-justify pt-8 '>
+                                        <p className=' text-justify pt-8 w-full h-1/6 lg:w-4/5 lg:pt-4'>
                                             {item.attributes.Description}
                                         </p>
                                     </div>
                                 ) : (
-                                    <div className=' mt-10' style={{ border: '2px solid red', }} >
-                                        <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-80' />
-                                        <div className='text-[#856EF4] text-4xl pt-5'>
+                                    <div className=' mt-10 px-4 sm:px-8 lg:w-1/2 lg:mt-0 lg:pl-20 '>
+                                        <img src={item.attributes.TitleGifLink} alt='Image not found' className='w-full py-5 lg:w-1/2' />
+                                        <div className='text-[#856EF4] text-4xl py-5'>
                                             {item.attributes.SubTitle}
                                         </div>
-                                        <p className='w-[503px] h-[123px] text-justify pt-8  '>
+                                        <p className='  text-justify pt-8 w-full h-1/6   lg:w-full lg:pt-4'>
                                             {item.attributes.Description}
                                         </p>
                                     </div>

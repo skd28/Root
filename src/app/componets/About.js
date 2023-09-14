@@ -35,18 +35,18 @@ function About() {
 
                 <div className=' py-5 px-7 '>
                     {services && (
-                        <p className="text-white text-4xl lg:text-3xl md:text-2xl sm:text-xl ">
-                            {services[0].attributes.Name}
+                        <p className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                            ABOUT US!
                         </p>
                     )}
-                    <div className="  w-16 h-1 pt-3  ">
-                        <div className=" bg-white w-16  h-1 rounded ">
+                    <div className="  w-16 h-1 pt-1 lg:pt-3 lg:w-24">
+                        <div className=" bg-white w-16  h-1 rounded lg:w-24">
                         </div>
                     </div>
                 </div>
 
-                <div className='flex flex-row px-10   py-10 lg:py-10 lg:flex-row md:flex-col md:py-5 sm:py-5 sm:flex-col'>
-                    <div className=' w-90% h-[50%] mt-10 ' style={{
+                <div className='flex flex-col px-10 lg:flex-row'>
+                    <div className=' w-90% h-[50%] mt-10 lg:mt-14' style={{
                         border: '2px solid gray',
                     }}>
                         {services && (
@@ -54,13 +54,13 @@ function About() {
                                 src='https://res.cloudinary.com/dgpftd5nf/image/upload/v1691578148/about_us_9aabba9fab.png'
                                 //  src={services[0].attributes.ImgLink}
                                 alt="Image Description"
-                                className='w-90% h-[70%] '
+                                className='w-full h-full '
                             />
                         )}
                     </div>
-                    <div className='text-white text-sm mx-10 lg:mx-10 md:mx-0  sm:mx-0  mt-10 w-full h-full '  >
+                    <div className='text-white text-sm  mt-10 w-full h-full lg:px-7 lg:mt-14 '  >
                         {services && (
-                            <p className=" whitespace-pre-wrap text-justify  w-full h-full   text-white">
+                            <p className=" whitespace-pre-wrap text-justify  w-full h-full text-white">
                                 {services[0].attributes.Description}</p>
                         )}
                     </div>
