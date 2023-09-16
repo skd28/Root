@@ -34,7 +34,7 @@ export default function Home() {
       {/* Second Page */}
 
 
-      {/* <Solutions /> */}
+      <Solutions />
 
       {/* Third Page */}
 
@@ -46,7 +46,7 @@ export default function Home() {
       {/* Fifth Page */}
 
 
-      {/* <Growing_Values /> */}
+      <Growing_Values />
       {/* Six Page */}
 
 

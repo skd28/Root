@@ -32,30 +32,28 @@ function Growing_Values() {
     return (
         <>
             <div className="bg-custom-blue">
-                <div className="px-5 py-5">
-                    <h1 className="text-white text-xl ">Growing With Values</h1>
-                    <div className="h-1 w-14 bg-white pt-1"></div>
+                <div className="px-16 py-5">
+                    <h1 className="text-white text-4xl ">Growing With Values</h1>
+                    <div className="h-1 w-20 bg-white mt-2 rounded"></div>
                 </div>
 
-                <div className=" w-full h-full bg-cotain bg-no-repeat mx-auto" style={{
-                    backgroundImage: 'url("/Image/Growing_Mobile.png")',
-                    border: '2px solid red',
+                <div className="flex flex-row mx-16" style={{
+                    //  border: '2px solid green'
                 }}>
-                    <div className="border-4 w-4/5 mx-auto " style={{ border: '2px solid green', }}>
-                        <Lotiee animationData={Growing_Values1} className="w-1/2" />
-                        <p className="text-white px-8 text-justify" >
+                    <div className="bg-no-repeat bg-contain " style={{
+                        backgroundImage: 'url("/Image/Growing_desktop.png")',
+                        // border: '2px solid black',
+                    }}>
+                        <Lotiee animationData={Growing_Values1} className="w-2/5 ml-16 " />
+                        <p className="text-white w-1/2 text-justify ml-16 pt-16" >
                             {services && services[0].attributes.Description}
                         </p>
                     </div>
-                    <div className="w-4/5 mx-auto" style={{ border: '2px solid red' }}>
-                        <p className="text-white px-5 text-justify" >{services && services[1].attributes.Description}</p>
-                        <Lotiee animationData={Growing_Values2} className="w-1/2" />
-
+                    <div className="relative ">
+                        <p className="text-white text-justify pl-5 px-16" >{services && services[1].attributes.Description}</p>
+                        <Lotiee animationData={Growing_Values2} className="h-[67%]  -ml-14" />
                     </div>
-
-
                 </div>
-
             </div>
         </>
     );
@@ -66,6 +64,25 @@ export default Growing_Values;
 
 
 
+{/* <div className=" flex flex-col" style={{ border: '2px solid yellow', }}>
+                    <div>
+                        <div className=" w-1/3 h-1/2 bg-contain bg-no-repeat" style={{
+                            backgroundImage: 'url("/Image/Growing_desktop.png")',
+                            border: '2px solid red',
+                        }}>
+                            <div className="border-4 w-4/5" style={{ border: '2px solid green', }}>
+                                <Lotiee animationData={Growing_Values1} className="w-1/2" />
+                                <p className="text-white px-8 text-justify" >
+                                    {services && services[0].attributes.Description}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="w-1/3" style={{ border: '2px solid red' }}>
+                            <p className="text-white px-5 text-justify" >{services && services[1].attributes.Description}</p>
+                            <Lotiee animationData={Growing_Values2} className="w-1/2" />
+                        </div>
+                    </div>
+                </div> */}
 
 
 

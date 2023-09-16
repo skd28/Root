@@ -64,19 +64,19 @@ function Home() {
             }}>
                 {/* w-[1800px] h-[800px]  right-3/4 border-4 border-red-800 */}
                 <div>
-                    <div className=' relative right-[00px] w-full bg-cover' style={{
+                    <div className=' relative  right-[200px] w-full h-[700px] bg-contain bg-no-repeat' style={{
                         backgroundImage: `url('https://res.cloudinary.com/dgpftd5nf/image/upload/v1691393550/background_img_bottom_73ea7913ab.png')`,
                         backgroundColor: "#0B234",
                     }}>
 
-                        <div className=' relative left-[00px]  text-white' style={{
+                        <div className='relative left-[200px]    text-white' style={{
                             // width: "69%",
                             border: '2px solid yellow',
                         }}>
                             <div className='flex flex-col w-full' style={{ border: '2px solid red', }}>
                                 <div className=''
                                 >
-                                    <Lotiee animationData={animation} className='w-1/2 h-1/2' />
+                                    <Lotiee animationData={animation} className='w-2/3 h-2/3' />
                                 </div>
                                 <div className='border-4' >
                                     <div className='grid grid-flow-col '>
