@@ -59,8 +59,9 @@ function Home() {
                     </div>
                 </div>
                 <div>
-                    <div className='relative' style="
-                        backgroundImage: url('https://res.cloudinary.com/dgpftd5nf/image/upload/v1693978560/mapimg_3634f3c0ff.png')">
+                    <div className='relative' style={{
+                        backgroundImage: "url('https://res.cloudinary.com/dgpftd5nf/image/upload/v1693978560/mapimg_3634f3c0ff.png')"
+                    }}>
                         <Lotiee animationData={location_map} className='w-full h-full absolute top-0 left-0' style={{ zIndex: 1 }}></Lotiee>
                     </div>
                 </div>
