@@ -39,7 +39,7 @@ function Our_Usp() {
                         </p>
                     )}
                     <div className="w-[35%] h-1 pt-1 sm:w-[35%] ">
-                        <div className=" bg-white w-[35%] h-1 roundeds sm:w-[35%]  "> </div>
+                        <div className=" bg-white w-[45%] h-1 roundeds sm:w-[35%]  "> </div>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@ function Our_Usp() {
 
 
                 <div className='bg-[#0B2341] text-center justify-start items-center xl:px-10 xl:py-10 lg:px-10 lg:py-10 md:px-5 md:py-10 sm:px-5 sm:py-10'>
-                    <div className='grid grid-flow-col text-center justify-start items-center'>
+                    <div className='grid grid-flow-row text-center justify-start items-center lg:grid-flow-col'>
 
                         <div className='text-white ' style={{
                             //  border: '2px solid red'
@@ -56,22 +56,22 @@ function Our_Usp() {
                                 // border: '2px solid blue'
                             }}>
                                 <span className='bg-custom-blue rounded-2xl  text-center  xl:text-xl xl:w-[55%] xl:my-2  lg:text-xl lg:w-[55%]
-                                 md:w-[63%] lg:my-2  md:my-2 md:text-xl sm:my-1 sm:text-lg sm:w-[83%] text-base'
+                                 md:w-[53%] lg:my-2  md:my-3 md:text-2xl sm:my-3 sm:text-xl sm:w-[55%] text-base w-[70%] my-3 mt-7'
                                     style={{ border: ' 2px solid black', }}> {services && services[0].attributes.Title1}</span>
                                 <span className='bg-custom-blue rounded-2xl  text-center  xl:text-xl xl:w-[78%] xl:my-2  lg:text-xl lg:w-[78%]
-                                 md:w-[86%]  lg:my-2  md:my-2 md:text-xl sm:my-1 sm:text-lg sm:w-[93%] text-base '
+                                 md:w-[74%]  lg:my-2  md:my-3 md:text-2xl sm:my-3 sm:text-xl sm:w-[76%] text-base my-3 w-full'
                                     style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title2}</span>
                                 <span className='bg-custom-blue rounded-2xl  text-center xl:text-xl  xl:w-[46%] xl:my-2  lg:text-xl lg:w-[46%]
-                                 md:w-[53%] lg:my-2 md:my-2 md:text-xl sm:my-1 sm:text-lg sm:w-[71%] text-base'
+                                 md:w-[44%] lg:my-2 md:my-3 md:text-2xl sm:my-3 sm:text-xl sm:w-[46%] text-base my-3 w-[60%]'
                                     style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title3}</span>
                                 <span className='bg-custom-blue rounded-2xl text-center  xl:text-xl xl:w-[53%] xl:my-2   lg:text-xl lg:w-[53%]
-                                 md:w-[60%] lg:my-2 md:my-2 md:text-xl sm:my-1 sm:text-lg sm:w-[78%] text-base'
+                                 md:w-[50%] lg:my-2 md:my-3 md:text-2xl sm:my-3 sm:text-xl sm:w-[53%] text-base my-3 w-[66%] '
                                     style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title4}</span>
                                 <span className='bg-custom-blue rounded-2xl text-center  xl:text-xl xl:w-[55%] xl:my-2   lg:text-xl lg:w-[55%]
-                                 md:w-[63%] lg:my-2 md:my-2 md:text-xl sm:my-1 sm:text-lg sm:w-[80%] text-base'
+                                 md:w-[53%] lg:my-2 md:my-3 md:text-2xl sm:my-3 sm:text-xl sm:w-[56%] text-base my-3 w-[72%]'
                                     style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title5}</span>
                                 <span className='bg-custom-blue rounded-2xl  text-center  xl:text-xl xl:w-[105%] xl:my-2  lg:text-xl  lg:w-[105%] lg:my-2
-                                 md:w-[100%]   md:my-2 md:text-xl sm:my-1 sm:text-lg  sm:w-[93%] text-base'
+                                 md:w-[99%]   md:my-3 md:text-2xl sm:my-3 sm:text-xl  sm:w-full text-base my-3 w-full '
                                     style={{ border: ' 2px solid black', }}>  {services && services[0].attributes.Title6}</span>
                             </div>
 
@@ -80,7 +80,7 @@ function Our_Usp() {
                             style={{
                                 // border: '2px solid red'
                             }} >
-                            <Lotiee animationData={Usp} className=' xl:h-2/3 xl:w-2/3  lg:w-2/3 lg:h-2/3 md:w-2/3 md:h-2/3  sm:h-3/4 ' style={{
+                            <Lotiee animationData={Usp} className=' xl:h-2/3 xl:w-2/3  lg:w-2/3 lg:h-2/3 md:w-3/4 md:h-3/4 md:mx-auto sm:h-3/4 ' style={{
                                 // border: '2px solid blue'
                             }} />
                         </div>

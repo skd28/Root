@@ -37,21 +37,21 @@ function Growing_Values() {
                     <div className="h-1 w-20 bg-white mt-2 rounded"></div>
                 </div>
 
-                <div className="flex flex-row mx-16" style={{
+                <div className="flex flex-row  mx-16" style={{
                     //  border: '2px solid green'
                 }}>
-                    <div className="bg-no-repeat bg-contain " style={{
+                    <div className="bg-no-repeat bg-contain  " style={{
                         backgroundImage: 'url("/Image/Growing_desktop.png")',
                         // border: '2px solid black',
                     }}>
-                        <Lotiee animationData={Growing_Values1} className="w-2/5 ml-16 " />
-                        <p className="text-white w-1/2 text-justify ml-16 pt-16" >
+                        <Lotiee animationData={Growing_Values1} className="w-1/2  mx-auto " />
+                        <p className="text-white  text-justify w-1/2  mx-auto" >
                             {services && services[0].attributes.Description}
                         </p>
                     </div>
                     <div className="relative ">
                         <p className="text-white text-justify pl-5 px-16" >{services && services[1].attributes.Description}</p>
-                        <Lotiee animationData={Growing_Values2} className="h-[67%]  -ml-14" />
+                        <Lotiee animationData={Growing_Values2} className="h-[63%]  -ml-14" />
                     </div>
                 </div>
             </div>

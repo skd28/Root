@@ -1,28 +1,28 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Lotiee from 'lottie-react';
-import server from '../animation/server.json';
-import user from '../animation/user.json';
-import virtual from '../animation/virtual.json';
-import unified from '../animation/unified.json';
-import security from '../animation/security.json';
-import network from '../animation/network.json';
-import power from '../animation/power.json';
-import intergation from '../animation/intergation.json';
-import datacenter from '../animation/datacenter.json';
+// import Lotiee from 'lottie-react';
+// import server from '../animation/server.json';
+// import user from '../animation/user.json';
+// import virtual from '../animation/virtual.json';
+// import unified from '../animation/unified.json';
+// import security from '../animation/security.json';
+// import network from '../animation/network.json';
+// import power from '../animation/power.json';
+// import intergation from '../animation/intergation.json';
+// import datacenter from '../animation/datacenter.json';
 
-const data = [
-    { id: 3, json: datacenter },
-    { id: 4, json: user },
-    { id: 7, json: virtual },
-    { id: 8, json: unified },
-    { id: 9, json: security },
-    { id: 1, json: network },
-    { id: 2, json: power },
-    { id: 5, json: intergation },
-    { id: 6, json: server },
-];
+// const data = [
+//     { id: 3, json: datacenter },
+//     { id: 4, json: user },
+//     { id: 7, json: virtual },
+//     { id: 8, json: unified },
+//     { id: 9, json: security },
+//     { id: 1, json: network },
+//     { id: 2, json: power },
+//     { id: 5, json: intergation },
+//     { id: 6, json: server },
+// ];
 
 function Solutions() {
 
@@ -77,48 +77,52 @@ function Solutions() {
                     // border: '2px solid red'
                 }}>
                     {/* Arrow */}
-                    <div className='my-auto mx-auto absolute left-3'>
-                        <span onClick={handlePrev} className='cursor-pointer text-4xl' >{'<<'}</span>
+                    <div className='my-auto mx-auto absolute left-1  mt-40 sm:mt-40 md:mt-0'>
+                        <span onClick={handlePrev} className='cursor-pointer text-4xl' >{'<'}</span>
                     </div>
                     {services &&
                         services.slice(currentSlide, currentSlide + 3).map((item, index) => (
-                            <div className={`${index == 1 ? "w-full h-full scrollbar-hide" : "hidden md:block w-full h-full scrollbar-hide"}`} key={item.id}>
-                                {/* {console.log('item: ' + item.id)} */}
-                                <div className={`${index == 1 ? 'flex flex-col w-full mx-auto rounded-2xl justify-center space-y-4 scrollbar-hide' : 'flex flex-col w-5/6 mx-auto rounded-2xl justify-center space-y-2 scrollbar-hide'}`} style={{
+                            <div className={`${index == 1 ? "w-full h-full " : "hidden md:block w-full h-full  "}`} key={item.id}>
+
+                                <div className={`${index == 1 ? 'flex flex-col  mx-auto rounded-2xl justify-center space-y-4  lg:w-full md:w-full sm:w-4/5 w-3/4' : 'flex flex-col w-5/6 mx-auto rounded-2xl justify-center space-y-2 '}`} style={{
                                     backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                 }}>
                                     {/* Heading */}
-                                    <div className={`${index == 1 ? 'w5/6 w-full mx-auto text-center text-2xl rounded-2xl scrollbar-hide' : 'w-5/6 mx-auto text-center text-xl rounded-2xl scrollbar-hide'}`} style={{
+                                    <div className={`${index == 1 ? 'w-full mx-auto text-center text-2xl rounded-2xl ' : 'w-full mx-auto text-center text-xl rounded-2xl '}`} style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }} >
                                         <span > {item.attributes.SubTitle} </span>
                                     </div>
                                     {/* Image */}
 
-                                    <div className='mx-auto rounded-2xl  scrollbar-hide' style={{
+                                    <div className='mx-auto rounded-2xl' style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }}>
-                                        <img src={item.attributes.TitleGifLink} className='mx-auto w-Full h-[245px] rounded-2xl' />
+                                        <img src={item.attributes.TitleGifLink} className='mx-auto w-Full h-full rounded-2xl' />
                                     </div>
 
                                     {/* Description     */}
-                                    <div className='w-full  text-justify  rounded-2xl scrollbar-hide' style={{
+                                    <div className='w-full  text-justify  rounded-2xl' style={{
                                         backgroundColor: 'rgba(217, 217, 217, 0.12)',
                                     }}>
-                                        <p className=' text-sm text-justify p-3' style={{
+                                        <p className=' text-sm text-justify p-3 px-10' style={{
                                         }}> {item.attributes.Description}</p>
 
-                                        <span className='rounded-2xl pt-3 flex items-end justify-end cursor-pointer' onClick={() => router.push('our_solution')} >
+                                        {index == 1 ? <span className='rounded-2xl pt-3 flex items-end justify-end cursor-pointer' onClick={() => router.push('our_solution')} >
                                             <img src='/Image/button.png' alt='Image not Found' className='w-6 h-6' />
-                                        </span>
+                                        </span> : <button></button>}
+
+                                        {/* <span className='rounded-2xl pt-3 flex items-end justify-end cursor-pointer' onClick={() => router.push('our_solution')} >
+                                            <img src='/Image/button.png' alt='Image not Found' className='w-6 h-6' />
+                                        </span> */}
                                     </div>
 
                                 </div>
                             </div>
                         ))}
                     {/* Arrow */}
-                    <div className='my-auto mx-auto absolute right-1'>
-                        <span onClick={handleNext} className='cursor-pointer text-4xl'>{'>>'}</span>
+                    <div className='my-auto mx-auto absolute right-1  mt-40 sm:mt-40 md:mt-0'>
+                        <span onClick={handleNext} className='cursor-pointer text-4xl'>{'>'}</span>
                     </div>
                 </div>
 

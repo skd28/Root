@@ -101,7 +101,9 @@ function Our_Development() {
                                 background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
                                 //  border: '2px solid red',
                             }}>
-                                <p className='text-white text-xs text-justify  whitespace-pre-wrap py-4  px-2 lg:px-4' >
+                                <p className='text-white text-xs text-justify  whitespace-pre-wrap py-4  px-2 lg:px-4' style={{
+                                    background: 'linear-gradient(358deg, rgba(128, 105, 238, 0.51),3.22%, rgba(128, 105, 238, 0.1275) 77.82% ,rgba(103, 121, 191, 0) 97.64%)',
+                                }} >
                                     {services && services[0].attributes.content}
                                 </p>
 
