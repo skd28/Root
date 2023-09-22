@@ -52,7 +52,6 @@ export default function Home() {
 
       <Our_Usp />
       {/* Seventh Page*/}
-
       <Key_Patterns />
 
       <Services />

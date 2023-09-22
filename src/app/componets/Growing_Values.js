@@ -31,7 +31,7 @@ function Growing_Values() {
 
     return (
         <>
-            <div className="bg-custom-blue">
+            {/* <div className="bg-custom-blue">
                 <div className="px-16 py-5">
                     <h1 className="text-white text-4xl ">Growing With Values</h1>
                     <div className="h-1 w-20 bg-white mt-2 rounded"></div>
@@ -44,8 +44,8 @@ function Growing_Values() {
                         backgroundImage: 'url("/Image/Growing_desktop.png")',
                         // border: '2px solid black',
                     }}>
-                        <Lotiee animationData={Growing_Values1} className="w-1/2  mx-auto " />
-                        <p className="text-white  text-justify w-1/2  mx-auto" >
+                        <Lotiee animationData={Growing_Values1} className="w-1/2  mx-10" />
+                        <p className="text-white  text-justify w-1/2  mx-10" >
                             {services && services[0].attributes.Description}
                         </p>
                     </div>
@@ -53,6 +53,33 @@ function Growing_Values() {
                         <p className="text-white text-justify pl-5 px-16" >{services && services[1].attributes.Description}</p>
                         <Lotiee animationData={Growing_Values2} className="h-[63%]  -ml-14" />
                     </div>
+                </div>
+            </div> */}
+            <div className=" flex flex-col bg-custom-blue" style={{
+                //border: '2px solid yellow',
+            }}>
+                <div className="" >
+                    <div className="  bg-auto bg-no-repeat border-4 " style={{
+                        backgroundImage: 'url("/Image/mobile3.png")',
+                        //  backgroundImage: 'url("/Image/mobile.png")',
+                        //  border: '2px solid red',
+                    }}>
+                        <div className="  w-full mx-auto my-1" style={{
+                            // border: '2px solid green',
+                        }}>
+                            <Lotiee animationData={Growing_Values1} className="border-4 mx-10" />
+                            <p className="text-white  text-justify text-xs w-full px-12 py-5" >
+                                {services && services[0].attributes.Description}
+                            </p>
+                        </div>
+                        <div className="my-10 mx-auto" style={{
+                            // border: '2px solid red'
+                        }}>
+                            <p className="text-white  text-justify text-xs px-14  py-5" >{services && services[1].attributes.Description}</p>
+                            <Lotiee animationData={Growing_Values2} className=" border-4 mx-12" />
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </>

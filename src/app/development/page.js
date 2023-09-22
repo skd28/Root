@@ -61,15 +61,15 @@ function Home() {
             <div className='bg-[#0B2341]' style={{
                 // background: '2px solid green',
             }}>
-                <div className=' relative  w-full  right-[650px] bg-cover bg-no-repeat sm:right-[0px]' style={{
+                <div className=' relative  w-full  lg:right-[650px] lg:bg-cover  bg-cover bg-no-repeat right-[100px]' style={{
                     backgroundImage: `url('https://res.cloudinary.com/dgpftd5nf/image/upload/v1691393550/background_img_bottom_73ea7913ab.png')`,
                     backgroundColor: "#0B234",
                 }}>
-                    <div className='flex flex-row w-full pt-40 relative left-[650px] sm:flex-col sm:left-[0px] s ' style={{
+                    <div className='flex flex-col w-full pt-40 relative lg:left-[650px] lg:flex-row  left-[100px]  ' style={{
                         border: '2px solid red',
                     }}>
                         {/* GIF */}
-                        <div className='ml-40' >
+                        <div className='lg:ml-40' >
                             <Lotiee animationData={animation} className='w-full h-full' />
                         </div>
 
