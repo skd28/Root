@@ -60,7 +60,7 @@ function Growing_Values() {
             }}>
                 <div className="" >
                     <div className="  bg-auto bg-no-repeat border-4 " style={{
-                        backgroundImage: 'url("/Image/mobile3.png")',
+                        backgroundImage: 'url("/Image/mobile2.png")',
                         //  backgroundImage: 'url("/Image/mobile.png")',
                         //  border: '2px solid red',
                     }}>
