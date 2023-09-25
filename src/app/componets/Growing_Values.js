@@ -62,7 +62,7 @@ function Growing_Values() {
                 //border: '2px solid yellow',
             }}>
                 <div className="" >
-                    <div className="  bg-contain bg-no-repeat border-4 " style={{
+                    <div className="  bg-contain bg-no-repeat " style={{
                         backgroundImage: 'url("/Image/Growing_Mobile.png")',
                         //  backgroundImage: 'url("/Image/mobile.png")',
                         //  border: '2px solid red',
