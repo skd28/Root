@@ -83,77 +83,101 @@ function Our_Service() {
                 </div>
             </div>
             <div className='bg-black relative '>
-                <div className=' bg-no-repeat relative right-[400px] bg-cover ' style={{
+                <div className=' bg-no-repeat relative  bg-cover ' style={{
                     backgroundImage: 'url("/Image/main.gif")',
-
+                    //    backgroundPosition:
                 }}>
                     <div className='flex flex-col items-center justify-center h-full '>
-                        <div className='  '>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[0].attributes.subtitle}</span>}
+                        {/* First  */}
+                        <div className='flex flex-row  border-4 w-full' >
+                            <div className=' flex flex-row'>
+                                <div className='rounded-full bg-[#00A2D0] w-4 h-4'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[0].attributes.subtitle}</span>}
+                            </div>
+
+                            <div className='flex flex-row'>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3 '></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[1].attributes.subtitle}</span>}
+                            </div>
                         </div>
-                        <div className=''>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3 '></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[1].attributes.subtitle}</span>}
+
+                        {/* Second */}
+                        <div className='flex flex-row'>
+                            <div className=' flex flex-row'>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3 '></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[2].attributes.subtitle}</span>}
+                            </div>
+                            <div className=' flex flex-row'>
+                                <div className='rounded-full bg-[#645AB2] w-3 h-3'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[3].attributes.subtitle}</span>}
+                            </div>
                         </div>
-                        <div className=''>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3 '></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[2].attributes.subtitle}</span>}
+
+                        {/* Third */}
+                        <div className='flex flex-row border-4'>
+                            <Lotiee animationData={open_lock} className='w-1/4 h-1/4 border-4'></Lotiee>
+                            <div className=' flex flex-row'>
+                                <div className='rounded-full bg-[#0082FF] w-3 h-3 '></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[4].attributes.subtitle}</span>}
+                            </div>
+                            <div className='flex flex-row'>
+                                <div className='rounded-full bg-[#0DF7F9] w-5 h-5'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[5].attributes.subtitle}</span>}
+                            </div>
+                            <div className=' flex flex-row '>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[6].attributes.subtitle}</span>}
+                            </div>
                         </div>
-                        <div className=''>
-                            <div className='rounded-full bg-[#645AB2] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[3].attributes.subtitle}</span>}
+
+                        <div className='flex flex-row'>
+                            <div className=' flex flex-row '>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[7].attributes.subtitle}</span>}
+                            </div>
+                            <div className='flex flex-row  '>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[8].attributes.subtitle}</span>}
+                            </div>
+                            <div className=' flex flex-row '>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[9].attributes.subtitle}</span>}
+                            </div>
                         </div>
-                        <div className=''>
-                            <div className='rounded-full bg-[#0082FF] w-3 h-3 '></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[4].attributes.subtitle}</span>}
+                        {/* Fourth */}
+                        <div className='flex flex-row'>
+                            <div className='flex flex-row  '>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[10].attributes.subtitle}</span>}
+                            </div>
+                            <div className='flex flex-row  '>
+                                <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
+                                {service && <span className='text-white' >{service.length > 0 && service[11].attributes.subtitle}</span>}
+                            </div>
                         </div>
-                        <div className=''>
-                            <div className='rounded-full bg-[#0DF7F9] w-5 h-5'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[5].attributes.subtitle}</span>}
-                        </div>
-                        <Lotiee animationData={open_lock} className='w-1/4 h-1/4 border-4 my-20 '></Lotiee>
-                        <div className='  '>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[6].attributes.subtitle}</span>}
-                        </div>
-                        <div className='  '>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[7].attributes.subtitle}</span>}
-                        </div>
-                        <div className='  '>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[8].attributes.subtitle}</span>}
-                        </div>
-                        <div className='  '>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[9].attributes.subtitle}</span>}
-                        </div>
-                        <div className='  '>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[10].attributes.subtitle}</span>}
-                        </div>
-                        <div className='  '>
-                            <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
-                            {service && <span className='text-white' >{service.length > 0 && service[11].attributes.subtitle}</span>}
-                        </div>
-                        <div className='  '>
+                        {/* Five */}
+                        <div className='flex flex-row  '>
                             <div className='rounded-full bg-[#00A2D0] w-3 h-3'></div>
                             {service && <span className='text-white' >{service.length > 0 && service[12].attributes.subtitle}</span>}
                         </div>
-                        <div className='  '>
+                        <div className='flex flex-row'>
                             <div className='rounded-full bg-[#BC65AE] w-3 h-3'></div>
                             {service && <span className='text-white' >{service.length > 0 && service[13].attributes.subtitle}</span>}
                         </div>
-                        <div className='  '>
+                        <div className='flex flex-row  '>
                             <div className='rounded-full bg-[#27DEBF] w-3 h-3'></div>
                             {service && <span className='text-white' >{service.length > 0 && service[14].attributes.subtitle}</span>}
                         </div>
                     </div >
+
                 </div>
 
 
             </div>
+
+            <svm >
+
+            </svm>
 
 
 
